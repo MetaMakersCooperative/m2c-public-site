@@ -2,6 +2,7 @@ export interface ZoneProps {
     slug: string,
     name: string,
     image: string,
+    color: string,
     benefits?: BenefitProps[]
 }
 
@@ -15,21 +16,22 @@ export const _zonePages : ZoneProps[] = [
     {
         name: "Woodworking",
         slug: "woodworking",
-        image: "images/zones/woodworking.jpg",
+        color: "#d53e4f",
+        image: "images/zones/woodworking.webp",
         benefits: [
             {
                 title: "Sawstop1",
-                image: "images/zones/benefits/sawstop.jpg",
+                image: "images/zones/benefits/sawstop.webp",
                 description: "...1"
             },
             {
                 title: "Sawstop2",
-                image: "images/zones/benefits/sawstop.jpg",
+                image: "images/zones/benefits/sawstop.webp",
                 description: "...2"
             },
             {
                 title: "Sawstop3",
-                image: "images/zones/benefits/sawstop.jpg",
+                image: "images/zones/benefits/sawstop.webp",
                 description: "...3"
             }
         ]
@@ -37,41 +39,49 @@ export const _zonePages : ZoneProps[] = [
     {
         name: "Laser Cutting",
         slug: "laser-cutting",
-        image: "images/zones/laser-cutting.jpg"
+        color: "#f46d43",
+        image: "images/zones/laser-cutting.webp"
     },
     {
         name: "CAD/CAM",
         slug: "cad-cam",
-        image: "images/zones/cad-cam.jpg"
+        color: "#fdae61",
+        image: "images/zones/cad-cam.webp"
     },
     {
         name: "CNC Cutting",
         slug: "cnc",
-        image: "images/zones/cnc.jpg"
+        color: "#fee08b",
+        image: "images/zones/cnc.webp"
     },
     {
         name: "Electronics",
         slug: "electronics",
-        image: "images/zones/electronics.jpg"
+        color: "#ffffbf",
+        image: "images/zones/electronics.webp"
     },
     {
         name: "Fibre Arts",
         slug: "fibre-arts",
-        image: "images/zones/fibre-arts.jpg"
+        color: "#e6f598",
+        image: "images/zones/fibre-arts.webp"
     },
     {
         name: "Machining",
         slug: "machining",
-        image: "images/zones/machining.jpg"
+        color: "#abdda4",
+        image: "images/zones/machining.webp"
     },
     {
         name: "Stained Glass",
         slug: "stained-glass",
-        image: "images/zones/stained-glass.jpg"
+        color: "#66c2a5",
+        image: "images/zones/stained-glass.webp"
     },
     {
         name: "3D Printing",
         slug: "3d-printing",
-        image: "images/zones/3d-printing.jpg"
+        color: "#3288bd",
+        image: "images/zones/3d-printing.webp"
     }
 ];

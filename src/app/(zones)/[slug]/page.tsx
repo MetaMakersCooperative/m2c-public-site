@@ -1,6 +1,9 @@
-import { Heading, Image } from "@chakra-ui/react";
+import { AbsoluteCenter, AspectRatio, Box, Center, Container, Heading, HStack, VStack } from "@chakra-ui/react";
 import { _zonePages, ZoneProps } from "@/data/zones";
 import { assertNotUndefined } from "@/data/utils";
+import ExportedImage from "next-image-export-optimizer";
+import { relative } from "path";
+
 
 export const dynamicParams  = false;
 
@@ -23,6 +26,22 @@ export default async function Zone({
   var zone = _zonePages.find(x => x.slug === slug);
   assertNotUndefined<ZoneProps>(zone);
   return (
-        <><Image src={zone.image} alt={zone.name} /><Heading>{zone.name}</Heading></>
+    <Container width="100%" height="auto" aspectRatio={21/9} >
+      <ExportedImage
+        src={zone.image}
+        alt={zone.name}
+        fill={true}
+        style={{objectFit: "cover", filter: "brightness(50%)"}}
+      />
+      <AbsoluteCenter width="100%">
+          
+          <VStack width="100%" textAlign="left">
+            <Heading size={{smDown:"5xl",base:"7xl"}} color="white">{zone.name}</Heading>
+            <Heading size={{smDown:"xl",base:"3xl"}} color="white">@ Meta Makers Cooperative</Heading>
+            
+          </VStack>
+
+      </AbsoluteCenter>
+    </Container>
   );
 }

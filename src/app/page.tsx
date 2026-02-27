@@ -4,7 +4,7 @@ import { ZoneCard } from "@/components/zone-card";
 
 export default function Home() {
   return (
-    <Grid templateColumns="repeat(3, 1fr)" gap="6">
+    <Grid m="4rem" templateColumns={{base: "repeat(3, 1fr)", lgDown: "repeat(2, 1fr)", smDown:"repeat(1, 1fr)"}} gap="6">
       {_zonePages.map((item) => (
           <ZoneCard {...item} key={item.slug} />
         )
