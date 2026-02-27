@@ -26,18 +26,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-module.exports = {
-  env: {
-    basePath: isProd ? '/m2c-public-site' : '',
-    assetPrefix: isProd ? '/m2c-public-site/' : '',
-    nextImageExportOptimizer_imageFolderPath: "public/images",
-    nextImageExportOptimizer_exportFolderPath: "out",
-    nextImageExportOptimizer_quality: "75",
-    nextImageExportOptimizer_storePicturesInWEBP: "true",
-    nextImageExportOptimizer_exportFolderName: "generated",
-    nextImageExportOptimizer_generateAndUseBlurImages: "true",
-    nextImageExportOptimizer_remoteImageCacheTTL: "0",
-  },
-}
-
 export default nextConfig;
