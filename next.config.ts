@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["@chakra-ui/react"],
   },
   basePath: !isDev ? '/m2c-public-site' : '',
-  assetPrefix: !isDev ? '/m2c-public-site/' : '',
   images: {
     loader: "custom",
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
