@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
   },
-  basePath: '/m2c-public-site',
   images: {
     loader: "custom",
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
