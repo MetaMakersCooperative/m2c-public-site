@@ -1,14 +1,14 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
+const isDev = process.env.NODE_ENV === 'development';
 
 const nextConfig: NextConfig = {
   output: 'export',
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
   },
-  basePath: isProd ? '/m2c-public-site' : '',
-  assetPrefix: isProd ? '/m2c-public-site/' : '',
+  basePath: !isDev ? '/m2c-public-site' : '',
+  assetPrefix: !isDev ? '/m2c-public-site/' : '',
   images: {
     loader: "custom",
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
