@@ -1,13 +1,11 @@
 import type { NextConfig } from "next";
 
-const isDev = process.env.NODE_ENV === 'development';
-
 const nextConfig: NextConfig = {
   output: 'export',
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
   },
-  basePath: !isDev ? '/m2c-public-site' : '',
+  basePath: '/m2c-public-site',
   images: {
     loader: "custom",
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
