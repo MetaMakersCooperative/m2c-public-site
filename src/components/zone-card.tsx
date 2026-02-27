@@ -1,7 +1,7 @@
 "use client"
 
 import { ZoneProps } from "@/data/zones"
-import { Button, Card, Center, Image, Text } from "@chakra-ui/react"
+import { Button, Card, Image } from "@chakra-ui/react"
 import Link from "next/link"
 
 export const ZoneCard = (props: ZoneProps) => {

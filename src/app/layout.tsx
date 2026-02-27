@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import styles from "./page.module.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
@@ -26,7 +27,11 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+            <div className={styles.page}>
+              <main className={styles.main}>
         <Provider>{children}</Provider>
+              </main>
+            </div>
       </body>
     </html>
   );
