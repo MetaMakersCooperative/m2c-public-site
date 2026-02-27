@@ -27,3 +27,17 @@
   justify-content: space-between;
   background-color: var(--foreground);
 }
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --background: #303030;
+    --foreground: #222222;
+
+    --text-primary: #ededed;
+    --text-secondary: #999;
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+    --button-secondary-border: #1a1a1a;
+  }
+}
