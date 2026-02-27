@@ -14,7 +14,10 @@ export const ZoneCard = (props: ZoneProps) => {
         boxShadow: `0 0 20px 5px ${props.color}bf`, // glow effect
         transform: "translateY(-5px)", // Optional slight lift effect
       }}
-      borderLeftColor={props.color} borderLeftStyle={"solid"} borderLeftWidth={"10px"}>
+      borderLeftColor={props.color} 
+      borderLeftStyle={"solid"} 
+      borderLeftWidth={"10px"}
+      _dark={{backgroundColor: "#282828"}}>
       <Link href={'/'+ props.slug}>
       <ExportedImage
         src={props.image}

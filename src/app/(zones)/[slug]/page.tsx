@@ -17,7 +17,7 @@ export async function generateStaticParams(): Promise<PathParams[]> {
   return result;
 } 
 
-export default async function Zone({
+export default async function ZonePage({
   params,
 }: {
   params: Promise<{ slug: string }>
