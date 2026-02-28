@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
+import Navigation from "./(common)/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,14 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-            <div className={styles.page}>
-              <main className={styles.main}>
-        <Provider>{children}</Provider>
-              </main>
-            </div>
+        <div className={styles.page}>
+          <main className={styles.main}>
+            <Provider>
+              <Navigation />
+              {children}
+            </Provider>
+          </main>
+        </div>
       </body>
     </html>
   );
