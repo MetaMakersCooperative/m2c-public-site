@@ -1,12 +1,12 @@
-import { AbsoluteCenter, Container, Grid, Heading, HStack, VStack } from "@chakra-ui/react";
+import { AbsoluteCenter, Center, Container, Grid, Heading, HStack, VStack, Text } from "@chakra-ui/react";
 import { _zonePages } from "@/data/zones";
 import ExportedImage from "next-image-export-optimizer";
 import ZoneGrid from "./(zones)/zone-grid";
+import Section from "./(common)/section";
 
 export default function Home() {
   return (
-    <>
-    <VStack>
+    <VStack width="100%" gap={0}>
       <Container width="100%" height="auto" aspectRatio={21/9} >
         <ExportedImage
           src="images/home.webp"
@@ -14,7 +14,7 @@ export default function Home() {
           fill={true}
           style={{objectFit: "cover", filter: "brightness(50%)"}}
         />
-        <AbsoluteCenter width="100%">
+        <AbsoluteCenter width="100%"> 
             
             <HStack width="75%">
               <img src="images/logo-white.svg" width={"40%"}/>
@@ -26,9 +26,12 @@ export default function Home() {
 
         </AbsoluteCenter>
       </Container>
-      <ZoneGrid></ZoneGrid>
-    </VStack>
 
-    </>
+      <Section id="zones" title="Zones">
+        <Text fontSize={"24px"} paddingBottom={8}>Our makerspace has zones with tools and resources for these areas of interest:</Text>
+        <ZoneGrid></ZoneGrid>
+      </Section>
+
+    </VStack>
   );
 }
