@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
 import Navigation from "./(common)/navigation";
+import { VStack } from "@chakra-ui/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +32,10 @@ export default function RootLayout({
         <div className={styles.page}>
           <main className={styles.main}>
             <Provider>
-              <Navigation />
-              {children}
+              <VStack width={"100%"} gap={0}>
+                <Navigation />
+                {children}
+              </VStack>
             </Provider>
           </main>
         </div>
