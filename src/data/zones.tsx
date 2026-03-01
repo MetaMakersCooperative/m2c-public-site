@@ -10,6 +10,7 @@ export interface BenefitProps {
     image: string
     title: string
     description: string
+    footnote?: string
 }
 
 export const _zonePages : ZoneProps[] = [ 
@@ -20,19 +21,30 @@ export const _zonePages : ZoneProps[] = [
         image: "images/zones/woodworking.webp",
         benefits: [
             {
-                title: "Sawstop1",
-                image: "images/zones/benefits/sawstop.webp",
-                description: "...1"
+                title: "SawStop Tablesaw",
+                image: "images/benefits/woodworking-sawstop.webp",
+                description: "Enjoy the safety and convenience of our tablesaw, with an 8' outfeed table, a 52\" fence, and the SawStop safety system, which instantly retracts the blade if it contacts skin."
             },
             {
-                title: "Sawstop2",
-                image: "images/zones/benefits/sawstop.webp",
-                description: "...2"
+                title: "Dust Collection",
+                image: "images/benefits/woodworking-dust-collection.webp",
+                description: "Breath easy: our workshop is thoughtfully designed, with dust collection ports on each tool and an air filtration system."
             },
             {
-                title: "Sawstop3",
-                image: "images/zones/benefits/sawstop.webp",
-                description: "...3"
+                title: "CNC Planing",
+                image: "images/benefits/woodworking-flattening.webp",
+                description: "Flatten large wood planks (up to 4' x 8') with our CNC router.*",
+                footnote: "Requires machine training and certification, or assistance from another member who is trained."
+            },
+            {
+                title: "Stocked Workbenches",
+                image: "images/benefits/woodworking-workbench.webp",
+                description: "Our woodworking zone includes several large workbenches, each stocked with a variety of hand tools and clamps for your projects."
+            },
+            {
+                title: "Glue-up Station",
+                image: "images/benefits/woodworking-glue-up.webp",
+                description: "Our dedicated glue-up station is equipped with a large, flat surface and clamps for gluing large projects."
             }
         ]
     },
