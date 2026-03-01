@@ -55,11 +55,6 @@ Various tools and supplies for painting, scrapbooking, leather work (punch), but
 
 And for the whole arts and crafts section, a computer for design work preloaded with design software like PE Design for embroidery, Inkscape, and others
 
-# wood
-
-lots of work bench space + misc hand tools
-add gluing station, 
-
 # CNC
 the cnc router
 training courses

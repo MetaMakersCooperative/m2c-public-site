@@ -52,7 +52,34 @@ export const _zonePages : ZoneProps[] = [
         name: "Laser Cutting",
         slug: "laser-cutting",
         color: "#f46d43",
-        image: "images/zones/laser-cutting.webp"
+        image: "images/zones/laser-cutting.webp",
+        benefits: [
+            {
+                title: "High Precision & Professional-Quality Results",
+                image: "images/benefits/laser-quality.webp",
+                description: "The Aeon Mira 7 offers positioning accuracy of ≤0.01 mm and can engrave high speeds, enabling extremely fine detail on logos, artwork, and text. "
+            },
+            {
+                title: "Versatile Material Capabilities",
+                image: "images/benefits/laser-materials.webp",
+                description: "Members can cut or engrave a wide range of safe materials including solid wood, plywood, acrylic, and more. Perfect for signs, décor, prototypes, cosplay, and custom gifts."
+            },
+            {
+                title: "Large Working Area for Bigger Projects",
+                image: "images/benefits/laser-work-area.webp",
+                description: "With a generous 700x450 mm work area, the machine accommodates larger pieces than many hobby-grade lasers, expanding the types of projects members can take on."
+            },
+            {
+                title: "Reliable, Easy-to-Learn, Maker-Friendly Equipment",
+                image: "images/benefits/laser-easy.webp",
+                description: "The laser is designed with makers in mind, featuring integrated water cooling, constant air assist, autofocus/manual focus options, and straightforward operation using LightBurn software. As a Meta Makers member users can get up and running quickly with a few hours of training."
+            },
+            {
+                title: "Ideal for Learning, Prototyping & Small-Batch Production",
+                image: "images/benefits/laser-prototype.webp",
+                description: "Because the tool is fast, precise, and cost-effective to run, it's excellent for first-time makers, iterative prototyping, and producing small runs of products such as ornaments, boxes, signage, or custom merchandise."
+            },
+        ]
     },
     {
         name: "CAD/CAM",
