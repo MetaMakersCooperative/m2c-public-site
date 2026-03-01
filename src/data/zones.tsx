@@ -49,7 +49,7 @@ export const _zonePages : ZoneProps[] = [
         ]
     },
     {
-        name: "Laser Cutting",
+        name: "Laser Cutting & Engraving",
         slug: "laser-cutting",
         color: "#f46d43",
         image: "images/zones/laser-cutting.webp",
@@ -72,7 +72,7 @@ export const _zonePages : ZoneProps[] = [
             {
                 title: "Reliable, Easy-to-Learn, Maker-Friendly Equipment",
                 image: "images/benefits/laser-easy.webp",
-                description: "The laser is designed with makers in mind, featuring integrated water cooling, constant air assist, autofocus/manual focus options, and straightforward operation using LightBurn software. As a Meta Makers member users can get up and running quickly with a few hours of training."
+                description: "The laser is designed with makers in mind, featuring integrated water cooling, constant air assist, autofocus/manual focus options, and straightforward operation using LightBurn software. As a Meta Makers member, you can get up and running quickly with a few hours of training."
             },
             {
                 title: "Ideal for Learning, Prototyping & Small-Batch Production",
