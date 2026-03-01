@@ -219,8 +219,8 @@ export const _zonePages: ZoneProps[] = [
           "Access a quality sewing machine for all your stitching and garment-making projects.",
       },
       {
-        title: "Large Cutting Table",
-        image: "images/benefits/fibre-arts-cutting-table.webp",
+        title: "Large Layout Table",
+        image: "images/benefits/fibre-arts-table.webp",
         description:
           "Work on our big table designed for cutting out patterns and assembling your fibre art projects.",
       },
