@@ -43,6 +43,7 @@ export const _memberPrices: MemberPriceCardProps[] = [
         title: "1 Year",
         termMonths: 12,
         termCost: 600,
-        monthCost: 50
+        monthCost: 50,
+        isBestValue: true
     }
 ];
