@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the public site for the Meta Makers Cooperative makerspace.
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To compile the project, run:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+yarn build
+```
 
-## Learn More
+## Frameworks
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the frameworks used in this repository, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) is a free static site hosting service that allows you to build and host a website directly from a repository on GitHub. The public site is hosted on GitHub pages.
+- [Next.js](https://nextjs.org/docs) is an open-source, full-stack React framework that provides building blocks and structure for creating fast, high-performance web applications.  This repo uses the app router and static site generation.
+- [Chakra UI](https://chakra-ui.com/docs/components/concepts/overview) is a simple, modular, and accessible component library for React that allows developers to build modern, responsive web applications quickly.  This repo uses Chakra components as the primary style library/framework.
+- [Next Image Export Optimizer](https://github.com/Niels-IO/next-image-export-optimizer) is a third-party library that enables image optimization at build time. All image files in the "/public/images" directory will be processed when you run "yarn build" to created optimized file sizes and blurred placeholder images in the "./generated" folder (relative to the original image location).
+- [Image Magick](https://imagemagick.org/#gsc.tab=0) can be used to convert from jpg or heic files into webp files by running a command such as "magick mogrify -format webp *.jpg" or "magick mogrify -format webp *.HEIC".
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Dev Containers
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can run this repository inside a dev container.  However, for fast reload on save, it's better to install nvm and yarn and then run the repository locally instead.

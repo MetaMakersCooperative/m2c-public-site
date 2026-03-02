@@ -362,25 +362,25 @@ export const _zonePages: ZoneProps[] = [
         title: "Cricut Machines",
         image: "images/benefits/crafts-cricut.webp",
         description:
-          "Use our two Cricut machines for precision cutting of vinyl, paper, fabric, and more, enabling creative designs and professional results.",
+          "Use our two Cricut machines to cut vinyl, paper, fabric, and more. Perfect for making custom decals, cards, and craft projects with precision and ease.",
       },
       {
-        title: "Multiple Paper Cutters",
-        image: "images/benefits/crafts-paper-cutters.webp",
-        description:
-          "Access a variety of paper cutters for clean, precise cuts on cardstock, paper, and other materials for your craft projects.",
-      },
-      {
-        title: "Comprehensive Craft Supplies",
+        title: "Crafting Supplies",
         image: "images/benefits/crafts-supplies.webp",
         description:
-          "Choose from a wide range of tools and supplies for painting, scrapbooking, leather work with punches, button making, and rock tumbling.",
+          "Choose from a wide range of tools and supplies for cutting paper, painting, scrapbooking, leather work, button making, and rock tumbling.",
       },
       {
-        title: "Design Software Workstation",
+        title: "Design Software",
         image: "images/benefits/crafts-design-software.webp",
         description:
           "Work on our dedicated computer loaded with design software including PE Design for embroidery, Inkscape, and other creative tools for planning your projects.",
+      },
+      {
+        title: "Classroom Space",
+        image: "images/benefits/crafts-classroom.webp",
+        description:
+          "Host workshops, classes, and group projects in our crafts zone, which includes a large table and space for up to 15 attendees. Request a copy of our event form for booking details.",
       },
     ],
   },
