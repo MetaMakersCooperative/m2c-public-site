@@ -5,6 +5,7 @@ import "./globals.css";
 import { Provider } from "@/components/ui/provider"
 import Navigation from "./(common)/navigation";
 import { VStack } from "@chakra-ui/react";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
               <VStack width={"100%"} gap={0}>
                 <Navigation />
                 {children}
+                <Toaster />
               </VStack>
             </Provider>
           </main>
