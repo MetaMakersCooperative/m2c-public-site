@@ -28,7 +28,7 @@ export default function Home() {
       </Container>
 
       <Section id="zones" title="Zones">
-        <Text fontSize={"24px"} paddingBottom={8}>Our makerspace has zones with tools and resources for these areas of interest:</Text>
+        <Text fontSize={"xl"} paddingBottom={8}>Our makerspace has zones with tools and resources for these areas of interest:</Text>
         <ZoneGrid></ZoneGrid>
       </Section>
 
