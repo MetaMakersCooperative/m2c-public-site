@@ -18,7 +18,20 @@ import { useState } from "react";
 import { _zonePages } from "@/data/zones";
 
 const navItems = [
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about",
+    submenu: [{
+      label: "Meta Makers Cooperative",
+      href: `/about`,
+    },
+    {
+      label: "Location",
+      href: `/location`,
+    },
+    {
+      label: "News",
+      href: `/news`,
+    }] 
+  },
   { label: "Membership", href: "/membership" },
   { label: "Classes", href: "/classes" },
   {
@@ -29,7 +42,16 @@ const navItems = [
       href: `/${zone.slug}`,
     })),
   },
-  { label: "Funding", href: "/funding" },
+  { label: "Funding", href: "/sponsorship" ,
+    submenu: [{
+      label: "Sponsorship",
+      href: `/sponsorship`,
+    },
+    {
+      label: "Grants",
+      href: `/grants`,
+    }] 
+  },
   { label: "Contact", href: "/contact" },
 ];
 

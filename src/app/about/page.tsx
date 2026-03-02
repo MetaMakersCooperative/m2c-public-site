@@ -1,6 +1,6 @@
 import Section from "../(common)/section";
 
-export default function ContactPage() {
+export default function AboutPage() {
     return (
         <>
             <Section id="story" title="Our Story">  
@@ -13,9 +13,6 @@ export default function ContactPage() {
                 <p>todo</p>
             </Section>
             <Section id="directors" title="Directors">  
-                <p>todo</p>
-            </Section>
-            <Section id="news" title="News">  
                 <p>todo</p>
             </Section>
         </>
