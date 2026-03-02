@@ -1,7 +1,6 @@
 'use client';
 
-import { Box, Center, Link, VStack } from "@chakra-ui/react";
-import ExportedImage from "next-image-export-optimizer";
+import { Box, Center, Link, VStack, Image } from "@chakra-ui/react";
 
 export default function SocialMediaLinks() {
     return (
@@ -10,11 +9,11 @@ export default function SocialMediaLinks() {
                 {/* Facebook */}
                 <Box>
                     <Link href="https://www.facebook.com/M2CYQG/" fontSize={"xl"}>
-                        <ExportedImage
-                            src="images/social/facebook.png"
+                        <Image
+                            src="logos/social/facebook.png"
                             alt="Facebook Logo"
-                            width={80}
-                            height={50}
+                            width="80px"
+                            height="50px"
                         />
                         Meta Makers Cooperative
                     </Link>
@@ -23,11 +22,11 @@ export default function SocialMediaLinks() {
                 {/* Instagram */}
                 <Box>
                     <Link href="https://www.instagram.com/m2cyqg/" fontSize={"xl"}>
-                        <ExportedImage
-                            src="images/social/instagram.png"
+                        <Image
+                            src="logos/social/instagram.png"
                             alt="Instagram Logo"
-                            width={103}
-                            height={29}
+                            width="103px"
+                            height="29px"
                         />
                         @m2cyqg
                     </Link>
@@ -36,11 +35,11 @@ export default function SocialMediaLinks() {
                 {/* Discord */}
                 <Box>
                     <Link href="https://discord.gg/nSWAjkxtDp" fontSize={"xl"}>
-                        <ExportedImage
-                            src="images/social/discord.svg"
+                        <Image
+                            src="logos/social/discord.svg"
                             alt="Discord Logo"
-                            width={160}
-                            height={54.413}
+                            width="160px"
+                            height="54.413px"
                         />
                         MetaMakers
                     </Link>

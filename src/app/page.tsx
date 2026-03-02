@@ -1,4 +1,4 @@
-import { AbsoluteCenter, Center, Container, Grid, Heading, HStack, VStack, Text } from "@chakra-ui/react";
+import { AbsoluteCenter, Center, Container, Grid, Heading, HStack, VStack, Text, Image } from "@chakra-ui/react";
 import { _zonePages } from "@/data/zones";
 import ExportedImage from "next-image-export-optimizer";
 import ZoneGrid from "./(zones)/zone-grid";
@@ -17,7 +17,7 @@ export default function Home() {
         <AbsoluteCenter width="100%"> 
             
             <HStack width="75%">
-              <img src="images/logo-white.svg" width={"40%"}/>
+              <Image src="logos/logo-white.svg" width={"40%"}/>
               <VStack p={4} width="60%" textAlign="left">
                 <Heading size={{smDown: "lg", mdDown: "3xl", lgDown: "5xl", xlDown:"6xl",base:"7xl"}} color="white">Meta Makers Cooperative Makerspace</Heading>
                 <Heading width="100%" alignSelf="baseline" paddingTop={8}  mdDown={{display: "none"}} size={{lgDown: "md", xlDown:"2xl",base:"4xl"}} color="white">Explore • Collaborate • Make</Heading>

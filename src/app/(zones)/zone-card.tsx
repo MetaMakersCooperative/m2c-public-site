@@ -8,7 +8,7 @@ import Zone from "@/app/(zones)/[slug]/page";
 
 export const ZoneCard = (props: ZoneProps) => {
   return (
-    <Card.Root maxW="sm" overflow="hidden" variant="elevated"       
+    <Card.Root overflow="hidden"     
       transition="all 0.3s ease-in-out" // Smooth transition
       _hover={{
         boxShadow: `0 0 20px 5px ${props.color}bf`, // glow effect

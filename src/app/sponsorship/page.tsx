@@ -1,16 +1,20 @@
+import { Box } from "@chakra-ui/react";
 import Section from "../(common)/section";
+import BecomeSponsorCard from "./become-sponsor-card";
+import CurrentSponsorGrid from "./current-sponsor-grid";
+import PastSponsorList from "./past-sponsor-list";
 
 export default function SponsorshipPage() {
     return (
         <>
-            <Section id="sponsorship" title="Sponsorship">  
-                <p>todo</p>
-            </Section>
+            <Box as="section" id="sponsorship" p={8} width={"100%"}>
+                <BecomeSponsorCard />
+            </Box>
             <Section id="current-sponsors" title="Current Sponsors">  
-                <p>todo</p>
+                <CurrentSponsorGrid />
             </Section>
             <Section id="past-sponsors" title="Past Sponsors">  
-                <p>todo</p>
+                <PastSponsorList />
             </Section>
         </>
     );

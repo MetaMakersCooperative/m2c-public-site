@@ -8,9 +8,9 @@ import {
   useDisclosure,
   Link,
   Menu,
-  MenuItem,
   Accordion,
   Portal,
+  Image,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose, MdExpandMore } from "react-icons/md";
@@ -82,7 +82,7 @@ export default function Navigation() {
         align="center"
       >
         <Link href="/">
-          <img src="images/logo-black.svg" alt="Home" width="40px" />
+          <Image src="logos/logo-black.svg" alt="Home" width="40px" />
         </Link>
 
         {/* Desktop Menu */}
