@@ -1,6 +1,6 @@
 import Section from "../(common)/section";
 import ContactForm from "./contact-form";
-import RecentFacebookPosts from "./recent-posts";
+import RecentFacebookPosts from "./recent-facebook-posts";
 import SocialMediaLinks from "./social-media-links";
 
 export default function ContactPage() {
