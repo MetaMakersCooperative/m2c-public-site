@@ -1,12 +1,16 @@
 'use client';
 import { BenefitProps } from '@/data/zones';
-import { Box, Button, Card, Link, VStack } from '@chakra-ui/react';
+import { Box, Button, Card, CardRootProps, Link, VStack } from '@chakra-ui/react';
 import ExportedImage from 'next-image-export-optimizer';
 import { LuExternalLink } from 'react-icons/lu';
 
-export default function BecomeSponsorCard() {
+export interface BecomeSponsorCardProps extends CardRootProps {
+
+}
+
+export default function BecomeSponsorCard({...props}:BecomeSponsorCardProps) {
     return (
-        <Card.Root width="100%" flexDirection={{base: "row", lgDown: "column"}} overflow="hidden">
+        <Card.Root width="100%" flexDirection={{base: "row", lgDown: "column"}} overflow="hidden" {...props}>
             <VStack  p={4} alignItems={"flex-start"} justifyContent={"space-between"}>
                 <Card.Body>
                     <Card.Title p={4} fontSize={{base:"5xl", mdDown:"2xl"}} lineHeight={1.25}>Sponsorship</Card.Title>

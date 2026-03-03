@@ -1,11 +1,18 @@
 'use client';
 import { BenefitProps } from '@/data/zones';
-import { Box, Card, VStack } from '@chakra-ui/react';
+import { Box, Card, CardRootProps, VStack } from '@chakra-ui/react';
 import ExportedImage from 'next-image-export-optimizer';
 
-export default function ZoneBenefit({ image, title, description, footnote }: BenefitProps) {
+export interface ZoneBenefitProps extends CardRootProps {
+    image: string,
+    title: string,
+    description: string, 
+    footnote: string
+}
+
+export default function ZoneBenefit({ image, title, description, footnote, ...props }: BenefitProps) {
     return (
-        <Card.Root width="100%" flexDirection={{base: "row", mdDown: "column"}} overflow="hidden">
+        <Card.Root width="100%" flexDirection={{base: "row", mdDown: "column"}} overflow="hidden" {...props}>
             <Box asChild aspectRatio={{base: "4/3", mdDown:"16/9"}}>
                 <ExportedImage
                     src={image}

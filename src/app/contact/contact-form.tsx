@@ -9,6 +9,8 @@ import {
   VStack,
   Text,
   Center,
+  BoxProps,
+  Box,
 } from "@chakra-ui/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import axios from 'axios';
@@ -20,7 +22,10 @@ interface ContactFormFields {
     message: string;
 }
 
-export default function ContactForm() {
+export interface ContactFormProps extends BoxProps {
+}
+
+export default function ContactForm({...props}: ContactFormProps) {
   const {
     register,
     handleSubmit,
@@ -58,7 +63,7 @@ export default function ContactForm() {
   }
 
   return (
-    <>
+    <Box {...props}>
       <Text>
         Contact us to learn more. Email us at{" "}
         <Link href="mailto:info@metamakers.org" color="blue.500">
@@ -98,6 +103,6 @@ export default function ContactForm() {
           </form>
         </VStack>
       </Center>
-    </>
+    </Box>
   );
 }

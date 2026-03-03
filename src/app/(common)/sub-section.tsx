@@ -1,37 +1,15 @@
 import { Box, Heading, HeadingProps } from '@chakra-ui/react';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import Section, { SectionProps } from './section';
 
-interface SectionProps {
-    id: string;
-    title: string;
-    children: ReactNode;
-    backgroundColor?: string;
-    headingProps?: Partial<HeadingProps>;
+interface SubSectionProps extends SectionProps {
 }
 
-export default function SubSection({
-    id,
-    title,
-    children,
-    backgroundColor,
-    headingProps,
-}: SectionProps) {
+export default function SubSection({children, ...props}: SubSectionProps) {
     return (
-        <Box id={id} bg={backgroundColor} p={8} width={"100%"}>
-            <Link href={`#${id}`} style={{ textDecoration: "none" }}>
-            <Heading
-                as="h3"
-                size="2xl"
-                mb={6}
-                {...headingProps}
-                width={"fit-content"}
-                borderBottom={"4px solid"}
-            >
-                {title}
-            </Heading>
-            </Link>
+        <Section headingProps={{as: "h3", fontSize: "2xl"}} {...props}>
             {children}
-        </Box>
+        </Section>
     );
 }

@@ -1,10 +1,13 @@
 'use client';
 
-import { Box, Center, Link, VStack, Image } from "@chakra-ui/react";
+import { Box, Center, Link, VStack, Image, CenterProps } from "@chakra-ui/react";
 
-export default function SocialMediaLinks() {
+export interface SocialMediaLinksProps extends CenterProps {
+
+}
+export default function SocialMediaLinks({...props}: SocialMediaLinksProps) {
     return (
-        <Center>
+        <Center {...props}>
             <VStack gap={8}>
                 {/* Facebook */}
                 <Box>

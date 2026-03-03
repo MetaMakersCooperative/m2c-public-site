@@ -11,6 +11,7 @@ import {
   Accordion,
   Portal,
   Image,
+  BoxProps,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose, MdExpandMore } from "react-icons/md";
@@ -55,7 +56,11 @@ const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
-export default function Navigation() {
+export interface NavigationProps extends BoxProps {
+  
+}
+
+export default function Navigation({...boxProps}: NavigationProps) {
   const { open, onToggle } = useDisclosure();
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
 
@@ -72,6 +77,7 @@ export default function Navigation() {
       top={0}
       zIndex={1000}
       width="100%"
+      {...boxProps}
     >
       <Flex
         maxW="container.lg"

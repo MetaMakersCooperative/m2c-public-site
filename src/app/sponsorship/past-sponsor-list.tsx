@@ -1,8 +1,12 @@
 import { _pastSponsors, PastSponsorProps } from '@/data/sponsors';
 import SubSection from '../(common)/sub-section';
-import { Card, Grid } from '@chakra-ui/react';
+import { Box, BoxProps, Card, Grid } from '@chakra-ui/react';
 
-export default function CurrentSponsorGrid()  {
+export interface CurrentSponsorGridProps extends BoxProps {
+    
+}
+
+export default function CurrentSponsorGrid({...props}: CurrentSponsorGridProps)  {
     const groupedByYear = _pastSponsors.reduce((acc, sponsor) => {
         if (!acc[sponsor.year]) {
             acc[sponsor.year] = [];
@@ -19,7 +23,7 @@ export default function CurrentSponsorGrid()  {
     };
 
     return (
-        <div className="past-sponsor-list">
+        <Box {...props}>
             {Object.entries(groupedByYear)
                 .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
                 .map(([year, yearSponsors]) => {
@@ -68,6 +72,6 @@ export default function CurrentSponsorGrid()  {
                         </SubSection>
                     );
                 })}
-        </div>
+        </Box>
     );
 };
