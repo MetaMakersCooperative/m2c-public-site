@@ -1,5 +1,4 @@
-import { Button, Center, HStack, Link, Stack, Text, StackProps } from "@chakra-ui/react";
-import { StickyComponent } from "@/components/ui/sticky";
+import { Button, HStack, Link, StackProps } from "@chakra-ui/react";
 import { LuExternalLink } from "react-icons/lu";
 
 export interface BecomeMemberProps extends StackProps{

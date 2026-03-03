@@ -1,10 +1,10 @@
 import { Box, BoxProps, Heading, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
-interface StickyProps extends BoxProps {
+export interface StickyComponentProps extends BoxProps {
     children: ReactNode;
 }
-export function StickyComponent({children, ...boxProps}: StickyProps) {
+export function StickyComponent({children, ...boxProps}: StickyComponentProps) {
     return (
             <Box 
                 {...boxProps}

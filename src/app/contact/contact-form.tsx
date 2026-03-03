@@ -97,7 +97,7 @@ export default function ContactForm({...props}: ContactFormProps) {
               <Field.ErrorText>{errors.message?.message}</Field.ErrorText>
             </Field.Root>
 
-            <Button type="submit" colorScheme="blue" width="full" mt={6}>
+            <Button type="submit" colorPalette="purple" p={4}>
               Send
             </Button> 
           </form>

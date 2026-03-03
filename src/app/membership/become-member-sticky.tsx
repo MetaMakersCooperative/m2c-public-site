@@ -1,9 +1,8 @@
-import { Button, Center, HStack, Link, Stack, StickyProps, Text } from "@chakra-ui/react";
-import { StickyComponent } from "@/components/ui/sticky";
-import { LuExternalLink } from "react-icons/lu";
+import { BoxProps, Center, Stack, Text } from "@chakra-ui/react";
 import BecomeMemberButtons from "./become-member-buttons";
+import { StickyComponent } from "@/components/ui/sticky";
 
-export interface BecomeMemberStickyProps extends StickyProps{
+export interface BecomeMemberStickyProps extends BoxProps{
     hideLearnMoreButton?: boolean;
 }
 
