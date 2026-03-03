@@ -1,11 +1,15 @@
 import Section from "../(common)/section";
-import { Image, Link, Text } from "@chakra-ui/react";
+import { Button, Center, HStack, Image, Link, Text } from "@chakra-ui/react";
 import MemberBenefitCardGrid from "./member-benefit-card-grid";
 import MemberPriceCardGrid from "./member-price-card-grid";
+import { StickyComponent } from "@/components/ui/sticky";
+import { LuExternalLink } from "react-icons/lu";
+import BecomeMemberSticky from "./become-member-sticky";
 
-export default function ContactPage() {
+export default function MembershipPage() {
     return (
         <>
+            <BecomeMemberSticky hideLearnMoreButton={true} />
             <Section id="member-benefits" title="Member Benefits">  
                 <Text fontSize={"xl"}>As a nonprofit cooperative, Meta Makers is a member-led organization.  Members enjoy voting rights at official meetings and also benefit from the following member perks:</Text>
                 <MemberBenefitCardGrid />
@@ -19,7 +23,7 @@ export default function ContactPage() {
                 <MemberPriceCardGrid />
             </Section>
             <Section id="payment-options" title="Payment Options">  
-                <Text fontSize={"xl"}>For automated payments, we accept credit and debit cards through Zeffy (click the "<Link href="https://zeffy.com/metamakers" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>Join</Link>" button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org).</Text>
+                <Text fontSize={"xl"}>For automated payments, we accept credit and debit cards through Zeffy (click the <Link href="https://zeffy.com/metamakers" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>"Become a Member"</Link> button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org).</Text>
             </Section>
         </>
     );

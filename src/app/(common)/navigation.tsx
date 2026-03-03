@@ -68,9 +68,9 @@ export default function Navigation() {
       as="nav"
       bg="white"
       boxShadow="sm"
-      position="sticky"
+      // position="sticky"
       top={0}
-      zIndex={10}
+      zIndex={1000}
       width="100%"
     >
       <Flex
