@@ -138,19 +138,19 @@ export const _zonePages: ZoneProps[] = [
       },
       {
         title: "Large 4'x8' CANCAM CNC Router",
-        image: "images/benefits/cnc-router.webp",
+        image: "images/zones/cnc.webp",
         description:
           "Work with our spacious CANCAM C2-48 LT CNC router, featuring a 49\" x 98\"x 12\" working area, enabling you to tackle large-scale projects with ease.",
       },
       {
         title: "Professional Speed and Precision",
-        image: "images/benefits/cnc-precision.webp",
+        image: "images/benefits/cnc-large.webp",
         description:
           "Experience professional-grade speed and precision with a rugged, vibration-reducing design, state-of-the-art Masso controlls, and a 6HP spindle that achieves speeds up to 24,000 RPM and IPM feed rate up to 1200w. Our advanced spoilboard with threaded inserts allows for speedy and precise material hold-down.",
       },
       {
         title: "Versatile Material Cutting",
-        image: "images/benefits/cnc-materials.webp",
+        image: "images/benefits/machining-cnc.webp",
         description:
           "Cut wood, aluminum, and plastic with our CNC router, giving you flexibility to work with the materials best suited for your projects.",
       },
