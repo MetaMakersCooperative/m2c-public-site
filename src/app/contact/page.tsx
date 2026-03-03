@@ -12,7 +12,7 @@ export default function ContactPage() {
             <Section id="social-media" title="Social Media">
                 <SocialMediaLinks />
             </Section>
-            <Section id="recent-facebook-posts" title="Recent Facebook Posts">
+            <Section>
                 <RecentFacebookPosts />
             </Section>
         </>

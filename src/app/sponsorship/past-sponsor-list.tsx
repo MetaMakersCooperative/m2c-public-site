@@ -1,6 +1,7 @@
 import { _pastSponsors, PastSponsorProps } from '@/data/sponsors';
 import SubSection from '../(common)/sub-section';
-import { Box, BoxProps, Card, Grid } from '@chakra-ui/react';
+import { Box, BoxProps, Card, Grid, Link, Text } from '@chakra-ui/react';
+import { LuExternalLink } from 'react-icons/lu';
 
 export interface CurrentSponsorGridProps extends BoxProps {
     
@@ -41,29 +42,29 @@ export default function CurrentSponsorGrid({...props}: CurrentSponsorGridProps) 
                                 {Object.entries(groupedByAmount)
                                     .sort(([amountA], [amountB]) => Number(amountB) - Number(amountA))
                                     .map(([amount, sponsors]) => (
-                                        <Card.Root key={amount} className="amount-card" p={4} gap={4}>
+                                        <Card.Root key={amount} p={4} gap={4}>
                                             <Card.Header>
-                                                <Card.Title className="card-title">{formatCurrency(Number(amount))}</Card.Title>
+                                                <Card.Title>{formatCurrency(Number(amount))}</Card.Title>
                                             </Card.Header>
-                                            <Card.Body className="sponsors-list">
+                                            <Card.Body>
                                                 {sponsors.map((sponsor, idx) => (
-                                                    <div key={idx} className="sponsor-item">
+                                                    <Box key={idx}>
                                                         {sponsor.url ? (
-                                                            <a
+                                                            <Link
                                                                 href={sponsor.url}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="sponsor-link"
+                                                                textDecoration={"underline"}
+                                                                color={"teal"}
+                                                                variant={"underline"}
                                                             >
                                                                 {sponsor.name}
-                                                                <span className="external-icon" aria-label="opens in new tab">
-                                                                    ↗
-                                                                </span>
-                                                            </a>
+                                                                 <LuExternalLink />
+                                                            </Link>
                                                         ) : (
-                                                            <span className="sponsor-name">{sponsor.name}</span>
+                                                            <Text>{sponsor.name}</Text>
                                                         )}
-                                                    </div>
+                                                    </Box>
                                                 ))}
                                             </Card.Body>
                                         </Card.Root>

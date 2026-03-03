@@ -11,19 +11,19 @@ export default function MembershipPage() {
         <>
             <BecomeMemberSticky hideLearnMoreButton={true} />
             <Section id="member-benefits" title="Member Benefits">  
-                <Text fontSize={"xl"}>As a nonprofit cooperative, Meta Makers is a member-led organization.  Members enjoy voting rights at official meetings and also benefit from the following member perks:</Text>
+                <Text fontSize={"xl"}>Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to. People come for the tools and stay to explore, collaborate and make. It affords them the opportunity to socialize, learn and teach. Being a cooperative, our members are active and engaged in all aspects of our organization. Members also benefit from the following member perks:</Text>
                 <MemberBenefitCardGrid />
             </Section>
             <Section id="sign-up-process" title="Sign-Up Process">
-                <Text fontSize={"xl"}>To sign up, you'll complete our membership form, review and accept our standard operating procedure, complete a liability waiver, and then select a membership term and payment option.  Click to view our <Link href="forms/sop.pdf" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>SOPs</Link> and <Link href="forms/waiver.pdf"  variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>Waiver</Link>. Finally, we'll schedule an orientation to provide your key card.</Text>
-                <Image src="icons/signup.png" alt="Membership Sign-Up Process" objectFit="contain" marginTop={8}/>
+                <Text fontSize={"xl"}>To sign up, click the <Link href="https://zeffy.com/metamakers" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>"Become a Member"</Link> button to purchase your preferred membership term.  Next, complete our <Link href="forms/membership.pdf" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>membership form</Link> and email it to <Link href="mailto:membership@metamakers.org" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>membership@metamakers.org</Link>. We'll respond via email to schedule an orientation.  At the orientation, you'll need to review and accept our <Link href="forms/sop.pdf" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>standard operating procedures (SOPs)</Link> and sign our <Link href="forms/waiver.pdf" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>liability waiver</Link>. Finally, we'll provide a tour of the makerspace and issue your keycard.</Text>
+                {/* <Image src="icons/signup.png" alt="Membership Sign-Up Process" objectFit="contain" marginTop={8}/> */}
             </Section>
             <Section id="pricing" title="Pricing">  
-                <Text fontSize={"xl"}>The cost of membership varies by membership term.  Select a longer membership term for the best price.</Text>
+                <Text fontSize={"xl"}>The cost of membership varies by membership term.  Membership terms are offered on an annual, semi-annual or quarterly basis. Day and week passes are also available. Select a longer membership term for the best price.</Text>
                 <MemberPriceCardGrid />
             </Section>
             <Section id="payment-options" title="Payment Options">  
-                <Text fontSize={"xl"}>For automated payments, we accept credit and debit cards through Zeffy (click the <Link href="https://zeffy.com/metamakers" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>"Become a Member"</Link> button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org).</Text>
+                <Text fontSize={"xl"}>For automated payments, we accept credit and debit cards through Zeffy (click the <Link href="https://zeffy.com/metamakers" variant={"underline"} textDecoration={"underline"} colorPalette={"teal"}>"Become a Member"</Link> button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org). To pay in person, complete the membership form and let us know you intend to pay in person when you email us.</Text>
             </Section>
         </>
     );

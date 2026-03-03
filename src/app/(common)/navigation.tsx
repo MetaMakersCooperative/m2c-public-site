@@ -24,10 +24,10 @@ const navItems = [
       label: "Meta Makers Cooperative",
       href: `/about`,
     },
-    {
-      label: "Location",
-      href: `/location`,
-    },
+    // {
+    //   label: "Location",
+    //   href: `/location`,
+    // },
     {
       label: "News",
       href: `/news`,
@@ -48,10 +48,11 @@ const navItems = [
       label: "Sponsorship",
       href: `/sponsorship`,
     },
-    {
-      label: "Grants",
-      href: `/grants`,
-    }] 
+    // {
+    //   label: "Grants",
+    //   href: `/grants`,
+    // }
+  ] 
   },
   { label: "Contact", href: "/contact" },
 ];

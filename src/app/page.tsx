@@ -8,6 +8,7 @@ import {
   Box,
   Grid,
   Center,
+  Link,
 } from "@chakra-ui/react";
 import { _zonePages } from "@/data/zones";
 import ZoneGrid from "./(zones)/zone-grid";
@@ -17,6 +18,7 @@ import BecomeMemberSticky from "./membership/become-member-sticky";
 import ExportedImage from "next-image-export-optimizer";
 import BecomeMemberCard from "./membership/become-member-card";
 import { useIsVisible } from "@/components/useIsVisible";
+import RecentFacebookPosts from "./contact/recent-facebook-posts";
 
 export default function Home() {
   
@@ -44,7 +46,7 @@ export default function Home() {
               </Box>
               <Center p={8}>
                 <Text fontSize={{base: "2xl", mdDown: "md"}} textAlign={"center"}>
-                  Located in Sho Art Studios at 628 Monmouth Road, Windsor, Ontario. 
+                  Located in Sho Art Studios at <Link href="https://goo.gl/maps/C1DEyxi6UdCPUZfK8" variant={"underline"} textDecoration={"underline"} color={"teal"}>628 Monmouth Road</Link>, Windsor, Ontario.
                 </Text>
               </Center>
             </Grid>
@@ -81,6 +83,9 @@ export default function Home() {
           interest:
         </Text>
         <ZoneGrid />
+      </Section>
+      <Section>
+          <RecentFacebookPosts />
       </Section>
     </VStack>
   );

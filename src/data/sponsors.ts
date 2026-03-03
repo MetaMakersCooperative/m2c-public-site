@@ -11,14 +11,14 @@ export const _sponsors: SponsorProps[] = [
     name: "ProtoScan3D",
     url: "https://www.protoscan3d.com/",
     image: "logos/sponsors/proto-scan-3d.webp",
-    tier: "platinum",
+    tier: "bronze",
     amount: 200
   },
   {
     name: "Well Fed Nutrition",
     url: "https://www.wellfednutrition.ca/",
     image: "logos/sponsors/well-fed-nutrition.webp",
-    tier: "platinum",
+    tier: "bronze",
     amount: 200
   }
 ];
