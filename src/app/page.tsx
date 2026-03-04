@@ -72,7 +72,8 @@ export default function Home() {
         </Section>
       </VStack>
       <BecomeMemberSticky 
-        display={isVisible ? "hidden" : "visible"}
+        height={isVisible ? "0px" : "auto"}
+        visibility={isVisible ? "hidden" : "visible"}
         opacity={isVisible ? 0 : 1}
         transform={isVisible ? "translateY(-80px)":"translateY(0px)"}
         transition={isVisible ? "opacity 300ms ease-in, visibility 0ms ease-in 300ms, transform 300ms ease-in 0ms": "opacity 300ms ease-in, visibility 0ms ease-in 0ms, transform 300ms ease-in 0ms"}
@@ -83,9 +84,6 @@ export default function Home() {
           interest:
         </Text>
         <ZoneGrid />
-      </Section>
-      <Section>
-          <RecentFacebookPosts />
       </Section>
     </VStack>
   );
