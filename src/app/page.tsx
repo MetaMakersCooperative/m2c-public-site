@@ -9,25 +9,19 @@ import {
   Grid,
   Center,
   Link,
-  ClientOnly,
 } from "@chakra-ui/react";
 import { _zonePages } from "@/data/zones";
 import ZoneGrid from "./(zones)/zone-grid";
 import Section from "./(common)/section";
 import HomeBanner from "./home-banner";
-import BecomeMemberSticky from "./membership/become-member-sticky";
 import ExportedImage from "next-image-export-optimizer";
 import BecomeMemberCard from "./membership/become-member-card";
-import { useIsVisible } from "@/components/useIsVisible";
-import RecentFacebookPosts from "./contact/recent-facebook-posts";
+import BecomeMemberFixed from "./membership/become-member-fixed";
 
 export default function Home() {
-  
-  const {ref, isVisible} = useIsVisible();
-
   return (
     <VStack width="100%" gap={0}>
-      <VStack ref={ref} width="100%" gap={0}>
+      <VStack width="100%" gap={0}>
         <HomeBanner />
         <Section p={4}>
           <Text fontSize={{base: "2xl", mdDown: "md"}} textAlign={"center"}>
@@ -72,15 +66,6 @@ export default function Home() {
           </Stack>
         </Section>
       </VStack>
-      <ClientOnly>
-        <BecomeMemberSticky 
-          height={isVisible ? "0px" : "auto"}
-          visibility={isVisible ? "hidden" : "visible"}
-          opacity={isVisible ? 0 : 1}
-          transform={isVisible ? "translateY(-80px)":"translateY(0px)"}
-          transition={isVisible ? "opacity 300ms ease-in, visibility 0ms ease-in 300ms, transform 300ms ease-in 0ms": "opacity 300ms ease-in, visibility 0ms ease-in 0ms, transform 300ms ease-in 0ms"}
-        />
-      </ClientOnly>
       <Section id="zones" title="Zones">
         <Text fontSize={"xl"} paddingBottom={8}>
           Our makerspace has zones with tools and resources for these areas of
@@ -88,6 +73,7 @@ export default function Home() {
         </Text>
         <ZoneGrid />
       </Section>
+      <BecomeMemberFixed />
     </VStack>
   );
 }

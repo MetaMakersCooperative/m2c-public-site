@@ -31,12 +31,10 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
+          <Navigation />
           <Box className={styles.pageBackground} backgroundColor={{_light: "#fafafa", _dark: "#0a0a0a"}}>
-            <VStack className={styles.pageForeground} backgroundColor={{_light: "white", _dark: "#111"}} gap={0}>
-              <Navigation />
-              <main>
+            <VStack as="main" className={styles.pageForeground} backgroundColor={{_light: "white", _dark: "#111"}} gap={0}>
                 {children}
-              </main>
               <Toaster />
             </VStack>
           </Box>
