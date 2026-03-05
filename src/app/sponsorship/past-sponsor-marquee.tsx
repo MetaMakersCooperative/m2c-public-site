@@ -14,7 +14,7 @@ export interface MarqueeProps {
 
 
 const SponsorMarquee = ({items}: MarqueeProps) => (
-  <Marquee.Root py={4} autoFill spacing="2rem">
+  <Marquee.Root py={4} autoFill spacing="2rem" backgroundColor={"white"}>
     <Marquee.Viewport>
       <Marquee.Content>
         {items.map((item, i) => (
