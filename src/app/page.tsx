@@ -20,7 +20,7 @@ import BecomeMemberFixed from "./membership/become-member-fixed";
 
 export default function Home() {
   return (
-    <VStack width="100%" gap={0}>
+    <VStack width="100%" gap={0} marginBottom={{base: "80px", mdDown: "100px"}}>
       <VStack width="100%" gap={0}>
         <HomeBanner />
         <Section p={4}>
