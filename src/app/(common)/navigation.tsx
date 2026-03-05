@@ -12,11 +12,14 @@ import {
   Portal,
   Image,
   BoxProps,
+  ClientOnly,
+  Skeleton,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose, MdExpandMore } from "react-icons/md";
 import { useState } from "react";
 import { _zonePages } from "@/data/zones";
+import { ColorModeButton, useColorModeValue } from "@/components/ui/color-mode";
 
 const navItems = [
   { label: "About", href: "/about",
@@ -69,10 +72,12 @@ export default function Navigation({...boxProps}: NavigationProps) {
     setExpandedMobile(expandedMobile === label ? null : label);
   };
 
+  var logoImageSrc = useColorModeValue("logos/logo-black.svg", "logos/logo-white.svg");
+
   return (
     <Box
       as="nav"
-      bg="white"
+      backgroundColor={{_light: "white", _dark:"#111"}}
       boxShadow="sm"
       // position="sticky"
       top={0}
@@ -88,14 +93,16 @@ export default function Navigation({...boxProps}: NavigationProps) {
         justify="space-between"
         align="center"
       >
-        <Link href="/">
-          <Image src="logos/logo-black.svg" alt="Home" width="40px" />
-        </Link>
+        <ClientOnly fallback={<Skeleton boxSize="40px" />}>
+          <Link href="/">
+            <Image src={logoImageSrc} alt="Home" width="40px" />
+          </Link>
+        </ClientOnly>
 
         {/* Desktop Menu */}
         <Stack
           direction="row"
-          gap="10px"
+          gap={4}
           display={{ base: "none", md: "flex" }}
           justifyContent="flex-end"
         >
@@ -104,7 +111,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
               {item.submenu ? (
                 <Menu.Root>
                   <Menu.Trigger asChild>
-                    <Button variant="ghost" padding="10px">
+                    <Button variant="ghost" padding={4}>
                       {item.label}
                       <MdExpandMore />
                     </Button>
@@ -117,7 +124,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
                             key={sub.href}
                             value={sub.href}
                             asChild
-                            padding="10px"
+                            padding={4}
                           >
                             <Link href={sub.href}>{sub.label}</Link>
                           </Menu.Item>
@@ -129,13 +136,14 @@ export default function Navigation({...boxProps}: NavigationProps) {
                 </Menu.Root>
               ) : (
                 <Link href={item.href}>
-                  <Button variant="ghost" padding="10px">
+                  <Button variant="ghost" padding={4}>
                     {item.label}
                   </Button>
                 </Link>
               )}
             </Box>
           ))}
+          <ColorModeButton />
         </Stack>
 
         {/* Mobile Menu Button */}
@@ -154,7 +162,6 @@ export default function Navigation({...boxProps}: NavigationProps) {
           px={4}
           py={4}
           gap={0}
-          bg="gray.50"
           display={{ base: "flex", md: "none" }}
         >
           {navItems.map((item) => (
@@ -166,7 +173,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
                   >
                     <Accordion.Item value={item.label}>
                       <Accordion.ItemTrigger 
-                      padding={"10px"}
+                      padding={4}
                         fontSize={"14px"}
                           width="100%"
                           justifyContent="space-between"
@@ -183,7 +190,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
                                 variant="ghost"
                                 width="100%"
                                 justifyContent="flex-start"
-                                padding="10px"
+                                padding={4}
                               >
                                 {sub.label}
                               </Button>
@@ -196,7 +203,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
                 </Box>
               ) : (
                 <Link href={item.href}>
-                  <Button variant="ghost" padding="10px" width="100%">
+                  <Button variant="ghost" padding={4} width="100%">
                     {item.label}
                   </Button>
                 </Link>

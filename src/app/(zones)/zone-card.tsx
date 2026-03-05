@@ -15,7 +15,7 @@ export interface ZoneCardProps extends CardRootProps {
 
 export const ZoneCard = ({slug, image, name, color, ...props}: ZoneCardProps) => {
   return (
-    <Card.Root overflow="hidden"     
+    <Card.Root overflow="hidden"
       transition="all 0.3s ease-in-out" // Smooth transition
       _hover={{
         boxShadow: `0 0 20px 5px ${color}bf`, // glow effect

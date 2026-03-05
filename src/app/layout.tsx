@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
 import Navigation from "./(common)/navigation";
-import { VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
@@ -30,17 +30,17 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className={styles.page}>
-          <main className={styles.main}>
-            <Provider>
-              <VStack width={"100%"} gap={0}>
-                <Navigation />
+        <Provider>
+          <Box className={styles.pageBackground} backgroundColor={{_light: "#fafafa", _dark: "#0a0a0a"}}>
+            <VStack className={styles.pageForeground} backgroundColor={{_light: "white", _dark: "#111"}} gap={0}>
+              <Navigation />
+              <main>
                 {children}
-                <Toaster />
-              </VStack>
-            </Provider>
-          </main>
-        </div>
+              </main>
+              <Toaster />
+            </VStack>
+          </Box>
+        </Provider>
       </body>
     </html>
   );

@@ -66,7 +66,7 @@ export default function ContactForm({...props}: ContactFormProps) {
     <Box {...props}>
       <Text>
         Contact us to learn more. Email us at{" "}
-        <Link href="mailto:info@metamakers.org" color="blue.500">
+        <Link href="mailto:info@metamakers.org" variant={"underline"}>
           info@metamakers.org
         </Link>{" "}
         or complete the form below.{errors.name && "Name is required."}

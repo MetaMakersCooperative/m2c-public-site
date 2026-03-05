@@ -14,12 +14,11 @@ export interface BecomeSponsorCardProps extends CardRootProps {
 
 export const CurrentSponsorCard = ({image, name, tier, url, ...props}: BecomeSponsorCardProps) => {
   return (
-    <Card.Root overflow="hidden" width={"100%"} 
-      _dark={{backgroundColor: "#282828"}}>
-        <VStack asChild p={4}>
+    <Card.Root width={"100%"}>
+        <VStack asChild>
           <Link href={url} target={"blank"}>
-            <Box height={"120px"} width={"100%"} justifyContent={"middle"} display={"flex"}>
-              <Center>
+            <Box p={4} height={"120px"} width={"100%"} justifyContent={"middle"} display={"flex"} backgroundColor={"white"}>
+              <Center overflow={"hidden"}>
                 <Image
                   src={image}
                   alt={name}
@@ -27,10 +26,10 @@ export const CurrentSponsorCard = ({image, name, tier, url, ...props}: BecomeSpo
                 />
               </Center>
             </Box>
-            <Card.Body width={"100%"}>
+            <Card.Body width={"100%"} px={4}>
               <Card.Title textStyle="xl" fontWeight="bold">{name} <LuExternalLink style={{display: "inline"}} /></Card.Title>
             </Card.Body>
-            <Card.Footer width={"100%"} justifyContent={"flex-start"}>
+            <Card.Footer width={"100%"} px={4} paddingBottom={4} justifyContent={"flex-start"}>
               <Badge colorPalette={tier === "platinum" ? "blue" : tier === "gold" ? "yellow" : tier === "silver" ? "gray" : "orange"} textTransform={"capitalize"}>
                 {tier} Sponsor
               </Badge>

@@ -6,7 +6,6 @@ export interface SectionProps extends BoxProps {
     id?: string;
     title?: string;
     children: ReactNode;
-    backgroundColor?: string;
     headingProps?: Partial<HeadingProps>;
 }
 
@@ -14,12 +13,11 @@ export default function Section({
     id,
     title,
     children,
-    backgroundColor,
     headingProps,
     ...boxProps
 }: SectionProps) {
     return (
-        <Box as="section" id={id} bg={backgroundColor} p={8} width={"100%"} {...boxProps}>
+        <Box as="section" id={id} p={8} width={"100%"} {...boxProps}>
             {id && title && (
                 <Link href={`#${id}`} style={{ textDecoration: "none" }}>
                 <Heading

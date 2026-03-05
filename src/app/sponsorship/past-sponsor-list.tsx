@@ -52,10 +52,7 @@ export default function CurrentSponsorGrid({...props}: CurrentSponsorGridProps) 
                                                         {sponsor.url ? (
                                                             <Link
                                                                 href={sponsor.url}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                textDecoration={"underline"}
-                                                                color={"teal"}
+                                                                target="blank"
                                                                 variant={"underline"}
                                                             >
                                                                 {sponsor.name}

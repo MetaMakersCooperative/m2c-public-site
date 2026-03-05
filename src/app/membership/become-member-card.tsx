@@ -10,7 +10,7 @@ export interface BecomeMemberCardProps extends CardRootProps {
 export default function BecomeMemberCard({...props}:BecomeMemberCardProps) {
   return (
             <Card.Root p={8} boxShadow={"lg"} {...props}>
-                <Card.Description fontSize={{ base: "2xl", mdDown: "md" }} color={"black"} textAlign={"center"}>
+                <Card.Description fontSize={{ base: "2xl", mdDown: "md" }} color={{_light:"black", _dark:"white"}}  textAlign={"center"}>
                     Are you a maker? Do you need access to a workspace with tools and a
                     community that shares your passion? Become a member and enjoy 24/7
                     access to our fully-equipped workshop!

@@ -9,8 +9,7 @@ export interface BecomeMemberStickyProps extends BoxProps{
 export default function BecomeMemberSticky({hideLearnMoreButton = false, ...props}: BecomeMemberStickyProps) {
     return (
         <StickyComponent 
-                background="white"
-                color="black"
+                backgroundColor={{_light: "white", _dark:"#111"}}
                 width="100%"
                 boxShadow= "sm"
                 {...props}

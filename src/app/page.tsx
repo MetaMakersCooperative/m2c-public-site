@@ -33,8 +33,8 @@ export default function Home() {
             Windsor's nonprofit community makerspace!
           </Text>
         </Section>
-        <Section p={0} backgroundColor="gray.100">
-          <Grid templateColumns={{base: "repeat(2, 1fr)", mdDown: "repeat(1, 1fr)"}} justifyContent={"center"} alignItems={"center"}>
+        <Section p={0}>
+          <Grid  backgroundColor={"bg.muted"} templateColumns={{base: "repeat(2, 1fr)", mdDown: "repeat(1, 1fr)"}} justifyContent={"center"} alignItems={"center"}>
               <Box>
                 <ExportedImage
                   src="images/map.webp"
@@ -46,20 +46,20 @@ export default function Home() {
               </Box>
               <Center p={8}>
                 <Text fontSize={{base: "2xl", mdDown: "md"}} textAlign={"center"}>
-                  Located in Sho Art Studios at <Link href="https://goo.gl/maps/C1DEyxi6UdCPUZfK8" variant={"underline"} textDecoration={"underline"} color={"teal"}>628 Monmouth Road</Link>, Windsor, Ontario.
+                  Located in Sho Art Studios at <Link href="https://goo.gl/maps/C1DEyxi6UdCPUZfK8" variant={"underline"}>628 Monmouth Road</Link>, Windsor, Ontario.
                 </Text>
               </Center>
             </Grid>
         </Section>
         <Section>
           <Stack direction={{base: "row", mdDown: "column"}} alignItems={"center"} gap={12} justifyContent={"center"}>
-            <Box width={{base: "33%", mdDown: "100%"}} color={"grey.700"}>
+            <Box width={{base: "33%", mdDown: "100%"}}>
               <Heading as ="h2" size="4xl" width={"fit-content"}>
                 makerspace
               <Text display={"inline"} as="span" fontSize="lg" fontWeight={"light"} paddingLeft={4}>noun</Text>
               </Heading>
               <Blockquote.Root fontSize={{ base: "xl", mdDown: "md" }} px={4} >
-                <Blockquote.Content  color={"gray.700"}>
+                <Blockquote.Content>
                   a place in which people with shared interests, especially in computing or technology, can gather to work on projects while sharing ideas, equipment, and knowledge.
                 </Blockquote.Content>
                 <Blockquote.Caption>
