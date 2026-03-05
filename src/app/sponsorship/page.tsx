@@ -23,7 +23,7 @@ export default function SponsorshipPage() {
                 <SponsorMarquee items={pastSponsorMarqueeItems} />
                 <PastSponsorList />
             </Section>
-            <Section id="non-monetary" title="Other Supporters">
+            <Section id="other-supporters" title="Other Supporters">
                 <Text fontSize={"xl"} paddingBottom={8}>Thanks to our non-monetary supporters who have donated materials, equipment or services:</Text>
                 <SponsorMarquee items={otherSupportMarqueeItems} />
                 <List.Root p={8}>
