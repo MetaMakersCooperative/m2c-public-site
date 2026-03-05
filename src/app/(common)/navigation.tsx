@@ -210,6 +210,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
               )}
             </Box>
           ))}
+          <ColorModeButton />
         </Stack>
       )}
     </Box>
