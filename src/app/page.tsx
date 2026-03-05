@@ -9,6 +9,7 @@ import {
   Grid,
   Center,
   Link,
+  ClientOnly,
 } from "@chakra-ui/react";
 import { _zonePages } from "@/data/zones";
 import ZoneGrid from "./(zones)/zone-grid";
@@ -71,13 +72,15 @@ export default function Home() {
           </Stack>
         </Section>
       </VStack>
-      <BecomeMemberSticky 
-        height={isVisible ? "0px" : "auto"}
-        visibility={isVisible ? "hidden" : "visible"}
-        opacity={isVisible ? 0 : 1}
-        transform={isVisible ? "translateY(-80px)":"translateY(0px)"}
-        transition={isVisible ? "opacity 300ms ease-in, visibility 0ms ease-in 300ms, transform 300ms ease-in 0ms": "opacity 300ms ease-in, visibility 0ms ease-in 0ms, transform 300ms ease-in 0ms"}
-      />
+      <ClientOnly>
+        <BecomeMemberSticky 
+          height={isVisible ? "0px" : "auto"}
+          visibility={isVisible ? "hidden" : "visible"}
+          opacity={isVisible ? 0 : 1}
+          transform={isVisible ? "translateY(-80px)":"translateY(0px)"}
+          transition={isVisible ? "opacity 300ms ease-in, visibility 0ms ease-in 300ms, transform 300ms ease-in 0ms": "opacity 300ms ease-in, visibility 0ms ease-in 0ms, transform 300ms ease-in 0ms"}
+        />
+      </ClientOnly>
       <Section id="zones" title="Zones">
         <Text fontSize={"xl"} paddingBottom={8}>
           Our makerspace has zones with tools and resources for these areas of
