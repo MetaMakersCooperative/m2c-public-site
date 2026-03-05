@@ -11,6 +11,7 @@ export default async function ZoneBanner({image, name, ...props}:ZoneBannerProps
   return (
     <Container width="100%" height="auto" aspectRatio={21/9} {...props} >
       <ExportedImage
+        preload={true}
         src={image}
         alt={name}
         fill={true}

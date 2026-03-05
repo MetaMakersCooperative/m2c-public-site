@@ -6,6 +6,7 @@ export default function HomeBanner() {
   return (
     <Container width="100%" height="auto" aspectRatio={21/9} >
         <ExportedImage
+            preload={true}
             src="images/home.webp"
             alt="Meta Makers Cooperative"
             fill={true}
