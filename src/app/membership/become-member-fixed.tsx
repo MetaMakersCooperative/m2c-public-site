@@ -1,6 +1,5 @@
-import { BoxProps, Center, CenterProps, Stack, Text } from "@chakra-ui/react";
+import { Center, CenterProps, Stack, Text } from "@chakra-ui/react";
 import BecomeMemberButtons from "./become-member-buttons";
-import { StickyComponent } from "@/components/ui/sticky";
 
 export interface BecomeMemberFixedProps extends CenterProps{
 }

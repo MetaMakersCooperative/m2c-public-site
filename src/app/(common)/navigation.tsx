@@ -20,6 +20,9 @@ import { MdClose, MdExpandMore } from "react-icons/md";
 import { useState } from "react";
 import { _zonePages } from "@/data/zones";
 import { ColorModeButton, useColorModeValue } from "@/components/ui/color-mode";
+import useScrollDirection from "@/components/useScrollDirection";
+
+export const HEADER_HEIGHT = "72px";
 
 const navItems = [
   { label: "About", href: "/about",
@@ -65,6 +68,7 @@ export interface NavigationProps extends BoxProps {
 }
 
 export default function Navigation({...boxProps}: NavigationProps) {
+  const scrollDirection = useScrollDirection(null);
   const { open, onToggle } = useDisclosure();
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
 
@@ -75,16 +79,21 @@ export default function Navigation({...boxProps}: NavigationProps) {
   var logoImageSrc = useColorModeValue("logos/logo-black.svg", "logos/logo-white.svg");
 
   return (
-    <Box
-      as="nav"
+    <Box as="header"
+      position="fixed"
+      top="0"
+      height={HEADER_HEIGHT}
       backgroundColor={{_light: "white", _dark:"#111"}}
       boxShadow="sm"
-      // position="sticky"
-      top={0}
       zIndex={1000}
       width="100%"
-      {...boxProps}
-    >
+      visibility={scrollDirection == "down" && !open ? "hidden" : "visible"}
+      opacity={scrollDirection == "down" && !open ? 0 : 1}
+      transition={scrollDirection == "down" && !open 
+        ? "opacity 0.3s ease-in-out, visibility 0s linear 0.3s"
+        : "opacity 0.3s ease-in-out, visibility 0s linear 0s"
+      }
+      {...boxProps}>
       <Flex
         maxW="container.lg"
         mx="auto"
@@ -100,7 +109,8 @@ export default function Navigation({...boxProps}: NavigationProps) {
         </ClientOnly>
 
         {/* Desktop Menu */}
-        <Stack
+        <Stack 
+          as="nav"
           direction="row"
           gap={4}
           display={{ base: "none", md: "flex" }}
@@ -159,10 +169,14 @@ export default function Navigation({...boxProps}: NavigationProps) {
       {/* Mobile Menu */}
       {open && (
         <Stack
+          as="nav"
           px={4}
           py={4}
           gap={0}
           display={{ base: "flex", md: "none" }}
+          backgroundColor={{_light: "white", _dark:"#111"}}
+          height={`calc(100vh - ${HEADER_HEIGHT})`} /* Fill rest of viewport */
+          overflowY="scroll" /* Enable vertical scrolling */
         >
           {navItems.map((item) => (
             <Box key={item.label}>

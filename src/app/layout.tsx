@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
-import Navigation from "./(common)/navigation";
+import Navigation, { HEADER_HEIGHT } from "./(common)/navigation";
 import { Box, VStack } from "@chakra-ui/react";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
           <Navigation />
-          <Box className={styles.pageBackground} backgroundColor={{_light: "#fafafa", _dark: "#0a0a0a"}}>
+          <Box marginTop={HEADER_HEIGHT} className={styles.pageBackground} backgroundColor={{_light: "#fafafa", _dark: "#0a0a0a"}}>
             <VStack as="main" className={styles.pageForeground} backgroundColor={{_light: "white", _dark: "#111"}} gap={0}>
                 {children}
               <Toaster />

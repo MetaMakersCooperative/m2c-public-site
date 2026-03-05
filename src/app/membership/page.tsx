@@ -1,9 +1,7 @@
 import Section from "../(common)/section";
-import { Button, Center, HStack, Image, Link, Text } from "@chakra-ui/react";
+import { Link, Text } from "@chakra-ui/react";
 import MemberBenefitCardGrid from "./member-benefit-card-grid";
 import MemberPriceCardGrid from "./member-price-card-grid";
-import { StickyComponent } from "@/components/ui/sticky";
-import { LuExternalLink } from "react-icons/lu";
 import BecomeMemberSticky from "./become-member-sticky";
 
 export default function MembershipPage() {
