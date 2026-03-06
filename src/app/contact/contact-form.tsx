@@ -15,8 +15,10 @@ import {
 import { SubmitHandler, useForm } from "react-hook-form";
 import axios from 'axios';
 import { toaster } from "@/components/ui/toaster";
+import { useSubmit } from "@formspree/react";
+import { FieldValues } from "@formspree/core"
 
-interface ContactFormFields {
+interface ContactFormFields extends FieldValues {
     name: string;
     email: string;
     message: string;
@@ -33,33 +35,34 @@ export default function ContactForm({...props}: ContactFormProps) {
     formState: { errors },
   } = useForm<ContactFormFields>();
 
+  const formspree = useSubmit<ContactFormFields>("xnjgaeoq");
+
   if (errors.name || errors.email || errors.message) {
     console.log("Validation errors:", errors);
   }
   
   const onSubmit: SubmitHandler<ContactFormFields> = async (data) => {
-    try {
-        //this doesn't work... need to get this hooked up to directus or something instead
-        const url = "https://formspree.io/f/info@metamakers.org";
-        const response = await axios.postForm(url, data, );
-        console.log('Success:', response.data);
-        toaster.create({
+
+        const response = await formspree(data);
+        console.log(response);
+        if (response.kind == "success") {
+          toaster.create({
             title: "Message received!",
             description: "Thanks for contacting us. We'll get back to you soon.",
             type: "success",
             duration: 10000,
             closable: true,
-        })
-    } catch (error) {
-        console.error('Error:', error);
-        toaster.create({
+          });
+        }
+        else {
+          toaster.create({
             title: "An error occurred.",
             description: "Please try again later or email us instead.",
             type: "error",
             duration: 10000,
             closable: true,
-        })
-    }
+          });
+        }
   }
 
   return (
