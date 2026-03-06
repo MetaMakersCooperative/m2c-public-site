@@ -12,14 +12,12 @@ import {
   Portal,
   Image,
   BoxProps,
-  ClientOnly,
-  Skeleton,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose, MdExpandMore } from "react-icons/md";
 import { useState } from "react";
 import { _zonePages } from "@/data/zones";
-import { ColorModeButton, useColorModeValue } from "@/components/ui/color-mode";
+import { ColorModeButton } from "@/components/ui/color-mode";
 import useScrollDirection from "@/components/useScrollDirection";
 
 export const HEADER_HEIGHT = "72px";
@@ -76,8 +74,6 @@ export default function Navigation({...boxProps}: NavigationProps) {
     setExpandedMobile(expandedMobile === label ? null : label);
   };
 
-  var logoImageSrc = useColorModeValue("logos/logo-black.svg", "logos/logo-white.svg");
-
   return (
     <Box as="header"
       position="fixed"
@@ -87,11 +83,11 @@ export default function Navigation({...boxProps}: NavigationProps) {
       boxShadow="sm"
       zIndex={1000}
       width="100%"
+      transform={scrollDirection == "down" && !open ? "translateY(-100%)" : "translateY(0)"}
       visibility={scrollDirection == "down" && !open ? "hidden" : "visible"}
-      opacity={scrollDirection == "down" && !open ? 0 : 1}
       transition={scrollDirection == "down" && !open 
-        ? "opacity 0.3s ease-in-out, visibility 0s linear 0.3s"
-        : "opacity 0.3s ease-in-out, visibility 0s linear 0s"
+        ? "transform 0.3s ease-out, visibility 0s linear 0.3s"
+        : "transform 0.3s ease-out, visibility 0s linear 0s"
       }
       {...boxProps}>
       <Flex
@@ -102,11 +98,10 @@ export default function Navigation({...boxProps}: NavigationProps) {
         justify="space-between"
         align="center"
       >
-        <ClientOnly fallback={<Skeleton boxSize="40px" />}>
-          <Link href="/">
-            <Image src={logoImageSrc} alt="Home" width="40px" />
-          </Link>
-        </ClientOnly>
+        <Link href="/">
+          <Image src="logos/logo-black.svg" display={{_light: "block", _dark: "none"}} alt="Home" width="40px" />
+          <Image src="logos/logo-white.svg" display={{_light: "none", _dark: "block"}} alt="Home" width="40px" />
+        </Link>
 
         {/* Desktop Menu */}
         <Stack 

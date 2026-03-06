@@ -17,8 +17,14 @@ import HomeBanner from "./home-banner";
 import ExportedImage from "next-image-export-optimizer";
 import BecomeMemberCard from "./membership/become-member-card";
 import BecomeMemberFixed from "./membership/become-member-fixed";
+import useScrollPredicate from "@/components/useScrollPredicate";
 
 export default function Home() {
+  const shouldDisplayCallToAction = (scrollY:number) => {
+    return scrollY >= 1350;
+  };
+  var displayCallToAction = useScrollPredicate(shouldDisplayCallToAction, false);
+
   return (
     <VStack width="100%" gap={0} marginBottom={{base: "80px", mdDown: "100px"}}>
       <VStack width="100%" gap={0}>
@@ -73,7 +79,14 @@ export default function Home() {
         </Text>
         <ZoneGrid />
       </Section>
-      <BecomeMemberFixed />
+      <BecomeMemberFixed 
+        visibility={displayCallToAction ? "visible" : "hidden"}
+        opacity={displayCallToAction ? 1 : 0}
+        transition={displayCallToAction
+          ? "opacity 0.3s ease-in-out, visibility 0s linear 0s"
+          : "opacity 0.3s ease-in-out, visibility 0s linear 0.3s"
+        }
+      />
     </VStack>
   );
 }

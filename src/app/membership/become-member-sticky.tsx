@@ -15,10 +15,12 @@ export default function BecomeMemberSticky({hideLearnMoreButton = false, ...prop
                 {...props}
                 position="sticky"
                 backgroundColor={{_light: "white", _dark:"#111"}}
-                top={scrollDirection == "up" ? HEADER_HEIGHT : "0px" }
+                top={scrollDirection == "up" ? HEADER_HEIGHT : "0px"}
                 zIndex="900"
                 boxShadow={"sm"}
-                width="100%">
+                width="100%"
+                transition="top 0.3s ease-out"
+      >
                 <Stack  p={4} direction={{base: "row", mdDown: "column"}} justifyContent={"center"} alignItems={"center"}>
                     
                     <Text textAlign="center" fontSize={{base: "xl", mdDown: "md"}}>Interested in membership?</Text>
