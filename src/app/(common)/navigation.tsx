@@ -130,6 +130,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
                             value={sub.href}
                             asChild
                             padding={4}
+                            _focus={{outline: "none"}}
                           >
                             <Link href={sub.href}>{sub.label}</Link>
                           </Menu.Item>
