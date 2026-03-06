@@ -18,6 +18,8 @@ import ExportedImage from "next-image-export-optimizer";
 import BecomeMemberCard from "./membership/become-member-card";
 import BecomeMemberFixed from "./membership/become-member-fixed";
 import useScrollPredicate from "@/components/useScrollPredicate";
+import { ImageGallery } from "@/components/ui/image-gallery";
+import { _facilityImages } from "@/data/facility";
 
 export default function Home() {
   const shouldDisplayCallToAction = (scrollY:number) => {
@@ -78,6 +80,12 @@ export default function Home() {
           interest:
         </Text>
         <ZoneGrid />
+      </Section>
+      <Section id="facility" title="Facility">
+        <Text fontSize={"xl"} paddingBottom={8}>
+          Our makerspace is 2000 square feet with ground floor access and an overhead door.  The space is split into two sections: one area for loud and dusty activities such as woodworking and machining, and another for quiet and clean activities such as 3D printing and fibre arts.
+        </Text>
+        <ImageGallery images={_facilityImages}/>
       </Section>
       <BecomeMemberFixed 
         visibility={displayCallToAction ? "visible" : "hidden"}

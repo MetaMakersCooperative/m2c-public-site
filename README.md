@@ -25,6 +25,7 @@ To learn more about the frameworks used in this repository, take a look at the f
 - [Chakra UI](https://chakra-ui.com/docs/components/concepts/overview) is a simple, modular, and accessible component library for React that allows developers to build modern, responsive web applications quickly.  This repo uses Chakra components as the primary style library/framework.
 - [Next Image Export Optimizer](https://github.com/Niels-IO/next-image-export-optimizer) is a third-party library that enables image optimization at build time. All image files in the "/public/images" directory will be processed when you run "yarn build" to create optimized file sizes and blurred placeholder images in the "./generated" folder (relative to the original image location).
 - [Image Magick](https://imagemagick.org/#gsc.tab=0) can be used to convert from jpg or heic files into webp files by running a command such as "magick mogrify -format webp *.jpg" or "magick mogrify -format webp *.HEIC".
+- [Formspree](https://formspree.io/) is currently used for form processing, but in the future we will likely switch to directus or a custom backend api.
 
 ## Dev Containers
 
