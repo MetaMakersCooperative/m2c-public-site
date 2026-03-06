@@ -1,8 +1,11 @@
+import { ImageDetail } from "./facility";
+
 export interface ZoneProps {
   slug: string;
   name: string;
   image: string;
   color: string;
+  facilityImages: ImageDetail[];
   benefits?: BenefitProps[];
 }
 
@@ -19,6 +22,20 @@ export const _zonePages: ZoneProps[] = [
     slug: "woodworking",
     color: "#d53e4f",
     image: "images/zones/woodworking.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/facility/woodworking-facility-1.webp",
+          altText: "Woodworking Area"
+      },    
+      {
+          imageSrc: "images/facility/woodworking-facility-2.webp",
+          altText: "Woodworking Area"
+      },    
+      {
+          imageSrc: "images/facility/woodworking-facility-3.webp",
+          altText: "Woodworking Area"
+      },    
+    ],
     benefits: [
       {
         title: "SawStop Tablesaw",
@@ -59,6 +76,16 @@ export const _zonePages: ZoneProps[] = [
     slug: "laser-cutting",
     color: "#f46d43",
     image: "images/zones/laser-cutting.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/facility/laser-facility-1.webp",
+          altText: "Laser Area"
+      },    
+      {
+          imageSrc: "images/facility/tech-facility-1.webp",
+          altText: "Tech Area"
+      }   
+    ],
     benefits: [
       {
         title: "High Precision & Professional-Quality Results",
@@ -97,6 +124,20 @@ export const _zonePages: ZoneProps[] = [
     slug: "cad-cam",
     color: "#fdae61",
     image: "images/zones/cad-cam.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/zones/cad-cam.webp",
+          altText: "Computer Area"
+      },    
+      {
+          imageSrc: "images/benefits/cad-cam-workstation.webp",
+          altText: "Computer Area"
+      },    
+      {
+          imageSrc: "images/facility/electronics-facility-1.webp",
+          altText: "Tech Area"
+      }
+    ],
     benefits: [
       {
         title: "Mastercam",
@@ -129,6 +170,16 @@ export const _zonePages: ZoneProps[] = [
     slug: "cnc",
     color: "#fee08b",
     image: "images/zones/cnc.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/zones/cnc.webp",
+          altText: "CNC Area"
+      },    
+      {
+          imageSrc: "images/facility/woodworking-facility-1.webp",
+          altText: "Woodworking Area"
+      }
+    ],
     benefits: [
       {
         title: "Training Courses",
@@ -167,6 +218,20 @@ export const _zonePages: ZoneProps[] = [
     slug: "electronics",
     color: "#ffffbf",
     image: "images/zones/electronics.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/facility/electronics-facility-2.webp",
+          altText: "Electronics Area"
+      },    
+      {
+          imageSrc: "images/facility/electronics-facility-1.webp",
+          altText: "Tech Area"
+      },  
+      {
+          imageSrc: "images/facility/tech-facility-1.webp",
+          altText: "Tech Area"
+      }
+    ],
     benefits: [
       {
         title: "Community Knowledge",
@@ -205,6 +270,20 @@ export const _zonePages: ZoneProps[] = [
     slug: "fibre-arts",
     color: "#e6f598",
     image: "images/zones/fibre-arts.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/facility/classroom-facility-1.webp",
+          altText: "Class Area"
+      },    
+      {
+          imageSrc: "images/facility/classroom-facility-2.webp",
+          altText: "Class Area"
+      },  
+      {
+          imageSrc: "images/zones/fibre-arts.webp",
+          altText: "Embroidery Area"
+      }
+    ],
     benefits: [
       {
         title: "Embroidery Machine",
@@ -243,6 +322,16 @@ export const _zonePages: ZoneProps[] = [
     slug: "machining",
     color: "#abdda4",
     image: "images/zones/machining.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/zones/machining.webp",
+          altText: "Machining Area"
+      },
+      {
+          imageSrc: "images/benefits/machining-lathe.webp",
+          altText: "Machining Area"
+      }
+    ],
     benefits: [
       {
         title: "Manual Mill",
@@ -281,6 +370,20 @@ export const _zonePages: ZoneProps[] = [
     slug: "stained-glass",
     color: "#66c2a5",
     image: "images/zones/stained-glass.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/facility/stained-glass-facility-1.webp",
+          altText: "Stained Glass Area"
+      },
+      {
+          imageSrc: "images/facility/stained-glass-facility-2.webp",
+          altText: "Stained Glass Area"
+      },
+      {
+          imageSrc: "images/benefits/stained-glass-storage.webp",
+          altText: "Stained Glass Area"
+      }
+    ],
     benefits: [
       {
         title: "Glass Grinders",
@@ -319,6 +422,20 @@ export const _zonePages: ZoneProps[] = [
     slug: "3d-printing",
     color: "#3288bd",
     image: "images/zones/3d-printing.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/zones/3d-printing.webp",
+          altText: "3D Printer Area"
+      },    
+      {
+          imageSrc: "images/facility/tech-facility-1.webp",
+          altText: "Tech Area"
+      },    
+      {
+          imageSrc: "images/facility/electronics-facility-1.webp",
+          altText: "Tech Area"
+      }   
+    ],
     benefits: [
       {
         title: "Learning from Experienced Members",
@@ -357,6 +474,20 @@ export const _zonePages: ZoneProps[] = [
     slug: "crafts",
     color: "#5e4fa2",
     image: "images/zones/crafts.webp",
+    facilityImages: [
+      {
+          imageSrc: "images/facility/classroom-facility-1.webp",
+          altText: "Class Area"
+      },    
+      {
+          imageSrc: "images/facility/classroom-facility-2.webp",
+          altText: "Class Area"
+      },    
+      {
+          imageSrc: "images/benefits/fibre-arts-fabrics.webp",
+          altText: "Cricut station"
+      },  
+    ],
     benefits: [
       {
         title: "Cricut Machines",

@@ -1,10 +1,11 @@
-import { VStack } from "@chakra-ui/react";
+import { VStack, Text } from "@chakra-ui/react";
 import { _zonePages, ZoneProps } from "@/data/zones";
 import { assertNotUndefined } from "@/data/utils";
 import Section from "@/app/(common)/section";
 import ZoneBenefit from "../zone-benefit";
 import ZoneBanner from "../zone-banner";
 import BecomeMemberSticky from "@/app/membership/become-member-sticky";
+import { ImageCarousel } from "@/components/ui/image-carousel";
 
 
 export const dynamicParams  = false;
@@ -40,6 +41,12 @@ export default async function ZonePage({
           </VStack>
         </Section>
       ) : null}
+      <Section id="facility" title="Facility">
+        <Text fontSize={"xl"} paddingBottom={8}>
+          Here's how the {zone.name} zone is setup in the makerspace:
+        </Text>
+        <ImageCarousel images={zone.facilityImages}/>
+      </Section>
     </VStack>
     
   );
