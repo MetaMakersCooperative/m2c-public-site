@@ -1,4 +1,4 @@
-import { VStack, Text } from "@chakra-ui/react";
+import { VStack, Text, List, SimpleGrid } from "@chakra-ui/react";
 import { _zonePages, ZoneProps } from "@/data/zones";
 import { assertNotUndefined } from "@/data/utils";
 import Section from "@/app/(common)/section";
@@ -47,6 +47,19 @@ export default async function ZonePage({
         </Text>
         <ImageCarousel images={zone.facilityImages}/>
       </Section>
+      {zone.tools && (
+        <Section id="tools" title="Tools">
+          <Text fontSize={"xl"} paddingBottom={8}>
+            Looking for something specific?  Here's a list of {zone.name} tools we have in the shop:
+          </Text>
+          <List.Root px={4} listStylePosition={"inside"}>
+            <SimpleGrid columns={{base: 3, mdDown: 2, smDown: 1}}>
+            {zone.tools.map((tool,i) => (<List.Item key={i}>{tool}</List.Item>))}
+            </SimpleGrid>
+          </List.Root>
+        </Section>
+        )
+      }
     </VStack>
     
   );

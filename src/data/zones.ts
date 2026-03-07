@@ -7,6 +7,7 @@ export interface ZoneProps {
   color: string;
   facilityImages: ImageDetail[];
   benefits?: BenefitProps[];
+  tools?: string[];
 }
 
 export interface BenefitProps {
@@ -70,6 +71,30 @@ export const _zonePages: ZoneProps[] = [
           "Our dedicated glue-up station is equipped with a large, flat surface and clamps for gluing large projects.",
       },
     ],
+    tools: 
+    [
+      "Table Saw",
+      "Band Saw",
+      "Miter Saw",
+      "Jig Saw",
+      "Reciprocating Saw",
+      "Circular Saw",
+      "Router",
+      "Drill press",
+      "Scroll saw",
+      "Drum sander",
+      "Palm sander",
+      "Belt sander",
+      "Wood lathe",
+      "Handheld drill and driver",
+      "Vise",
+      "Hand saws",
+      "Pocket Hole Jig",
+      "Biscuit Jig",
+      "Planer",
+      "CNC Router",
+      "Chisels and hand planes",
+    ]
   },
   {
     name: "Laser Cutting",
