@@ -1,7 +1,7 @@
 'use client'
 import { Box, Center, CenterProps, Stack, Text } from "@chakra-ui/react";
 import BecomeMemberButtons from "./become-member-buttons";
-import useScrollDirection from "@/components/useScrollDirection";
+import useScrollY from "@/components/useScrollY";
 import { HEADER_HEIGHT } from "../(common)/navigation";
 
 export interface BecomeMemberStickyProps extends CenterProps{
@@ -9,13 +9,13 @@ export interface BecomeMemberStickyProps extends CenterProps{
 }
 
 export default function BecomeMemberSticky({hideLearnMoreButton = false, ...props}: BecomeMemberStickyProps) {
-    const scrollDirection = useScrollDirection(null);
+    const {scrollYDirection} = useScrollY();
     return (
             <Center                 
                 {...props}
                 position="sticky"
                 backgroundColor={{_light: "white", _dark:"#111"}}
-                top={scrollDirection == "up" ? HEADER_HEIGHT : "0px"}
+                top={scrollYDirection == "up" ? HEADER_HEIGHT : "0px"}
                 zIndex="900"
                 boxShadow={"sm"}
                 width="100%"

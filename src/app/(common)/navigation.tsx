@@ -15,10 +15,11 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose, MdExpandMore } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { _zonePages } from "@/data/zones";
 import { ColorModeButton } from "@/components/ui/color-mode";
-import useScrollDirection from "@/components/useScrollDirection";
+import useScrollDirection from "@/components/useScrollY";
+import useScrollY from "@/components/useScrollY";
 
 export const HEADER_HEIGHT = "72px";
 
@@ -66,9 +67,15 @@ export interface NavigationProps extends BoxProps {
 }
 
 export default function Navigation({...boxProps}: NavigationProps) {
-  const scrollDirection = useScrollDirection(null);
-  const { open, onToggle } = useDisclosure();
+  const {scrollYDirection, scrollYPosition} = useScrollY();
+  const {open, onToggle } = useDisclosure();
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
+  const [showHeader, setShowHeader] = useState(true);
+
+  useEffect(() => {
+    //show the header when near the top of page (such as when dragging from top to refresh) or when mobile menu is open, or when scrolling up (or initial state)
+    setShowHeader(scrollYPosition < 300 || open || scrollYDirection != "down")
+  }, [open, scrollYDirection, scrollYPosition, setShowHeader])
 
   const toggleMobileSubmenu = (label: string) => {
     setExpandedMobile(expandedMobile === label ? null : label);
@@ -83,11 +90,11 @@ export default function Navigation({...boxProps}: NavigationProps) {
       boxShadow="sm"
       zIndex={1000}
       width="100%"
-      transform={scrollDirection == "down" && !open ? "translateY(-100%)" : "translateY(0)"}
-      visibility={scrollDirection == "down" && !open ? "hidden" : "visible"}
-      transition={scrollDirection == "down" && !open 
-        ? "transform 0.3s ease-out, visibility 0s linear 0.3s"
-        : "transform 0.3s ease-out, visibility 0s linear 0s"
+      transform={showHeader ? "translateY(0)" : "translateY(-100%)"}
+      visibility={showHeader ? "visible" : "hidden"}
+      transition={showHeader 
+        ? "transform 0.3s ease-out, visibility 0s linear 0s"
+        : "transform 0.3s ease-out, visibility 0s linear 0.3s"
       }
       {...boxProps}>
       <Flex

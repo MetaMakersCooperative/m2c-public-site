@@ -17,16 +17,17 @@ import HomeBanner from "./home-banner";
 import ExportedImage from "next-image-export-optimizer";
 import BecomeMemberCard from "./membership/become-member-card";
 import BecomeMemberFixed from "./membership/become-member-fixed";
-import useScrollPredicate from "@/components/useScrollPredicate";
-import { ImageGallery } from "@/components/ui/image-gallery";
 import { _facilityImages } from "@/data/facility";
 import { ImageCarousel } from "@/components/ui/image-carousel";
+import useScrollY from "@/components/useScrollY";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const shouldDisplayCallToAction = (scrollY:number) => {
-    return scrollY >= 1350;
-  };
-  var displayCallToAction = useScrollPredicate(shouldDisplayCallToAction, false);
+  var {scrollYPosition} = useScrollY();
+  const [displayCallToAction, setDisplayCallToAction] = useState(false);
+  useEffect(() => {
+    setDisplayCallToAction(scrollYPosition > 1350);
+  },[scrollYPosition, setDisplayCallToAction])
 
   return (
     <VStack width="100%" gap={0} marginBottom={{base: "80px", mdDown: "100px"}}>
