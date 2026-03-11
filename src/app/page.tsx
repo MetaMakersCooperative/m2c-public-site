@@ -21,6 +21,7 @@ import { _facilityImages } from "@/data/facility";
 import { ImageCarousel } from "@/components/ui/image-carousel";
 import useScrollY from "@/components/useScrollY";
 import { useEffect, useState } from "react";
+import WordDefinition from "./word-definition";
 
 export default function Home() {
   var {scrollYPosition} = useScrollY();
@@ -58,20 +59,7 @@ export default function Home() {
         </Section>
         <Section>
           <Stack direction={{base: "row", mdDown: "column"}} alignItems={"center"} gap={12} justifyContent={"center"}>
-            <Box width={{base: "33%", mdDown: "100%"}}>
-              <Heading as ="h2" size="4xl" width={"fit-content"}>
-                makerspace
-              <Text display={"inline"} as="span" fontSize="lg" fontWeight={"light"} paddingLeft={4}>noun</Text>
-              </Heading>
-              <Blockquote.Root fontSize={{ base: "xl", mdDown: "md" }} px={4} >
-                <Blockquote.Content>
-                  a place in which people with shared interests, especially in computing or technology, can gather to work on projects while sharing ideas, equipment, and knowledge.
-                </Blockquote.Content>
-                <Blockquote.Caption>
-                  <cite>- Oxford Dictionary of English</cite>
-                </Blockquote.Caption>
-              </Blockquote.Root>
-            </Box>
+            <WordDefinition word="makerspace" type="noun" definition="a place where people with shared interests can gather to work on projects while sharing ideas, equipment, and knowledge." width={{base: "33%", mdDown: "100%"}} />
             <BecomeMemberCard width={{base: "66%", mdDown: "100%"}} />
           </Stack>
         </Section>

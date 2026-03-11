@@ -228,7 +228,8 @@ export const _zonePages: ZoneProps[] = [
         title: "Versatile Material Cutting",
         image: "images/benefits/machining-cnc.webp",
         description:
-          "Cut wood, aluminum, and plastic with our CNC router, giving you flexibility to work with the materials best suited for your projects.",
+          "Cut wood and plastic with our CNC router, giving you flexibility to work with the materials best suited for your projects.",
+        footnote: "Our machine can also cut Aluminum but requires additional tooling and special approval."
       },
       {
         title: "Affordable Machine Time",
@@ -383,10 +384,11 @@ export const _zonePages: ZoneProps[] = [
           "Access bench grinders and a complete set of hand tools for tool maintenance, sharpening, and precision machining work.",
       },
       {
-        title: "CNC Aluminum and Plastic",
+        title: "CNC Plastic",
         image: "images/benefits/machining-cnc.webp",
         description:
-          "Use our CNC equipment to machine aluminum and plastic with precision for prototyping and production runs.",
+          "Use our CNC equipment to machine plastic with precision for prototyping and production runs.",
+        footnote: "Our machine can also cut Aluminum but requires additional tooling and special approval."
       },
     ],
   },
@@ -411,23 +413,17 @@ export const _zonePages: ZoneProps[] = [
     ],
     benefits: [
       {
-        title: "Glass Grinders",
-        image: "images/benefits/stained-glass-grinders.webp",
-        description:
-          "Use our glass grinders for smoothing edges and shaping glass pieces with precision for professional-quality results.",
-      },
-      {
-        title: "Glass Vertical Storage",
+        title: "Dedicated Stained Glass Workspace",
         image: "images/benefits/stained-glass-storage.webp",
         description:
-          "Access our organized vertical storage system for convenient browsing and storage of glass sheets and pieces.",
+          "Enjoy our dedicated stained glass cutting, grinding, project storage and vertical glass storage area. We isolated this area to keep glass shards and dust under control as much as possible.",
       },
-      {
-        title: "Light Table",
-        image: "images/benefits/stained-glass-light-table.webp",
-        description:
-          "Work on our light table to view glass colors and patterns clearly, making design and assembly easier.",
-      },
+      // {
+      //   title: "Light Table",
+      //   image: "images/benefits/stained-glass-light-table.webp",
+      //   description:
+      //     "Work on our light table to view glass colors and patterns clearly, making design and assembly easier.",
+      // },
       {
         title: "Hand Tools for Cutting and Soldering",
         image: "images/benefits/stained-glass-hand-tools.webp",

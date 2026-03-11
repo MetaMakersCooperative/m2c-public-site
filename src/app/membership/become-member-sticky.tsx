@@ -2,20 +2,26 @@
 import { Box, Center, CenterProps, Stack, Text } from "@chakra-ui/react";
 import BecomeMemberButtons from "./become-member-buttons";
 import useScrollY from "@/components/useScrollY";
-import { HEADER_HEIGHT } from "../(common)/navigation";
+import { HEADER_ALWAYS_SHOW_TOP, HEADER_HEIGHT } from "../(common)/navigation";
+import { useEffect, useState } from "react";
 
 export interface BecomeMemberStickyProps extends CenterProps{
     hideLearnMoreButton?: boolean;
 }
 
 export default function BecomeMemberSticky({hideLearnMoreButton = false, ...props}: BecomeMemberStickyProps) {
-    const {scrollYDirection} = useScrollY();
+    const {scrollYDirection, scrollYPosition} = useScrollY();
+      const [offsetSticky, setOffsetSticky] = useState(true);
+      useEffect(() => {
+        //offset the sticky if header is shown
+        setOffsetSticky(scrollYPosition < HEADER_ALWAYS_SHOW_TOP || scrollYDirection != "down")
+      }, [scrollYDirection, scrollYPosition, offsetSticky])
     return (
             <Center                 
                 {...props}
                 position="sticky"
                 backgroundColor={{_light: "white", _dark:"#111"}}
-                top={scrollYDirection == "up" ? HEADER_HEIGHT : "0px"}
+                top={offsetSticky ? HEADER_HEIGHT : "0px"}
                 zIndex="900"
                 boxShadow={"sm"}
                 width="100%"

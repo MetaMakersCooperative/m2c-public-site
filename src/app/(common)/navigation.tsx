@@ -22,6 +22,7 @@ import useScrollDirection from "@/components/useScrollY";
 import useScrollY from "@/components/useScrollY";
 
 export const HEADER_HEIGHT = "72px";
+export const HEADER_ALWAYS_SHOW_TOP = 150;
 
 const navItems = [
   { label: "About", href: "/about",
@@ -74,7 +75,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
 
   useEffect(() => {
     //show the header when near the top of page (such as when dragging from top to refresh) or when mobile menu is open, or when scrolling up (or initial state)
-    setShowHeader(scrollYPosition < 300 || open || scrollYDirection != "down")
+    setShowHeader(scrollYPosition < HEADER_ALWAYS_SHOW_TOP || open || scrollYDirection != "down")
   }, [open, scrollYDirection, scrollYPosition, setShowHeader])
 
   const toggleMobileSubmenu = (label: string) => {

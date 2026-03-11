@@ -2,13 +2,25 @@ This is the public site for the Meta Makers Cooperative makerspace.
 
 ## Getting Started
 
-First, run the development server:
+Install nvm, git and your preferred IDE (e.g., VS Code). Install yarn with:
+
+```bash
+npm install --global yarn
+```
+
+Initialize packages with:
+
+```bash
+yarn install
+```
+
+To start the development server, run:
 
 ```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 To compile the project, run:
 
