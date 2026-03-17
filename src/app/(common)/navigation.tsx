@@ -24,20 +24,7 @@ export const HEADER_HEIGHT = "72px";
 export const HEADER_ALWAYS_SHOW_TOP = 150;
 
 const navItems = [
-  { label: "About", href: "/about",
-    submenu: [{
-      label: "Meta Makers Cooperative",
-      href: `/about`,
-    },
-    // {
-    //   label: "Location",
-    //   href: `/location`,
-    // },
-    {
-      label: "News",
-      href: `/news`,
-    }] 
-  },
+  { label: "About", href: "/about" },
   { label: "Membership", href: "/membership" },
   { label: "Classes", href: "/classes" },
   {
@@ -100,7 +87,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
         justify="space-between"
         align="center"
       >
-        <Link href="/">
+        <Link href="/" _focus={{outline: "none"}}>
           <Image src="logos/logo-black.svg" display={{_light: "block", _dark: "none"}} alt="Home" width="40px" />
           <Image src="logos/logo-white.svg" display={{_light: "none", _dark: "block"}} alt="Home" width="40px" />
         </Link>
