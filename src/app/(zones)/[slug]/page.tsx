@@ -33,8 +33,8 @@ export default async function ZonePage({
       <ZoneBanner {...zone}/>
       <BecomeMemberSticky />
       {zone.benefits ? (
-        <Section id="benefits" title="Benefits">
-          <VStack width="100%" gap={4}>
+        <Section id="benefits" title="Benefits" backgroundColor={"bg.muted"}>
+          <VStack width="100%" gap={8}>
             {zone.benefits.map((benefit, index) => (
               <ZoneBenefit key={index} {...benefit} />
             ))}

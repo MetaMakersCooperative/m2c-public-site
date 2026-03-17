@@ -13,7 +13,7 @@ export interface ZoneBenefitProps extends CardRootProps {
 export default function ZoneBenefit({ image, title, description, footnote, ...props }: BenefitProps) {
     return (
         <Card.Root width="100%" flexDirection={{base: "row", mdDown: "column"}} overflow="hidden" {...props}>
-            <Box asChild aspectRatio={{base: "4/3", mdDown:"16/9"}}>
+            <Box asChild aspectRatio={{base: "4/3", mdDown:"16/9"}} mdDown={{width: "100%"}} >
                 <ExportedImage
                     src={image}
                     alt={title}
@@ -24,8 +24,8 @@ export default function ZoneBenefit({ image, title, description, footnote, ...pr
             </Box>
             <VStack  p={4} alignItems={"flex-start"} justifyContent={"space-between"}>
                 <Card.Body>
-                    <Card.Title p={4} fontSize={"4xl"} lineHeight={1.25}>{title}</Card.Title>
-                    <Card.Description p={4} fontSize={"xl"}>{description}</Card.Description>
+                    <Card.Title p={4} fontSize={{base:"4xl", mdDown:"xl"}} lineHeight={1.25}>{title}</Card.Title>
+                    <Card.Description p={4} fontSize={{base:"xl", mdDown:"md"}}>{description}</Card.Description>
                 </Card.Body>
                 {footnote && (
                     <Card.Footer p={4} fontSize={"md"} color="gray.500" justifyContent={"flex-end"}>

@@ -57,7 +57,7 @@ export default function Home() {
           </Stack>
         </Section>
       </VStack>
-      <Section id="zones" title="Zones">
+      <Section id="zones" title="Zones"  backgroundColor={"bg.muted"} >
         <Text fontSize={"xl"} paddingBottom={8}>
           Our makerspace has zones with tools and resources for these areas of
           interest:
