@@ -15,10 +15,9 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose, MdExpandMore } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { _zonePages } from "@/data/zones";
 import { ColorModeButton } from "@/components/ui/color-mode";
-import useScrollDirection from "@/components/useScrollY";
 import useScrollY from "@/components/useScrollY";
 
 export const HEADER_HEIGHT = "72px";
@@ -71,12 +70,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
   const {scrollYDirection, scrollYPosition} = useScrollY();
   const {open, onToggle } = useDisclosure();
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
-  const [showHeader, setShowHeader] = useState(true);
-
-  useEffect(() => {
-    //show the header when near the top of page (such as when dragging from top to refresh) or when mobile menu is open, or when scrolling up (or initial state)
-    setShowHeader(scrollYPosition < HEADER_ALWAYS_SHOW_TOP || open || scrollYDirection != "down")
-  }, [open, scrollYDirection, scrollYPosition, setShowHeader])
+  const showHeader = scrollYPosition < HEADER_ALWAYS_SHOW_TOP || open || scrollYDirection != "down";
 
   const toggleMobileSubmenu = (label: string) => {
     setExpandedMobile(expandedMobile === label ? null : label);

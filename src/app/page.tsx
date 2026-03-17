@@ -2,9 +2,7 @@
 import {
   VStack,
   Text,
-  Blockquote,
   Stack,
-  Heading,
   Box,
   Grid,
   Center,
@@ -20,16 +18,11 @@ import BecomeMemberFixed from "./membership/become-member-fixed";
 import { _facilityImages } from "@/data/facility";
 import { ImageCarousel } from "@/components/ui/image-carousel";
 import useScrollY from "@/components/useScrollY";
-import { useEffect, useState } from "react";
 import WordDefinition from "./word-definition";
 
 export default function Home() {
   var {scrollYPosition} = useScrollY();
-  const [displayCallToAction, setDisplayCallToAction] = useState(false);
-  useEffect(() => {
-    setDisplayCallToAction(scrollYPosition > 1350);
-  },[scrollYPosition, setDisplayCallToAction])
-
+  const displayCallToAction = scrollYPosition > 1350;
   return (
     <VStack width="100%" gap={0} marginBottom={{base: "80px", mdDown: "100px"}}>
       <VStack width="100%" gap={0}>
