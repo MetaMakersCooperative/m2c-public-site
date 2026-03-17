@@ -222,7 +222,7 @@ export const _zonePages: ZoneProps[] = [
         title: "Professional Speed and Precision",
         image: "images/benefits/cnc-large.webp",
         description:
-          "Experience professional-grade speed and precision with a rugged, vibration-reducing design, state-of-the-art Masso controlls, and a 6HP spindle that achieves speeds up to 24,000 RPM and IPM feed rate up to 1200w. Our advanced spoilboard with threaded inserts allows for speedy and precise material hold-down.",
+          "Experience professional-grade speed and precision with a rugged, vibration-reducing design, state-of-the-art Masso controls, and a 6HP spindle that achieves speeds up to 24,000 RPM and IPM feed rate up to 1200w. Our advanced spoilboard with threaded inserts allows for speedy and precise material hold-down.",
       },
       {
         title: "Versatile Material Cutting",
@@ -424,7 +424,7 @@ export const _zonePages: ZoneProps[] = [
         title: "Vertical and Horizontal Storage",
         image: "images/benefits/stained-glass-storage.webp",
         description:
-          "Members can organize and store thier own glass sheets in convenient vertical storage cubbies. Access a range of hand tools for scoring and snapping. Store your work-in-progress projects on horizontal storage trays.",
+          "Members can organize and store their own glass sheets in convenient vertical storage cubbies. Access a range of hand tools for scoring and snapping. Store your work-in-progress projects on horizontal storage trays.",
       },
       {
         title: "Layout and Soldering Station",
@@ -473,10 +473,10 @@ export const _zonePages: ZoneProps[] = [
           "Access easy-to-use, high-quality printers that are maintained by community members to ensure reliable performance for your projects.",
       },
       {
-        title: "Heatset Insert Tools",
+        title: "Heat-set Insert Tools",
         image: "images/benefits/3d-printing-inserts.webp",
         description:
-          "Use our heatset insert tools to add threaded inserts to your prints for stronger, more durable connections and assemblies.",
+          "Use our heat-set insert tools to add threaded inserts to your prints for stronger, more durable connections and assemblies.",
       },
       {
         title: "Post Processing Tools",
