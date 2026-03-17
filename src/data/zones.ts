@@ -405,19 +405,9 @@ export const _zonePages: ZoneProps[] = [
       {
           imageSrc: "images/facility/stained-glass-facility-2.webp",
           altText: "Stained Glass Area"
-      },
-      {
-          imageSrc: "images/benefits/stained-glass-storage.webp",
-          altText: "Stained Glass Area"
       }
     ],
     benefits: [
-      {
-        title: "Dedicated Stained Glass Workspace",
-        image: "images/benefits/stained-glass-storage.webp",
-        description:
-          "Enjoy our dedicated stained glass cutting, grinding, project storage and vertical glass storage area. We isolated this area to keep glass shards and dust under control as much as possible.",
-      },
       // {
       //   title: "Light Table",
       //   image: "images/benefits/stained-glass-light-table.webp",
@@ -425,10 +415,22 @@ export const _zonePages: ZoneProps[] = [
       //     "Work on our light table to view glass colors and patterns clearly, making design and assembly easier.",
       // },
       {
-        title: "Hand Tools for Cutting and Soldering",
+        title: "Glass Cutting and Grinding Tools",
+        image: "images/facility/stained-glass-facility-2.webp",
+        description:
+          "Enjoy our dedicated workspace for cutting and grinding stained glass sheets and pieces. We isolated this area to keep glass shards and dust under control as much as possible.",
+      },
+      {
+        title: "Vertical and Horizontal Storage",
+        image: "images/benefits/stained-glass-storage.webp",
+        description:
+          "Browse our shared collection of glass sheets in convenient vertical storage cubbies. Access a range of hand tools for scoring and snapping. Store your work-in-progress projects on horizontal storage trays.",
+      },
+      {
+        title: "Layout and Soldering Station",
         image: "images/benefits/stained-glass-hand-tools.webp",
         description:
-          "Access a complete set of hand tools including glass cutters and soldering equipment for creating and joining your pieces.",
+          "Layout, foil and solder your creations on our dedicated solder station.  Use pins to hold your layout in place while you work.",
       },
       {
         title: "Convenient Location",

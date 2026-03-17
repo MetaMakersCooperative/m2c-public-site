@@ -25,7 +25,7 @@ export const _facilityImages: ImageDetail[] = [
         altText: "Entrance to Workshop"
     },     
     {
-        imageSrc: "images/benefits/stained-glass-storage.webp",
+        imageSrc: "images/facility/stained-glass-facility-2.webp",
         altText: "Stained Glass Area"
     },
     {
