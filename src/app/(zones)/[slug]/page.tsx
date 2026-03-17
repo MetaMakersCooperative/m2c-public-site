@@ -48,7 +48,7 @@ export default async function ZonePage({
         <ImageCarousel images={zone.facilityImages}/>
       </Section>
       {zone.tools && (
-        <Section id="tools" title="Tools">
+        <Section id="tools" title="Tools" backgroundColor={"bg.muted"}>
           <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>
             Looking for something specific?  Here's a list of {zone.name} tools we have in the shop:
           </Text>
