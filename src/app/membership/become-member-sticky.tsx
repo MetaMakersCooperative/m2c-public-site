@@ -24,8 +24,8 @@ export default function BecomeMemberSticky({hideLearnMoreButton = false, ...prop
       >
                 <Stack  p={4} direction={{base: "row", mdDown: "column"}} justifyContent={"center"} alignItems={"center"}>
                     
-                    <Text textAlign="center" fontSize={{base: "xl", mdDown: "md"}}>Interested in membership?</Text>
-                    <Text fontSize={"xl"} display={{base: "flex", mdDown:"none"}}>Sign up here →</Text>
+                    <Text textAlign="center" fontSize={{base: "lg", mdDown: "md"}}>Interested in membership?</Text>
+                    <Text fontSize={{base: "lg", mdDown: "md"}} display={{base: "flex", mdDown:"none"}}>Sign up here →</Text>
                     
                     <BecomeMemberButtons hideLearnMoreButton={hideLearnMoreButton} />
                 </Stack>

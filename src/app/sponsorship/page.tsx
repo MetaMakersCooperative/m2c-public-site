@@ -14,18 +14,18 @@ export default function SponsorshipPage() {
             <Box as="section" id="sponsorship" p={8} width={"100%"}>
                 <BecomeSponsorCard />
             </Box>
-            <Section id="current-sponsors" title="Current Sponsors">  
-                <Text fontSize={"xl"} paddingBottom={8}>Thanks to our current sponsors for their generous support:</Text>
+            <Section backgroundColor={"bg.muted"} id="current-sponsors" title="Current Sponsors">  
+                <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>Thanks to our current sponsors for their generous support:</Text>
                 <CurrentSponsorGrid />
             </Section>
             <Section id="past-sponsors" title="Past Sponsors">  
-                <Text fontSize={"xl"} paddingBottom={8}>Thanks to our past sponsors for their generous support:</Text>
-                <SponsorMarquee items={pastSponsorMarqueeItems} />
+                <Text fontSize={{base: "xl", mdDown:"md"}}>Thanks to our past sponsors for their generous support:</Text>
+                <SponsorMarquee items={pastSponsorMarqueeItems} marginY={8} />
                 <PastSponsorList />
             </Section>
             <Section id="other-supporters" title="Other Supporters">
-                <Text fontSize={"xl"} paddingBottom={8}>Thanks to our non-monetary supporters who have donated materials, equipment or services:</Text>
-                <SponsorMarquee items={otherSupportMarqueeItems} />
+                <Text fontSize={{base: "xl", mdDown:"md"}}>Thanks to our non-monetary supporters who have donated materials, equipment or services:</Text>
+                <SponsorMarquee items={otherSupportMarqueeItems}  marginTop={8} marginBottom={4} />
                 <List.Root p={8}>
                     {_otherSupport.map((x,i) => (<List.Item key={i}>{x.name}</List.Item>))}
                 </List.Root>

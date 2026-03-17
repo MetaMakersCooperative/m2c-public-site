@@ -1,20 +1,20 @@
 "use client"
 
 import { _pastSponsors } from "@/data/sponsors";
-import { Image, Marquee } from "@chakra-ui/react"
+import { Image, Marquee, MarqueeRootProps } from "@chakra-ui/react"
 
 export interface MarqueeItem {
     imageSrc: string;
     altText: string; 
 }
 
-export interface MarqueeProps {
+export interface SponsorMarqueeProps extends MarqueeRootProps {
     items: MarqueeItem[]
 }
 
 
-const SponsorMarquee = ({items}: MarqueeProps) => (
-  <Marquee.Root py={4} autoFill spacing="2rem" backgroundColor={"white"}>
+const SponsorMarquee = ({items, ...props}: SponsorMarqueeProps) => (
+  <Marquee.Root py={4} autoFill spacing="2rem" backgroundColor={"white"} {...props}>
     <Marquee.Viewport>
       <Marquee.Content>
         {items.map((item, i) => (

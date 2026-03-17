@@ -24,7 +24,7 @@ export default function CurrentSponsorGrid({...props}: CurrentSponsorGridProps) 
     };
 
     return (
-        <Box {...props}>
+        <Box {...props} backgroundColor={"bg.muted"} borderRadius={8}>
             {Object.entries(groupedByYear)
                 .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
                 .map(([year, yearSponsors]) => {

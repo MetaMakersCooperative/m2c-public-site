@@ -24,7 +24,7 @@ export default function ZoneBenefit({ image, title, description, footnote, ...pr
             </Box>
             <VStack  p={4} alignItems={"flex-start"} justifyContent={"space-between"}>
                 <Card.Body>
-                    <Card.Title p={4} fontSize={{base:"4xl", mdDown:"xl"}} lineHeight={1.25}>{title}</Card.Title>
+                    <Card.Title p={4} fontSize={{base:"3xl", mdDown:"xl"}} lineHeight={1.25}>{title}</Card.Title>
                     <Card.Description p={4} fontSize={{base:"xl", mdDown:"md"}}>{description}</Card.Description>
                 </Card.Body>
                 {footnote && (

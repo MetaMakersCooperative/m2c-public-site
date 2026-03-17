@@ -28,7 +28,7 @@ export default function Home() {
       <VStack width="100%" gap={0}>
         <HomeBanner />
         <Section p={4}>
-          <Text fontSize={{base: "2xl", mdDown: "md"}} textAlign={"center"}>
+          <Text fontSize={{base: "xl", mdDown: "md"}} textAlign={"center"}>
             Windsor's nonprofit community makerspace!
           </Text>
         </Section>
@@ -58,14 +58,14 @@ export default function Home() {
         </Section>
       </VStack>
       <Section id="zones" title="Zones"  backgroundColor={"bg.muted"} >
-        <Text fontSize={"xl"} paddingBottom={8}>
+        <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>
           Our makerspace has zones with tools and resources for these areas of
           interest:
         </Text>
         <ZoneGrid />
       </Section>
       <Section id="facility" title="Facility">
-        <Text fontSize={"xl"} paddingBottom={8}>
+        <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>
           Our makerspace is 2000 square feet with ground floor access and an overhead door.  The space is split into two sections: one area for loud and dusty activities such as woodworking and machining, and another for quiet and clean activities such as 3D printing and fibre arts.
         </Text>
         <ImageCarousel images={_facilityImages}/>

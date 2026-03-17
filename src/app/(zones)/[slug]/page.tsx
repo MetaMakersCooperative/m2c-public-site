@@ -42,14 +42,14 @@ export default async function ZonePage({
         </Section>
       ) : null}
       <Section id="facility" title="Facility">
-        <Text fontSize={"xl"} paddingBottom={8}>
+        <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>
           Here's how the {zone.name} zone is setup in the makerspace:
         </Text>
         <ImageCarousel images={zone.facilityImages}/>
       </Section>
       {zone.tools && (
         <Section id="tools" title="Tools">
-          <Text fontSize={"xl"} paddingBottom={8}>
+          <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>
             Looking for something specific?  Here's a list of {zone.name} tools we have in the shop:
           </Text>
           <List.Root px={4} listStylePosition={"inside"}>
