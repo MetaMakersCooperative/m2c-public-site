@@ -424,7 +424,7 @@ export const _zonePages: ZoneProps[] = [
         title: "Vertical and Horizontal Storage",
         image: "images/benefits/stained-glass-storage.webp",
         description:
-          "Browse our shared collection of glass sheets in convenient vertical storage cubbies. Access a range of hand tools for scoring and snapping. Store your work-in-progress projects on horizontal storage trays.",
+          "Members can organize and store thier own glass sheets in convenient vertical storage cubbies. Access a range of hand tools for scoring and snapping. Store your work-in-progress projects on horizontal storage trays.",
       },
       {
         title: "Layout and Soldering Station",
