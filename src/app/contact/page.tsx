@@ -6,13 +6,13 @@ import SocialMediaLinks from "./social-media-links";
 export default function ContactPage() {
     return (
         <>
-            <Section id="contact-us" title="Contact Us">  
+            <Section id="contact-us" title="Contact Us" backgroundColor={"bg.muted"}>  
                 <ContactForm />
             </Section>
             <Section id="social-media" title="Social Media">
                 <SocialMediaLinks />
             </Section>
-            <Section>
+            <Section backgroundColor={"bg.muted"}>
                 <RecentFacebookPosts />
             </Section>
         </>

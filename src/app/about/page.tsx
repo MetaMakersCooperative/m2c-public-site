@@ -8,7 +8,7 @@ export default function AboutPage() {
             {/* <Section id="story" title="Our Story">  
                 <p></p>
             </Section> */}
-            <Section id="mission" title="Mission">  
+            <Section id="mission" title="Mission" backgroundColor={"bg.muted"}>  
                 <Text>Meta Makers Cooperative (M2C) is a non-profit makerspace in Windsor. Our mission is to provide access to tools and resources to maximize human potential, enabling our members to be autonomous, achieve self mastery and fulfill a sense of purpose. We also believe that science, technology, engineering, arts, and math are an integral part of the making process and when people make, they become empowered. We are a social enterprise with a diverse array of skilled members who help make Makers.</Text>
             </Section>
             <Section id="vision" title="Future Vision">  
@@ -27,7 +27,7 @@ export default function AboutPage() {
             {/* <Section id="directors" title="Directors">  
                 <p>todo</p>
             </Section> */}
-            <Section id="news" title="News">  
+            <Section id="news" title="News" backgroundColor={"bg.muted"}>  
                 <VStack alignItems={"left"}>
                     <Link variant={"underline"} target="blank" href="https://bizxmagazine.com/events/grand-opening-of-windsors-only-makerspace/">Grand Opening of Windsor's Only Makerspace <LuExternalLink /></Link>
                     <Link variant={"underline"} target="blank" href="https://youtu.be/jRKCQpYDlug">Grand Opening Video by Kannex Media <LuExternalLink /></Link>

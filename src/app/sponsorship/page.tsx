@@ -11,7 +11,7 @@ export default function SponsorshipPage() {
     const otherSupportMarqueeItems = _otherSupport.filter(x => x.image != null).map(x =>  {return {imageSrc: x.image!, altText: x.name};});
     return (
         <>
-            <Box as="section" id="sponsorship" p={8} width={"100%"}>
+            <Box as="section" id="sponsorship" p={8} width={"100%"} backgroundColor={"bg.muted"}>
                 <BecomeSponsorCard />
             </Box>
             <Section backgroundColor={"bg.muted"} id="current-sponsors" title="Current Sponsors">  

@@ -80,7 +80,7 @@ export default function ContactForm({...props}: ContactFormProps) {
           <form onSubmit={handleSubmit(onSubmit)}>
             <Field.Root invalid={!!errors.name}>
               <Field.Label>Your Name</Field.Label>
-              <Input placeholder="Enter your name" {...register("name", { required: "Name is required." })} paddingInlineStart={2}/>
+              <Input placeholder="Enter your name" {...register("name", { required: "Name is required." })} paddingInlineStart={2} backgroundColor={"bg.panel"}/>
               <Field.ErrorText>{errors.name?.message}</Field.ErrorText>
             </Field.Root>
 
@@ -90,13 +90,13 @@ export default function ContactForm({...props}: ContactFormProps) {
                     value: /\S+@\S+\.\S+/,
                     message: "Please enter a valid email address.",
                 } 
-              })}  paddingInlineStart={2} />
+              })}  paddingInlineStart={2}  backgroundColor={"bg.panel"}/>
               <Field.ErrorText>{errors.email?.message}</Field.ErrorText>
             </Field.Root>
 
             <Field.Root invalid={!!errors.message}>
               <Field.Label>Your Message</Field.Label>
-              <Textarea rows={6} placeholder="Enter your message" {...register("message", { required: "Message is required." })} paddingInlineStart={2} paddingBlock={2} />
+              <Textarea rows={6} placeholder="Enter your message" {...register("message", { required: "Message is required." })} paddingInlineStart={2} paddingBlock={2}  backgroundColor={"bg.panel"}/>
               <Field.ErrorText>{errors.message?.message}</Field.ErrorText>
             </Field.Root>
 

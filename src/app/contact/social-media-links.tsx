@@ -30,6 +30,7 @@ export default function SocialMediaLinks({...props}: SocialMediaLinksProps) {
                             alt="Instagram Logo"
                             width="103px"
                             height="29px"
+                            _dark={{filter: "invert(100%)"}}
                         />
                         @m2cyqg
                     </Link>

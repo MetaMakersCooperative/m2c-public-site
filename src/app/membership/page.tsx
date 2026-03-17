@@ -8,7 +8,7 @@ export default function MembershipPage() {
     return (
         <>
             <BecomeMemberSticky hideLearnMoreButton={true} />
-            <Section id="member-benefits" title="Member Benefits">  
+            <Section id="member-benefits" title="Member Benefits" backgroundColor={"bg.muted"}>  
                 <Text fontSize={{base: "xl", mdDown:"md"}}>Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to. People come for the tools and stay to explore, collaborate and make. It affords them the opportunity to socialize, learn and teach. Being a cooperative, our members are active and engaged in all aspects of our organization. Members also benefit from the following member perks:</Text>
                 <MemberBenefitCardGrid />
             </Section>
@@ -16,7 +16,7 @@ export default function MembershipPage() {
                 <Text fontSize={{base: "xl", mdDown:"md"}}>To sign up, click the <Link href="https://www.zeffy.com/en-CA/ticketing/meta-makers-co-operatives-memberships" variant={"underline"} target="blank">"Become a Member"</Link> button to purchase your preferred membership term.  Next, complete our <Link href="forms/membership.pdf" variant={"underline"}>membership form</Link> and email it to <Link href="mailto:membership@metamakers.org" variant={"underline"}>membership@metamakers.org</Link>. We'll respond via email to schedule an orientation.  At the orientation, you'll need to review and accept our <Link href="forms/sop.pdf" variant={"underline"}>standard operating procedures (SOPs)</Link> and sign our <Link href="forms/waiver.pdf" variant={"underline"}>liability waiver</Link>. Finally, we'll provide a tour of the makerspace and issue your keycard.</Text>
                 {/* <Image src="icons/signup.png" alt="Membership Sign-Up Process" objectFit="contain" marginTop={8}/> */}
             </Section>
-            <Section id="pricing" title="Pricing">  
+            <Section id="pricing" title="Pricing" backgroundColor={"bg.muted"}>  
                 <Text fontSize={{base: "xl", mdDown:"md"}}>The cost of membership varies by membership term.  Membership terms are offered on an annual, semi-annual or quarterly basis. Day and week passes are also available. Select a longer membership term for the best price.</Text>
                 <MemberPriceCardGrid />
             </Section>
