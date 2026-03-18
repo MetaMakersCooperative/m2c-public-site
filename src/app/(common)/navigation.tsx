@@ -64,7 +64,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
         align="center"
       >
         <ChakraLink asChild _focus={{outline: "none"}}>
-          <NextLink href="/">
+          <NextLink href="/" onClick={handleMobileClick}>
             <Image src="logos/logo-black.svg" display={{_light: "block", _dark: "none"}} alt="Home" width="40px" />
             <Image src="logos/logo-white.svg" display={{_light: "none", _dark: "block"}} alt="Home" width="40px" />
           </NextLink>

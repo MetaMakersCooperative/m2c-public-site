@@ -6,7 +6,8 @@ import { Provider } from "@/components/ui/provider"
 import Navigation, { HEADER_HEIGHT } from "./(common)/navigation";
 import { Box, VStack } from "@chakra-ui/react";
 import { Toaster } from "@/components/ui/toaster";
-
+import type { Viewport } from 'next'
+ 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -42,4 +43,8 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+
+export const viewport: Viewport = {
+  viewportFit: 'cover'
 }

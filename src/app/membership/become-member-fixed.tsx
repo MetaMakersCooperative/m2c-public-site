@@ -7,7 +7,7 @@ export interface BecomeMemberFixedProps extends CenterProps{
 export default function BecomeMemberFixed({...props}: BecomeMemberFixedProps) {
     return (
             <Center
-                position={"fixed"}
+                position="fixed"
                 bottom={"0"}          
                 backgroundColor={{_light: "white", _dark:"#111"}}
                 width="100%"
