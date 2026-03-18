@@ -1,6 +1,5 @@
 'use client';
 import { Box, BoxProps, useBreakpointValue } from "@chakra-ui/react";
-import { headers } from "next/headers";
 
 export interface RecentFacebookPostsProps extends BoxProps {
 

@@ -1,5 +1,4 @@
 import { Button, HStack, StackProps } from "@chakra-ui/react";
-import { LuExternalLink } from "react-icons/lu";
 import NextLink from "next/link";
 
 export interface BecomeMemberProps extends StackProps{

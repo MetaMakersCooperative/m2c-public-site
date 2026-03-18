@@ -1,8 +1,6 @@
 'use client';
-import { BenefitProps } from '@/data/zones';
 import { Box, Button, Card, CardRootProps, Link, VStack } from '@chakra-ui/react';
 import ExportedImage from 'next-image-export-optimizer';
-import { LuExternalLink } from 'react-icons/lu';
 
 export interface BecomeSponsorCardProps extends CardRootProps {
 
