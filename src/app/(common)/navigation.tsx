@@ -6,7 +6,7 @@ import {
   Button,
   Stack,
   useDisclosure,
-  Link,
+  Link as ChakraLink,
   Menu,
   Accordion,
   Portal,
@@ -16,52 +16,28 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose, MdExpandMore } from "react-icons/md";
 import { useState } from "react";
-import { _zonePages } from "@/data/zones";
+import { _navItems } from "@/data/navigation";
 import { ColorModeButton } from "@/components/ui/color-mode";
 import useScrollY from "@/components/useScrollY";
+import NextLink from "next/link";
 
 export const HEADER_HEIGHT = "72px";
 export const HEADER_ALWAYS_SHOW_TOP = 150;
 
-const navItems = [
-  { label: "About", href: "/about" },
-  { label: "Membership", href: "/membership" },
-  { label: "Classes", href: "/classes" },
-  {
-    label: "Zones",
-    href: "#zones",
-    submenu: _zonePages.map((zone) => ({
-      label: zone.name,
-      href: `/${zone.slug}`,
-    })),
-  },
-  { label: "Funding", href: "/sponsorship" ,
-    submenu: [{
-      label: "Sponsorship",
-      href: `/sponsorship`,
-    },
-    // {
-    //   label: "Grants",
-    //   href: `/grants`,
-    // }
-  ] 
-  },
-  { label: "Contact", href: "/contact" },
-];
-
 export interface NavigationProps extends BoxProps {
-  
 }
 
 export default function Navigation({...boxProps}: NavigationProps) {
   const {scrollYDirection, scrollYPosition} = useScrollY();
-  const {open, onToggle } = useDisclosure();
+  const {open, onToggle, setOpen } = useDisclosure();
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
   const showHeader = scrollYPosition < HEADER_ALWAYS_SHOW_TOP || open || scrollYDirection != "down";
 
   const toggleMobileSubmenu = (label: string) => {
     setExpandedMobile(expandedMobile === label ? null : label);
   };
+
+  const handleMobileClick = () => setOpen(false);
 
   return (
     <Box as="header"
@@ -87,10 +63,12 @@ export default function Navigation({...boxProps}: NavigationProps) {
         justify="space-between"
         align="center"
       >
-        <Link href="/" _focus={{outline: "none"}}>
-          <Image src="logos/logo-black.svg" display={{_light: "block", _dark: "none"}} alt="Home" width="40px" />
-          <Image src="logos/logo-white.svg" display={{_light: "none", _dark: "block"}} alt="Home" width="40px" />
-        </Link>
+        <ChakraLink asChild _focus={{outline: "none"}}>
+          <NextLink href="/">
+            <Image src="logos/logo-black.svg" display={{_light: "block", _dark: "none"}} alt="Home" width="40px" />
+            <Image src="logos/logo-white.svg" display={{_light: "none", _dark: "block"}} alt="Home" width="40px" />
+          </NextLink>
+        </ChakraLink>
 
         {/* Desktop Menu */}
         <Stack 
@@ -100,7 +78,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
           display={{ base: "none", md: "flex" }}
           justifyContent="flex-end"
         >
-          {navItems.map((item) => (
+          {_navItems.map((item) => (
             <Box key={item.label}>
               {item.submenu ? (
                 <Menu.Root>
@@ -119,9 +97,10 @@ export default function Navigation({...boxProps}: NavigationProps) {
                             value={sub.href}
                             asChild
                             padding={4}
-                            _focus={{outline: "none"}}
                           >
-                            <Link href={sub.href}>{sub.label}</Link>
+                            <ChakraLink asChild _focus={{outline: "none"}}>
+                              <NextLink href={sub.href}>{sub.label}</NextLink>
+                            </ChakraLink>
                           </Menu.Item>
                         ))}
                       </Menu.Content>
@@ -130,11 +109,13 @@ export default function Navigation({...boxProps}: NavigationProps) {
                   <Menu.ItemGroup></Menu.ItemGroup>
                 </Menu.Root>
               ) : (
-                <Link href={item.href}>
-                  <Button variant="ghost" padding={4}>
-                    {item.label}
-                  </Button>
-                </Link>
+                <ChakraLink asChild>
+                  <NextLink href={item.href}>
+                    <Button variant="ghost" padding={4}>
+                      {item.label}
+                    </Button>
+                  </NextLink>
+                </ChakraLink>
               )}
             </Box>
           ))}
@@ -163,7 +144,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
           height={`calc(100vh - ${HEADER_HEIGHT})`} /* Fill rest of viewport */
           overflowY="scroll" /* Enable vertical scrolling */
         >
-          {navItems.map((item) => (
+          {_navItems.map((item) => (
             <Box key={item.label}>
               {item.submenu ? (
                 <Box>
@@ -184,16 +165,18 @@ export default function Navigation({...boxProps}: NavigationProps) {
                       <Accordion.ItemContent>
                         <Stack pl={4} gap={0}>
                           {item.submenu.map((sub) => (
-                            <Link key={sub.label} href={sub.href}>
-                              <Button
-                                variant="ghost"
-                                width="100%"
-                                justifyContent="flex-start"
-                                padding={4}
-                              >
-                                {sub.label}
-                              </Button>
-                            </Link>
+                            <ChakraLink key={sub.label} asChild>
+                              <NextLink href={sub.href} onClick={handleMobileClick}>
+                                <Button
+                                  variant="ghost"
+                                  width="100%"
+                                  justifyContent="flex-start"
+                                  padding={4}
+                                >
+                                  {sub.label}
+                                </Button>
+                              </NextLink>
+                            </ChakraLink>
                           ))}
                         </Stack>
                       </Accordion.ItemContent>
@@ -201,11 +184,13 @@ export default function Navigation({...boxProps}: NavigationProps) {
                   </Accordion.Root>
                 </Box>
               ) : (
-                <Link href={item.href}>
-                  <Button variant="ghost" padding={4} width="100%">
-                    {item.label}
-                  </Button>
-                </Link>
+                <ChakraLink asChild>
+                  <NextLink href={item.href} onClick={handleMobileClick}>
+                    <Button variant="ghost" padding={4} width="100%">
+                      {item.label}
+                    </Button>
+                  </NextLink>
+                </ChakraLink>
               )}
             </Box>
           ))}

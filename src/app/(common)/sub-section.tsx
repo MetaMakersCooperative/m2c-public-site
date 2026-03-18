@@ -1,6 +1,3 @@
-import { Box, Heading, HeadingProps } from '@chakra-ui/react';
-import Link from 'next/link';
-import { ReactNode } from 'react';
 import Section, { SectionProps } from './section';
 
 interface SubSectionProps extends SectionProps {

@@ -1,5 +1,6 @@
-import { Button, HStack, Link, StackProps } from "@chakra-ui/react";
+import { Button, HStack, StackProps } from "@chakra-ui/react";
 import { LuExternalLink } from "react-icons/lu";
+import NextLink from "next/link";
 
 export interface BecomeMemberProps extends StackProps{
     hideLearnMoreButton?: boolean;
@@ -10,15 +11,15 @@ export default function BecomeMemberButtons({hideLearnMoreButton = false, ...sta
         <HStack {...stackProps}>
             {!hideLearnMoreButton &&         
                 <Button asChild variant={"outline"} colorPalette={"purple"} size={{base: "xl", mdDown: "sm"}} p={4}>
-                    <Link href="/membership">
+                    <NextLink href="/membership">
                         Learn More
-                    </Link>
+                    </NextLink>
                 </Button>    
             }                
             <Button asChild variant={"solid"} colorPalette={"purple"} size={{base: "xl", mdDown: "sm"}} p={4}>
-                <Link href="https://www.zeffy.com/en-CA/ticketing/meta-makers-co-operatives-memberships" color={"white"} target="_blank">
+                <NextLink href="https://www.zeffy.com/en-CA/ticketing/meta-makers-co-operatives-memberships" color={"white"} target="_blank">
                     Become a Member <LuExternalLink />
-                </Link>
+                </NextLink>
             </Button>
         </HStack>
     );
