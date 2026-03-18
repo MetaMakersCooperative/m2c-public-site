@@ -148,21 +148,21 @@ export default function Navigation({...boxProps}: NavigationProps) {
             <Box key={item.label}>
               {item.submenu ? (
                 <Box>
-                  <Accordion.Root
+                  <Accordion.Root marginBottom={1}
                     value={expandedMobile === item.label ? [item.label] : []}
                   >
                     <Accordion.Item value={item.label}>
                       <Accordion.ItemTrigger 
-                      padding={4}
+                        px={4}
+                        py={2}
                         fontSize={"14px"}
-                          width="100%"
-                          justifyContent="space-between"
-                          onClick={() => toggleMobileSubmenu(item.label)}>
-                        
+                        width="100%"
+                        justifyContent="space-between"
+                        onClick={() => toggleMobileSubmenu(item.label)}>
                           {item.label}
                           <MdExpandMore />
                       </Accordion.ItemTrigger>
-                      <Accordion.ItemContent>
+                      <Accordion.ItemContent marginBottom={1}>
                         <Stack pl={4} gap={0}>
                           {item.submenu.map((sub) => (
                             <ChakraLink key={sub.label} asChild>
