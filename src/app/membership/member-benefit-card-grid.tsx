@@ -7,7 +7,7 @@ export interface MemberBenefitCardGridProps extends GridProps {
 
 export default function MemberBenefitCardGrid( {...props}: MemberBenefitCardGridProps) {
     return (
-        <Grid px={{base:"100px", mdDown: 0}} py={8} gap={8} templateColumns={{base: "repeat(3, 1fr)", mdDown: "repeat(1, 1fr)"}} {...props}>
+        <Grid px={{base:"100px", mdDown: 0}} gap={8} templateColumns={{base: "repeat(3, 1fr)", mdDown: "repeat(1, 1fr)"}} {...props}>
             {_memberBenefits.map((item) => (
                 <Card.Root p={4} gap={4} key={item.title}>
                     <Card.Body asChild>

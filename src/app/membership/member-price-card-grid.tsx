@@ -6,7 +6,7 @@ export interface MemberPriceCardGridProps extends GridProps {
 }
 export default function MemberPriceCardGrid( {...props}: MemberPriceCardGridProps) {
     return (
-        <Grid px={{base:"100px", mdDown: 0}} py={8} gap={8} templateColumns={{base: "repeat(3, 1fr)", mdDown: "repeat(1, 1fr)"}} {...props}>
+        <Grid px={{base:"100px", mdDown: 0}} gap={8} templateColumns={{base: "repeat(3, 1fr)", mdDown: "repeat(1, 1fr)"}} {...props}>
             {_memberPrices.map((item) => (
                 <Card.Root p={4} gap={4} key={item.title} boxShadow={item.isBestValue ? `0 0 10px 3px #9333eabf` : "none"}>
                     <Card.Body asChild>
