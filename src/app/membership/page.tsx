@@ -13,15 +13,14 @@ export default function MembershipPage() {
                 <MemberBenefitCardGrid paddingTop={8} />
             </Section>
             <Section id="sign-up-process" title="Sign-Up Process">
-                <Text fontSize={{base: "xl", mdDown:"md"}}>To sign up, click the <Link href="https://www.zeffy.com/en-CA/ticketing/meta-makers-co-operatives-memberships" variant={"underline"} target="blank">"Become a Member"</Link> button to purchase your preferred membership term.  Next, complete our <Link href="forms/membership.pdf" variant={"underline"}>membership form</Link> and email it to <Link href="mailto:membership@metamakers.org" variant={"underline"}>membership@metamakers.org</Link>. We'll respond via email to schedule an orientation.  At the orientation, you'll need to review and accept our <Link href="forms/sop.pdf" variant={"underline"}>standard operating procedures (SOPs)</Link> and sign our <Link href="forms/waiver.pdf" variant={"underline"}>liability waiver</Link>. Finally, we'll provide a tour of the makerspace and issue your keycard.</Text>
-                {/* <Image src="icons/signup.png" alt="Membership Sign-Up Process" objectFit="contain" marginTop={8}/> */}
+                <Text fontSize={{base: "xl", mdDown:"md"}}>To sign up, click the <Link href="/join" variant={"underline"}>"Become a Member"</Link> button to purchase your preferred membership term.  Next, complete our <Link href="forms/membership.pdf" variant={"underline"}>membership form</Link> and email it to <Link href="mailto:membership@metamakers.org" variant={"underline"}>membership@metamakers.org</Link>. We'll respond via email to schedule an orientation.  At the orientation, you'll need to review and accept our <Link href="forms/sop.pdf" variant={"underline"}>standard operating procedures (SOPs)</Link> and sign our <Link href="forms/waiver.pdf" variant={"underline"}>liability waiver</Link>. Finally, we'll provide a tour of the makerspace and issue your keycard.</Text>
             </Section>
             <Section id="pricing" title="Pricing" backgroundColor={"bg.muted"}>  
                 <Text fontSize={{base: "xl", mdDown:"md"}}>The cost of membership varies by membership term.  Membership terms are offered on an annual, semi-annual or quarterly basis. Day and week passes are also available. Select a longer membership term for the best price.</Text>
                 <MemberPriceCardGrid paddingTop={8} />
             </Section>
             <Section id="payment-options" title="Payment Options">  
-                <Text fontSize={{base: "xl", mdDown:"md"}}>For automated payments, we accept credit and debit cards through Zeffy (click the <Link href="https://www.zeffy.com/en-CA/ticketing/meta-makers-co-operatives-memberships" variant={"underline"}  target="blank">"Become a Member"</Link> button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org). To pay in person, complete the membership form and let us know you intend to pay in person when you email us.</Text>
+                <Text fontSize={{base: "xl", mdDown:"md"}}>For automated payments, we accept credit and debit cards through Zeffy (click the <Link href="/join" variant={"underline"}>"Become a Member"</Link> button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org). To pay in person, complete the membership form and let us know you intend to pay in person when you email us.</Text>
             </Section>
         </>
     );

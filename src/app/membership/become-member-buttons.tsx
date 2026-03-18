@@ -17,8 +17,8 @@ export default function BecomeMemberButtons({hideLearnMoreButton = false, ...sta
                 </Button>    
             }                
             <Button asChild variant={"solid"} colorPalette={"purple"} size={{base: "xl", mdDown: "sm"}} p={4}>
-                <NextLink href="https://www.zeffy.com/en-CA/ticketing/meta-makers-co-operatives-memberships" color={"white"} target="_blank">
-                    Become a Member <LuExternalLink />
+                <NextLink href="/join" color={"white"}>
+                    Become a Member
                 </NextLink>
             </Button>
         </HStack>

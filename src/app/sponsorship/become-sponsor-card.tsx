@@ -18,8 +18,8 @@ export default function BecomeSponsorCard({...props}:BecomeSponsorCardProps) {
                 </Card.Body>
                 <Card.Footer p={4} fontSize={"md"} color="gray.500" justifyContent={"flex-end"}>
                     <Button asChild variant={"solid"} colorPalette={"purple"} size={"xl"} p={4}>
-                        <Link href="https://www.zeffy.com/en-CA/ticketing/gearing-up-for-growth" color={"white"} target="_blank">
-                            Become a Sponsor <LuExternalLink />
+                        <Link href="/gear-up" color={"white"}>
+                            Become a Sponsor
                         </Link>
                     </Button>
                 </Card.Footer>

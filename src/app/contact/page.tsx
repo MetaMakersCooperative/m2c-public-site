@@ -1,3 +1,4 @@
+import { Stack } from "@chakra-ui/react";
 import Section from "../(common)/section";
 import ContactForm from "./contact-form";
 import RecentFacebookPosts from "./recent-facebook-posts";
@@ -10,10 +11,10 @@ export default function ContactPage() {
                 <ContactForm />
             </Section>
             <Section id="social-media" title="Social Media">
-                <SocialMediaLinks />
-            </Section>
-            <Section backgroundColor={"bg.muted"}>
-                <RecentFacebookPosts />
+                <Stack direction={{base: "row", mdDown: "column"}} justifyContent={"space-evenly"} alignItems={"center"}>
+                    <SocialMediaLinks />
+                    <RecentFacebookPosts />
+                </Stack>
             </Section>
         </>
     );

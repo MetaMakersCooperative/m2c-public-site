@@ -1,14 +1,19 @@
-import { Center, CenterProps } from "@chakra-ui/react";
+'use client';
+import { Box, BoxProps, useBreakpointValue } from "@chakra-ui/react";
+import { headers } from "next/headers";
 
-export interface RecentFacebookPostsProps extends CenterProps {
+export interface RecentFacebookPostsProps extends BoxProps {
 
 }
 
-export default function RecentFacebookPosts({...props}: CenterProps) {
-    const rawHtml = `<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FM2CYQG&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`
+export default function RecentFacebookPosts({...props}: RecentFacebookPostsProps) {
+  const width = useBreakpointValue({base: "400", mdDown: "300"});
   return (
-    <Center {...props} overflowX="hidden">
-        <div dangerouslySetInnerHTML={{ __html: rawHtml }} />
-    </Center>
+        <Box asChild {...props} p={{mdDown: 8}} margin={"0 0"}>
+            <iframe title="Meta Makers Cooperative Facebook Page" width={width} height="700"
+                src={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FM2CYQG&tabs=timeline&width=${width}&height=700&adapt_container_width=true`}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+        </Box>
   );
 }

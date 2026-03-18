@@ -1,17 +1,17 @@
 'use client';
 
-import { Box, Center, Link, VStack, Image, CenterProps } from "@chakra-ui/react";
+import { Box, Center, Link, VStack, Image, CenterProps, BoxProps } from "@chakra-ui/react";
 
-export interface SocialMediaLinksProps extends CenterProps {
+export interface SocialMediaLinksProps extends BoxProps {
 
 }
 export default function SocialMediaLinks({...props}: SocialMediaLinksProps) {
     return (
-        <Center {...props}>
-            <VStack gap={8}>
+        <Box {...props} paddingTop={{mdDown: 8}}>
+            <VStack gap={8} textAlign={"center"}>
                 {/* Facebook */}
                 <Box>
-                    <Link href="https://www.facebook.com/M2CYQG/" fontSize={"xl"}>
+                    <Link href="https://www.facebook.com/M2CYQG/" fontSize={{base: "xl", mdDown: "md"}}>
                         <Image
                             src="logos/social/facebook.png"
                             alt="Facebook Logo"
@@ -24,7 +24,7 @@ export default function SocialMediaLinks({...props}: SocialMediaLinksProps) {
 
                 {/* Instagram */}
                 <Box>
-                    <Link href="https://www.instagram.com/m2cyqg/" fontSize={"xl"}>
+                    <Link href="https://www.instagram.com/m2cyqg/" fontSize={{base: "xl", mdDown: "md"}}>
                         <Image
                             src="logos/social/instagram.png"
                             alt="Instagram Logo"
@@ -38,7 +38,7 @@ export default function SocialMediaLinks({...props}: SocialMediaLinksProps) {
 
                 {/* Discord */}
                 <Box>
-                    <Link href="https://discord.gg/nSWAjkxtDp" fontSize={"xl"}>
+                    <Link href="https://discord.gg/nSWAjkxtDp" fontSize={{base: "xl", mdDown: "md"}}>
                         <Image
                             src="logos/social/discord.svg"
                             alt="Discord Logo"
@@ -49,6 +49,6 @@ export default function SocialMediaLinks({...props}: SocialMediaLinksProps) {
                     </Link>
                 </Box>
             </VStack>
-        </Center>
+        </Box>
     );
 }
