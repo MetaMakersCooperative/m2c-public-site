@@ -1,4 +1,4 @@
-import ZeffyCampaign from "../zeffy-campaign";
+import ZeffyCampaign from "../(common)/zeffy-campaign";
 
 export default function JoinPage() {
     return (
