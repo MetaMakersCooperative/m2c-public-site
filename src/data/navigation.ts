@@ -1,5 +1,8 @@
 import { _zonePages, ZoneProps } from "./zones";
 
+export const HEADER_HEIGHT = "72px";
+export const HEADER_ALWAYS_SHOW_TOP = 150;
+
 export interface NavItem {
     label: string,
     href: string,
@@ -8,7 +11,6 @@ export interface NavItem {
     changes?: "monthly" | "daily" | "weekly" | "always" | "hourly" | "yearly" | "never" | undefined;
     submenu?: NavItem[]
 }
-
 
 export const _navItems: NavItem[] = [
     { label: "About", href: "/about", priority: 0.5, changes: "monthly" },

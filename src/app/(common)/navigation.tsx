@@ -16,13 +16,10 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose, MdExpandMore } from "react-icons/md";
 import { useState } from "react";
-import { _navItems } from "@/data/navigation";
+import { _navItems, HEADER_ALWAYS_SHOW_TOP, HEADER_HEIGHT } from "@/data/navigation";
 import { ColorModeButton } from "@/components/ui/color-mode";
 import useScrollY from "@/components/useScrollY";
 import NextLink from "next/link";
-
-export const HEADER_HEIGHT = "72px";
-export const HEADER_ALWAYS_SHOW_TOP = 150;
 
 export interface NavigationProps extends BoxProps {
 }

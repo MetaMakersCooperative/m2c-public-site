@@ -2,8 +2,7 @@
 import { Center, CenterProps, Stack, Text } from "@chakra-ui/react";
 import BecomeMemberButtons from "./become-member-buttons";
 import useScrollY from "@/components/useScrollY";
-import { HEADER_ALWAYS_SHOW_TOP, HEADER_HEIGHT } from "../(common)/navigation";
-
+import { HEADER_ALWAYS_SHOW_TOP, HEADER_HEIGHT } from "@/data/navigation";
 export interface BecomeMemberStickyProps extends CenterProps{
     hideLearnMoreButton?: boolean;
 }

@@ -3,10 +3,11 @@ import styles from "./page.module.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
-import Navigation, { HEADER_HEIGHT } from "./(common)/navigation";
+import Navigation from "./(common)/navigation";
 import { Box, VStack } from "@chakra-ui/react";
 import { Toaster } from "@/components/ui/toaster";
 import type { Viewport } from 'next'
+import { HEADER_HEIGHT } from "@/data/navigation";
  
 const geistSans = Geist({
   variable: "--font-geist-sans",
