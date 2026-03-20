@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import styles from "./page.module.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
 import Navigation from "./(common)/navigation";
-import { Box, VStack } from "@chakra-ui/react";
-import { Toaster } from "@/components/ui/toaster";
 import type { Viewport } from 'next'
-import { HEADER_HEIGHT } from "@/data/navigation";
  
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,15 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body  className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
           <Navigation />
-          <Box marginTop={HEADER_HEIGHT} className={styles.pageBackground} backgroundColor={{_light: "#fafafa", _dark: "#0a0a0a"}}>
-            <VStack as="main" className={styles.pageForeground} backgroundColor={{_light: "white", _dark: "#111"}} gap={0}>
-                {children}
-              <Toaster />
-            </VStack>
-          </Box>
+          {children}
         </Provider>
       </body>
     </html>
