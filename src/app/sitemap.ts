@@ -4,7 +4,7 @@ import { _zonePages } from '@/data/zones';
 import type { MetadataRoute } from 'next'
 export const dynamic = "force-static";
 
-export const BASE_URL = "https://m2c-test.niksteel.net";
+export const BASE_URL = "https://metamakers.org";
 export default function sitemap(): MetadataRoute.Sitemap {
     const home: MetadataRoute.Sitemap = [{
         url: BASE_URL,
