@@ -3,6 +3,7 @@ import Section from "../../(common)/section";
 import GoogleCalendar from "./google-calendar";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
+import SlimBanner from "@/app/(common)/slim-banner";
 
 export const metadata: Metadata = {
   title: "Classes @ Meta Makers Cooperative",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <>
+            <SlimBanner title="Classes @ Meta Makers Cooperative"/>
             <Section id="upcoming-classes" title="Upcoming Classes" backgroundColor={"bg.muted"}>  
                 <Text>Coming Soon! Visit us again to learn about our upcoming classes.</Text>
             </Section>

@@ -42,7 +42,6 @@ export default function Navigation({...boxProps}: NavigationProps) {
       top="0"
       height={HEADER_HEIGHT}
       backgroundColor={{_light: "white", _dark:"#111"}}
-      boxShadow="sm"
       zIndex={1000}
       width="100%"
       transform={showHeader ? "translateY(0)" : "translateY(-100%)"}

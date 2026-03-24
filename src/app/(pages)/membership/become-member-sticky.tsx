@@ -17,7 +17,6 @@ export default function BecomeMemberSticky({hideLearnMoreButton = false, ...prop
                 backgroundColor={{_light: "white", _dark:"#111"}}
                 top={offsetSticky ? HEADER_HEIGHT : "0px"}
                 zIndex="900"
-                boxShadow={"sm"}
                 width="100%"
                 transition="top 0.3s ease-out"
       >

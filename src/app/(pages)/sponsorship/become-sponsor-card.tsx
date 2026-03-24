@@ -11,7 +11,7 @@ export default function BecomeSponsorCard({...props}:BecomeSponsorCardProps) {
         <Card.Root boxShadow={"sm"} width="100%" flexDirection={{base: "row", lgDown: "column"}} overflow="hidden" {...props}>
             <VStack  p={4} alignItems={"flex-start"} justifyContent={"space-between"}>
                 <Card.Body>
-                    <Card.Title p={4} fontSize={{base:"5xl", mdDown:"2xl"}} lineHeight={1.25}>Sponsorship</Card.Title>
+                    <Card.Title p={4} fontSize={{base:"5xl", mdDown:"2xl"}} lineHeight={1.25}>Sponsor Gear Wall</Card.Title>
                     <Card.Description p={4} fontSize={{base:"4xl", mdDown:"xl"}}>Get a spot on our interactive sponsor wall!</Card.Description>
                 </Card.Body>
                 <Card.Footer p={4} fontSize={"md"} color="gray.500" justifyContent={"flex-end"}>

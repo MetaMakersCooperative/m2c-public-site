@@ -2,9 +2,10 @@ import { Center, CenterProps, Stack, Text } from "@chakra-ui/react";
 import BecomeMemberButtons from "./become-member-buttons";
 
 export interface BecomeMemberFixedProps extends CenterProps{
+    hideLearnMoreButton?: boolean;
 }
 
-export default function BecomeMemberFixed({...props}: BecomeMemberFixedProps) {
+export default function BecomeMemberFixed({hideLearnMoreButton, ...props}: BecomeMemberFixedProps) {
     return (
             <Center
                 position="fixed"
@@ -18,7 +19,7 @@ export default function BecomeMemberFixed({...props}: BecomeMemberFixedProps) {
                     <Text textAlign="center" fontSize={{base: "lg", mdDown: "md"}}>Interested in membership?</Text>
                     <Text fontSize={{base: "lg", mdDown: "md"}} display={{base: "flex", mdDown:"none"}}>Sign up here →</Text>
                     
-                    <BecomeMemberButtons />
+                    <BecomeMemberButtons hideLearnMoreButton={hideLearnMoreButton} />
                 </Stack>
             </Center>
     );

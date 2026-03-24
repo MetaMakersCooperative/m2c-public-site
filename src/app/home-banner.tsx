@@ -17,7 +17,7 @@ export default function HomeBanner() {
             <HStack width="75%">
                 <Image src="logos/logo-white.svg" width={"40%"}/>
                 <VStack p={4} width="60%" textAlign="left">
-                <Heading size={{smDown: "lg", mdDown: "3xl", lgDown: "5xl", xlDown:"6xl",base:"7xl"}} color="white">Meta Makers Cooperative Makerspace</Heading>
+                <Heading as="h1" size={{smDown: "lg", mdDown: "3xl", lgDown: "5xl", xlDown:"6xl",base:"7xl"}} color="white">Meta Makers Cooperative Makerspace</Heading>
                 <Heading width="100%" alignSelf="baseline" paddingTop={8}  mdDown={{display: "none"}} size={{lgDown: "md", xlDown:"2xl",base:"4xl"}} color="white">Explore • Collaborate • Make</Heading>
                 </VStack>
             </HStack>

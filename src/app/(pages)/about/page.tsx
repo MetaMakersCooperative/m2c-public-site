@@ -3,6 +3,7 @@ import Section from "../../(common)/section";
 import { LuExternalLink } from "react-icons/lu";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
+import SlimBanner from "@/app/(common)/slim-banner";
 
 export const metadata: Metadata = {
   title: "About Meta Makers Cooperative",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
+            <SlimBanner title="About Meta Makers Cooperative"/>
             {/* <Section id="story" title="Our Story">  
                 <p></p>
             </Section> */}

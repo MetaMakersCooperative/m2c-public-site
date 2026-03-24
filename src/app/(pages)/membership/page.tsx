@@ -5,14 +5,16 @@ import MemberPriceCardGrid from "./member-price-card-grid";
 import BecomeMemberSticky from "./become-member-sticky";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
+import SlimBanner from "@/app/(common)/slim-banner";
+import BecomeMemberFixed from "./become-member-fixed";
 
 export const metadata: Metadata = {
-  title: "Join Meta Makers Cooperative",
+  title: "Membership @ Meta Makers Cooperative",
   description: "Learn more about the perks of becoming a Meta Makers Cooperative member and how to sign up. Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to.",
   openGraph: {
     url: `${BASE_URL}/membership`,
     type: "website",
-    title: "Join Meta Makers Cooperative",
+    title: "Membership @ Meta Makers Cooperative",
     description: "Learn more about the perks of becoming a Meta Makers Cooperative member and how to sign up. Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to.",
     images: `${BASE_URL}/logos/logo-black.svg`
   }
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
 export default function MembershipPage() {
     return (
         <>
-            <BecomeMemberSticky hideLearnMoreButton={true} />
+            <SlimBanner title="Membership @ Meta Makers Cooperative" />
             <Section id="member-benefits" title="Member Benefits" backgroundColor={"bg.muted"}>  
                 <Text fontSize={{base: "xl", mdDown:"md"}}>Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to. People come for the tools and stay to explore, collaborate and make. It affords them the opportunity to socialize, learn and teach. Being a cooperative, our members are active and engaged in all aspects of our organization. Members also benefit from the following member perks:</Text>
                 <MemberBenefitCardGrid paddingTop={8} />
@@ -35,6 +37,7 @@ export default function MembershipPage() {
             <Section id="payment-options" title="Payment Options">  
                 <Text fontSize={{base: "xl", mdDown:"md"}}>For automated payments, we accept credit and debit cards through Zeffy (click the <Link href="/join" variant={"underline"}>"Become a Member"</Link> button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org). To pay in person, complete the membership form and let us know you intend to pay in person when you email us.</Text>
             </Section>
+            <BecomeMemberFixed hideLearnMoreButton={true} />
         </>
     );
 }
