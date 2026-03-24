@@ -35,7 +35,7 @@ export default function ContactForm({...props}: ContactFormProps) {
     formState: { errors },
   } = useForm<ContactFormFields>();
 
-  const formspree = useSubmit<ContactFormFields>("xnjgaeoq");
+  const formspree = useSubmit<ContactFormFields>("mnjgebzd");
 
   if (errors.name || errors.email || errors.message) {
     console.log("Validation errors:", errors);
