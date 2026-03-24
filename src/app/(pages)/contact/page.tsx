@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Contact Meta Makers Cooperative",
     description: "Contact us via email or social media to learn more about Meta Makers Cooperative makerspace in Windsor.",
+    images: `${BASE_URL}/logos/logo-black.svg`
   }
 };
 

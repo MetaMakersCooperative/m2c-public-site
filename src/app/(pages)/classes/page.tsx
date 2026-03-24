@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Classes @ Meta Makers Cooperative",
     description: "Sign up for upcoming classes and events at the Meta Makers Cooperative Makerspace.",
+    images: `${BASE_URL}/logos/logo-black.svg`
   }
 };
 

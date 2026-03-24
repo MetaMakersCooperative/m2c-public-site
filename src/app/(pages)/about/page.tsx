@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "About Meta Makers Cooperative",
     description: "Meta Makers Cooperative (M2C) is a non-profit makerspace in Windsor. Our mission is to provide access to tools and resources to maximize human potential.",
+    images: `${BASE_URL}/logos/logo-black.svg`
   }
 };
 

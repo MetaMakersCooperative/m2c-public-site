@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Join Meta Makers Cooperative",
     description: "Learn more about the perks of becoming a Meta Makers Cooperative member and how to sign up. Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to.",
+    images: `${BASE_URL}/logos/logo-black.svg`
   }
 };
 export default function MembershipPage() {

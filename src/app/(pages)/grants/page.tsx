@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Grant Funding for Meta Makers Cooperative",
     description: "Learn more about how Meta Makers leverages grants to benefit the Windsor-Essex community.",
+    images: `${BASE_URL}/logos/logo-black.svg`
   }
 };
 
