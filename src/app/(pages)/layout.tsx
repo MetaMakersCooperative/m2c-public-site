@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import { Box, VStack } from "@chakra-ui/react";
 import { Toaster } from "@/components/ui/toaster";
 import { HEADER_HEIGHT } from "@/data/navigation";
+import { Viewport } from "next";
  
 
 export default function PageLayout({
@@ -17,4 +18,8 @@ export default function PageLayout({
       </VStack>
     </Box>
   );
+}
+
+export const viewport: Viewport = {
+  viewportFit: 'cover'
 }
