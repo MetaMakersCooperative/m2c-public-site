@@ -1,6 +1,19 @@
 import { Link, List, Text, VStack } from "@chakra-ui/react";
 import Section from "../../(common)/section";
 import { LuExternalLink } from "react-icons/lu";
+import { Metadata } from "next";
+import { BASE_URL } from "@/app/sitemap";
+
+export const metadata: Metadata = {
+  title: "About Meta Makers Cooperative",
+  description: "Meta Makers Cooperative (M2C) is a non-profit makerspace in Windsor. Our mission is to provide access to tools and resources to maximize human potential.",
+  openGraph: {
+    url: `${BASE_URL}/about`,
+    type: "website",
+    title: "About Meta Makers Cooperative",
+    description: "Meta Makers Cooperative (M2C) is a non-profit makerspace in Windsor. Our mission is to provide access to tools and resources to maximize human potential.",
+  }
+};
 
 export default function AboutPage() {
     return (

@@ -3,7 +3,19 @@ import { Link, Text } from "@chakra-ui/react";
 import MemberBenefitCardGrid from "./member-benefit-card-grid";
 import MemberPriceCardGrid from "./member-price-card-grid";
 import BecomeMemberSticky from "./become-member-sticky";
+import { Metadata } from "next";
+import { BASE_URL } from "@/app/sitemap";
 
+export const metadata: Metadata = {
+  title: "Join Meta Makers Cooperative",
+  description: "Learn more about the perks of becoming a Meta Makers Cooperative member and how to sign up. Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to.",
+  openGraph: {
+    url: `${BASE_URL}/membership`,
+    type: "website",
+    title: "Join Meta Makers Cooperative",
+    description: "Learn more about the perks of becoming a Meta Makers Cooperative member and how to sign up. Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to.",
+  }
+};
 export default function MembershipPage() {
     return (
         <>

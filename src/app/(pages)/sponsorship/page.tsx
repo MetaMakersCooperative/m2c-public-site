@@ -5,6 +5,20 @@ import CurrentSponsorGrid from "./current-sponsor-grid";
 import PastSponsorList from "./past-sponsor-list";
 import { _otherSupport, _pastSponsors } from "@/data/sponsors";
 import SponsorMarquee from "./past-sponsor-marquee";
+import { Metadata } from "next";
+import { BASE_URL } from "@/app/sitemap";
+
+export const metadata: Metadata = {
+  title: "Sponsor Meta Makers Cooperative",
+  description: "Learn about our current and past sponsors and how to get your spot on our interactive sponsor gear wall!",
+  openGraph: {
+    url: `${BASE_URL}/sponsorship`,
+    type: "website",
+    title: "Sponsor Meta Makers Cooperative",
+    description: "Learn about our current and past sponsors and how to get your spot on our interactive sponsor gear wall!",
+    images: `${BASE_URL}/images/funding/sponsor-wall.webp`,
+ }
+};
 
 export default function SponsorshipPage() {
     const pastSponsorMarqueeItems = _pastSponsors.filter(x => x.image != null).map(x =>  {return {imageSrc: x.image!, altText: x.name};});

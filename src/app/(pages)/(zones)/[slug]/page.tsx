@@ -6,6 +6,8 @@ import ZoneBenefit from "../zone-benefit";
 import ZoneBanner from "../zone-banner";
 import BecomeMemberSticky from "@/app/(pages)/membership/become-member-sticky";
 import { ImageCarousel } from "@/components/ui/image-carousel";
+import { Metadata, ResolvingMetadata } from "next";
+import { BASE_URL } from "@/app/sitemap";
 
 
 export const dynamicParams  = false;
@@ -20,6 +22,29 @@ export async function generateStaticParams(): Promise<PathParams[]> {
   return result;
 } 
 
+type MetadataProps = {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata(
+  { params }: MetadataProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const {slug} = (await params);
+  var zone = _zonePages.find(x => x.slug === slug);
+  return {
+    title: `${zone?.name} @ Meta Makers Cooperative`,
+    description: zone?.description,
+    openGraph: {
+      url: `${BASE_URL}/${slug}`,
+      type: "website",
+      title: `${zone?.name} @ Meta Makers Cooperative`,
+      description: zone?.description,
+      images: `${BASE_URL}/${zone?.image}`,
+    }
+  }
+}
+
 export default async function ZonePage({
   params,
 }: {
@@ -31,6 +56,9 @@ export default async function ZonePage({
   return (
     <VStack width="100%" gap={0}>
       <ZoneBanner {...zone}/>
+      <Section>
+        <Text>{zone.description}</Text>
+      </Section>
       <BecomeMemberSticky />
       {zone.benefits ? (
         <Section id="benefits" title="Benefits" backgroundColor={"bg.muted"}>

@@ -1,6 +1,19 @@
 import { Link, Text } from "@chakra-ui/react";
 import Section from "../../(common)/section";
 import GoogleCalendar from "./google-calendar";
+import { Metadata } from "next";
+import { BASE_URL } from "@/app/sitemap";
+
+export const metadata: Metadata = {
+  title: "Classes @ Meta Makers Cooperative",
+  description: "Sign up for upcoming classes and events at the Meta Makers Cooperative Makerspace.",
+  openGraph: {
+    url: `${BASE_URL}/classes`,
+    type: "website",
+    title: "Classes @ Meta Makers Cooperative",
+    description: "Sign up for upcoming classes and events at the Meta Makers Cooperative Makerspace.",
+  }
+};
 
 export default function ContactPage() {
     return (
