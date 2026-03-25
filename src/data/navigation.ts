@@ -13,16 +13,16 @@ export interface NavItem {
 }
 
 export const _navItems: NavItem[] = [
-    { label: "About", href: "/about", priority: 0.5, changes: "monthly" },
-    { label: "Membership", href: "/membership", priority: 0.7, changes: "monthly" },
-    { label: "Classes", href: "/classes", priority: 0.8, changes: "weekly" },
+    { label: "About", href: "/about", priority: 0.9, changes: "monthly" },
+    { label: "Membership", href: "/membership", priority: 0.9, changes: "monthly" },
+    { label: "Classes", href: "/classes", priority: 0.9, changes: "weekly" },
     {
         label: "Zones",
         href: "#zones",
         submenu: _zonePages.map((zone) => ({
             label: zone.name,
             href: `/${zone.slug}`,
-            priority: 0.9,
+            priority: 0.8,
             changes: "weekly",
             zone
         })),
@@ -33,13 +33,13 @@ export const _navItems: NavItem[] = [
             {
                 label: "Sponsorship",
                 href: `/sponsorship`,
-                priority: 0.4,
+                priority: 0.7,
                 changes: "monthly"
             },
             // {
             //   label: "Grants",
             //   href: `/grants`,,
-            //   priority: 0.3, 
+            //   priority: 0.7, 
             //   changes: "monthly" 
             // }
         ]
@@ -47,7 +47,7 @@ export const _navItems: NavItem[] = [
     {
         label: "Contact",
         href: "/contact",
-        priority: 0.6,
+        priority: 0.9,
         changes: "monthly"
     },
 ];

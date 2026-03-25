@@ -6,17 +6,49 @@ export const dynamic = "force-static";
 
 export const BASE_URL = "https://metamakers.org";
 export default function sitemap(): MetadataRoute.Sitemap {
-    const home: MetadataRoute.Sitemap = [{
+    const main: MetadataRoute.Sitemap = [{
         url: BASE_URL,
         lastModified: new Date(),
         changeFrequency: "weekly",
         priority: 1.0,
-        images: [`${BASE_URL}/images/home.webp`, ..._facilityImages.map((x) => `${BASE_URL}/${x.imageSrc}`)]
-    }];
-    const csrf: MetadataRoute.Sitemap = [{
+        images: [`${BASE_URL}/images/home.webp`, ..._zonePages.map((x)=> `${BASE_URL}/${x.image}`), ..._facilityImages.map((x) => `${BASE_URL}/${x.imageSrc}`)]
+    },{
+        url: `${BASE_URL}/join`,
+        lastModified: new Date("2026-03-25"),
+        changeFrequency: "yearly",
+        priority: 0.9,
+    },{
+        url: `${BASE_URL}/gear-up`,
+        lastModified: new Date("2026-03-25"),
+        changeFrequency: "yearly",
+        priority: 0.9,
+        images: [`${BASE_URL}/images/funding/sponsor-wall.webp`]
+    },
+    ];
+    const old: MetadataRoute.Sitemap = [{
         url: `${BASE_URL}/grants/csrf`,
         lastModified: new Date("2023-11-02"),
         changeFrequency: "never",
+        priority: 0.0,
+    },{
+        url: `${BASE_URL}/assets/event.pdf`,
+        lastModified: new Date("2026-03-25"),
+        changeFrequency: "yearly",
+        priority: 0.1,
+    },{
+        url: `${BASE_URL}/assets/membership_form.pdf`,
+        lastModified: new Date("2026-03-25"),
+        changeFrequency: "yearly",
+        priority: 0.1,
+    },{
+        url: `${BASE_URL}/assets/SOP.pdf`,
+        lastModified: new Date("2026-03-25"),
+        changeFrequency: "yearly",
+        priority: 0.1,
+    },{
+        url: `${BASE_URL}/assets/waiver.pdf`,
+        lastModified: new Date("2026-03-25"),
+        changeFrequency: "yearly",
         priority: 0.1,
     }];
     const pages: MetadataRoute.Sitemap = _navItems
@@ -42,5 +74,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 };
             })
         ).reduce((a, b) => a.concat(b), []);
-    return [...home, ...pages, ...subPages, ...csrf];
+    return [...main, ...pages, ...subPages, ...old];
 }
