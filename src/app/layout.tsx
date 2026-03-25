@@ -18,12 +18,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Meta Makers Cooperative Makerspace",
-  description: "Meta Makers Cooperative is a nonprofit community makerspace in Windsor with tools and resources for a variety of interests, such as woodworking, fibre arts, 3D printing, and stained glass.",
+  description: "Meta Makers Cooperative is a nonprofit community makerspace in Windsor, ON where members enjoy 24/7 access to shared tools and resources.",
   openGraph: {
     url: BASE_URL,
     type: "website",
     title: "Meta Makers Cooperative Makerspace",
-    description: "Meta Makers Cooperative is a nonprofit community makerspace in Windsor with tools and resources for a variety of interests, such as woodworking, fibre arts, 3D printing, and stained glass.",
+    description: "Meta Makers Cooperative is a nonprofit community makerspace in Windsor, ON where members enjoy 24/7 access to shared tools and resources.",
     images: `${BASE_URL}/images/home.webp`,
   }
 };

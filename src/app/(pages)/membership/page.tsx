@@ -11,12 +11,12 @@ import { LuExternalLink } from "react-icons/lu";
 
 export const metadata: Metadata = {
   title: "Membership @ Meta Makers Cooperative",
-  description: "Learn more about the perks of becoming a Meta Makers Cooperative member and how to sign up. Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to.",
+  description: "Discover the perks of becoming a Meta Makers Cooperative member, such as 24/7 access and class discounts, and learn how to sign up.",
   openGraph: {
     url: `${BASE_URL}/membership`,
     type: "website",
     title: "Membership @ Meta Makers Cooperative",
-    description: "Learn more about the perks of becoming a Meta Makers Cooperative member and how to sign up. Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to.",
+    description: "Discover the perks of becoming a Meta Makers Cooperative member, such as 24/7 access and class discounts, and learn how to sign up.",
     images: `${BASE_URL}/logos/logo-black.svg`
   }
 };

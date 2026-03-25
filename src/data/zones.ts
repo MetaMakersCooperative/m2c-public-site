@@ -100,7 +100,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "Laser Cutting",
-    description: "Are you interested in laser cutting and engraving and need access to equipment and some guidance? Become a member and enjoy 24/7 access to our professional-quality machine!",
+    description: "Are you interested in laser cutting and engraving? Become a member and enjoy 24/7 access to our professional-quality machine!",
     slug: "laser-cutting",
     color: "#f46d43",
     image: "images/zones/laser-cutting.webp",
@@ -149,7 +149,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "CAD/CAM",
-    description: "Are you interested in Computer Aided Design and Manufacturiong (CAD/CAM) and need access to software, workstations and mentorship? Become a member and enjoy 24/7 access to our CAD/CAM workstations and a community of members who share your interest!",
+    description: "Are you interested in Computer Aided Design and Manufacturiong (CAD/CAM)? Become a member and enjoy 24/7 access to our CAD/CAM workstations and software!",
     slug: "cad-cam",
     color: "#fdae61",
     image: "images/zones/cad-cam.webp",
@@ -196,7 +196,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "CNC Cutting",
-    description: "Are you interested in CNC cutting and need access to equipment and training? Become a member and enjoy metered access to our professional-quality machine and attend our affordable training courses!",
+    description: "Are you interested in CNC cutting? Become a member and enjoy affordable access to our professional-quality machine and training courses!",
     slug: "cnc",
     color: "#fee08b",
     image: "images/zones/cnc.webp",
@@ -246,7 +246,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "Electronics",
-    description: "Are you interested in electronics and need access to tools and advice? Become a member and enjoy 24/7 access to our electronics workstation, with soldering irons and tools, and join a community of hobbyists and tinkerers who share your interest!",
+    description: "Are you interested in electronics? Become a member and enjoy 24/7 access to our electronics workstation and a community of makers who share your passion!",
     slug: "electronics",
     color: "#ffffbf",
     image: "images/zones/electronics.webp",
@@ -299,7 +299,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "Fibre Arts",
-    description: "Are you interested in sewing, embroidery, or other fibre arts and need access to sewing machines and other resources? Become a member and enjoy 24/7 access to our equipment and a community of makers who share your interest!",
+    description: "Are you interested in sewing, embroidery, or other fibre arts? Become a member and enjoy 24/7 access to our machines and host or attend classes!",
     slug: "fibre-arts",
     color: "#e6f598",
     image: "images/zones/fibre-arts.webp",
@@ -352,7 +352,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "Machining",
-    description: "Are you interested in machining and need access to equipment? Become a member and enjoy 24/7 access to our machine shop and community of makers who share your interest!",
+    description: "Are you interested in machining? Become a member and enjoy 24/7 access to our machine shop and community of makers who share your interest!",
     slug: "machining",
     color: "#abdda4",
     image: "images/zones/machining.webp",
@@ -402,7 +402,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "Stained Glass",
-    description: "Are you interested in stained glass need access to tools and workspace? Become a member and enjoy 24/7 access to our stained glass zone and a community of makers who share your interest!",
+    description: "Are you interested in stained glass? Become a member and enjoy 24/7 access to our stained glass tools and workspace!",
     slug: "stained-glass",
     color: "#66c2a5",
     image: "images/zones/stained-glass.webp",
@@ -451,7 +451,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "3D Printing",
-    description: "Are you interested in 3D Printing and need access to equipment and advice? Become a member and enjoy 24/7 access to our 3D printers and a community of experienced makers!",
+    description: "Are you interested in 3D Printing? Become a member and enjoy 24/7 access to our 3D printers and a community of experienced makers!",
     slug: "3d-printing",
     color: "#3288bd",
     image: "images/zones/3d-printing.webp",
@@ -504,7 +504,7 @@ export const _zonePages: ZoneProps[] = [
   },
   {
     name: "Crafts",
-    description: "Are you interested in attending or teaching arts and crafts classes and need access to classroom space? Become a member and plan classes in our makerspace!",
+    description: "Are you interested in attending or teaching arts and crafts classes? Become a member enjoy access to our classroom space and crafting resources!",
     slug: "crafts",
     color: "#5e4fa2",
     image: "images/zones/crafts.webp",
