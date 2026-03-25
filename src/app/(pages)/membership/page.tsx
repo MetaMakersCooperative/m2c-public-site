@@ -5,27 +5,28 @@ import MemberPriceCardGrid from "./member-price-card-grid";
 import BecomeMemberSticky from "./become-member-sticky";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
-import SlimBanner from "@/app/(common)/slim-banner";
 import BecomeMemberFixed from "./become-member-fixed";
 import { LuExternalLink } from "react-icons/lu";
 
 export const metadata: Metadata = {
-  title: "Membership @ Meta Makers Cooperative",
+  title: "Membership",
   description: "Discover the perks of becoming a Meta Makers Cooperative member, such as 24/7 access and class discounts, and learn how to sign up.",
   openGraph: {
     url: `${BASE_URL}/membership`,
     type: "website",
-    title: "Membership @ Meta Makers Cooperative",
+    title: "Meta Makers Membership",
     description: "Discover the perks of becoming a Meta Makers Cooperative member, such as 24/7 access and class discounts, and learn how to sign up.",
     images: `${BASE_URL}/logos/logo-black.svg`
   }
 };
 export default function MembershipPage() {
     return (
-        <>
-            <SlimBanner title="Membership @ Meta Makers Cooperative" />
+        <>  
+            <Section id="membership" title="Membership">  
+                <Text fontSize={{base: "xl", mdDown:"md"}}>As nonprofit cooperative, Meta Makers is owned and operated by members who volunteer their time to help with all aspects of our organization.  Members democratically elect our board of directors annually and can participate as directors, officers, and zone coordinators.</Text>
+            </Section>
             <Section id="member-benefits" title="Member Benefits" backgroundColor={"bg.muted"}>  
-                <Text fontSize={{base: "xl", mdDown:"md"}}>Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to. People come for the tools and stay to explore, collaborate and make. It affords them the opportunity to socialize, learn and teach. Being a cooperative, our members are active and engaged in all aspects of our organization. Members also benefit from the following member perks:</Text>
+                <Text fontSize={{base: "xl", mdDown:"md"}}>Members benefit from access to a co-working space with tools and resources that they might not otherwise have access to. People come for the tools and stay to explore, collaborate and make. It affords them the opportunity to socialize, learn and teach. Members also benefit from these perks:</Text>
                 <MemberBenefitCardGrid paddingTop={8} />
             </Section>
             <Section id="sign-up-process" title="Sign-Up Process">

@@ -3,16 +3,15 @@ import Section from "../../(common)/section";
 import GoogleCalendar from "./google-calendar";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
-import SlimBanner from "@/app/(common)/slim-banner";
 import { LuExternalLink } from "react-icons/lu";
 
 export const metadata: Metadata = {
-  title: "Classes @ Meta Makers Cooperative",
+  title: "Classes",
   description: "Sign up for upcoming classes and events at the Meta Makers Cooperative Makerspace.",
   openGraph: {
     url: `${BASE_URL}/classes`,
     type: "website",
-    title: "Classes @ Meta Makers Cooperative",
+    title: "Meta Makers Classes",
     description: "Sign up for upcoming classes and events at the Meta Makers Cooperative Makerspace.",
     images: `${BASE_URL}/logos/logo-black.svg`
   }
@@ -21,8 +20,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <>
-            <SlimBanner title="Classes @ Meta Makers Cooperative"/>
-            <Section id="upcoming-classes" title="Upcoming Classes" backgroundColor={"bg.muted"}>  
+            <Section headingProps={{as: "h1"}} id="classes" title="Classes" backgroundColor={"bg.muted"}>  
                 <Text>Coming Soon! Visit us again to learn about our upcoming classes.</Text>
             </Section>
             <Section id="calendar" title="Calendar">  

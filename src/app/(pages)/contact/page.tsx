@@ -5,10 +5,9 @@ import RecentFacebookPosts from "./recent-facebook-posts";
 import SocialMediaLinks from "./social-media-links";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
-import SlimBanner from "@/app/(common)/slim-banner";
 
 export const metadata: Metadata = {
-  title: "Contact Meta Makers Cooperative",
+  title: "Contact",
   description: "Contact us via email or social media to learn more about Meta Makers Cooperative makerspace in Windsor.",
   openGraph: {
     url: `${BASE_URL}/contact`,
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <>
-            <Section headingProps={{as: "h1"}} id="contact-us" title="Contact Us" backgroundColor={"bg.muted"}>  
+            <Section headingProps={{as: "h1"}} id="contact" title="Contact" backgroundColor={"bg.muted"}>  
                 <ContactForm />
             </Section>
             <Section id="social-media" title="Social Media">

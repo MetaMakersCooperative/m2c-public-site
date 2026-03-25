@@ -1,4 +1,4 @@
-import { Box, List, Text } from "@chakra-ui/react";
+import { List, Text } from "@chakra-ui/react";
 import Section from "../../(common)/section";
 import BecomeSponsorCard from "./become-sponsor-card";
 import CurrentSponsorGrid from "./current-sponsor-grid";
@@ -7,15 +7,14 @@ import { _otherSupport, _pastSponsors } from "@/data/sponsors";
 import SponsorMarquee from "./past-sponsor-marquee";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
-import SlimBanner from "@/app/(common)/slim-banner";
 
 export const metadata: Metadata = {
-  title: "Sponsorship @ Meta Makers Cooperative",
+  title: "Sponsorship",
   description: "Learn about our current and past sponsors and how to get your spot on our interactive sponsor gear wall!",
   openGraph: {
     url: `${BASE_URL}/sponsorship`,
     type: "website",
-    title: "Sponsorship @ Meta Makers Cooperative",
+    title: "Meta Makers Sponsor Funding",
     description: "Learn about our current and past sponsors and how to get your spot on our interactive sponsor gear wall!",
     images: `${BASE_URL}/images/funding/sponsor-wall.webp`,
  }
@@ -26,10 +25,10 @@ export default function SponsorshipPage() {
     const otherSupportMarqueeItems = _otherSupport.filter(x => x.image != null).map(x =>  {return {imageSrc: x.image!, altText: x.name};});
     return (
         <>
-            <SlimBanner title="Sponsorship @ Meta Makers Cooperative"/>
-            <Box as="section" id="sponsorship" p={8} width={"100%"} backgroundColor={"bg.muted"}>
+            <Section id="sponsorship" title="Sponsorship">
+                <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>Explore our current sponsorship programs:</Text>
                 <BecomeSponsorCard />
-            </Box>
+            </Section>
             <Section backgroundColor={"bg.muted"} id="current-sponsors" title="Current Sponsors">  
                 <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>Thanks to our current sponsors for their generous support:</Text>
                 <CurrentSponsorGrid />

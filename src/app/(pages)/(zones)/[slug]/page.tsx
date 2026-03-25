@@ -33,7 +33,7 @@ export async function generateMetadata(
   const {slug} = (await params);
   var zone = _zonePages.find(x => x.slug === slug);
   return {
-    title: `${zone?.name} @ Meta Makers Cooperative`,
+    title: `${zone?.name}`,
     description: zone?.description,
     openGraph: {
       url: `${BASE_URL}/${slug}`,
@@ -57,7 +57,7 @@ export default async function ZonePage({
     <VStack width="100%" gap={0}>
       <ZoneBanner {...zone}/>
       <Section>
-        <Text>{zone.description}</Text>
+        <Text textAlign={"center"} fontSize={{base: "lg", mdDown: "md"}}>{zone.description}</Text>
       </Section>
       <BecomeMemberSticky />
       {zone.benefits ? (

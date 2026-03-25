@@ -3,12 +3,12 @@ import Section from "../../(common)/section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Grant Funding for Meta Makers Cooperative",
+  title: "Grants",
   description: "Learn more about how Meta Makers leverages grants to benefit the Windsor-Essex community.",
   openGraph: {
     url: `${BASE_URL}/grants`,
     type: "website",
-    title: "Grant Funding for Meta Makers Cooperative",
+    title: "Meta Makers Grant Funding",
     description: "Learn more about how Meta Makers leverages grants to benefit the Windsor-Essex community.",
     images: `${BASE_URL}/logos/logo-black.svg`
   }
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function GrantsPage() {
     return (
         <>
-            <Section id="Grants" title="Grants">  
+            <Section headingProps={{as:"h1"}} id="Grants" title="Grants">  
                 <p>todo</p>
             </Section>
         </>

@@ -3,10 +3,9 @@ import Section from "../../(common)/section";
 import { LuExternalLink } from "react-icons/lu";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
-import SlimBanner from "@/app/(common)/slim-banner";
 
 export const metadata: Metadata = {
-  title: "About Meta Makers Cooperative",
+  title: "About",
   description: "Meta Makers Cooperative (M2C) is a non-profit makerspace in Windsor. Our mission is to provide access to tools and resources to maximize human potential.",
   openGraph: {
     url: `${BASE_URL}/about`,
@@ -20,12 +19,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
-            <SlimBanner title="About Meta Makers Cooperative"/>
-            {/* <Section id="story" title="Our Story">  
-                <p></p>
-            </Section> */}
+            <Section headingProps={{as: "h1"}} id="about" title="About">  
+                <Text>Meta Makers Cooperative (M2C) is a nonprofit makerspace located at 628 Monmouth Road in Windsor, Ontario, Canada.</Text>
+            </Section>
             <Section id="mission" title="Mission" backgroundColor={"bg.muted"}>  
-                <Text>Meta Makers Cooperative (M2C) is a non-profit makerspace in Windsor. Our mission is to provide access to tools and resources to maximize human potential, enabling our members to be autonomous, achieve self mastery and fulfill a sense of purpose. We also believe that science, technology, engineering, arts, and math are an integral part of the making process and when people make, they become empowered. We are a social enterprise with a diverse array of skilled members who help make Makers.</Text>
+                <Text>Our mission is to provide access to tools and resources to maximize human potential, enabling our members to be autonomous, achieve self mastery and fulfill a sense of purpose. We also believe that science, technology, engineering, arts, and math are an integral part of the making process and when people make, they become empowered. We are a social enterprise with a diverse array of skilled members who help make Makers.</Text>
             </Section>
             <Section id="vision" title="Future Vision">  
                 <Text paddingBottom={4}>We will achieve our aims through a variety of functions including:</Text>

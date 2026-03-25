@@ -18,9 +18,9 @@ export default async function ZoneBanner({image, name, ...props}:ZoneBannerProps
         style={{objectFit: "cover", filter: "brightness(50%)"}}
       />
       <AbsoluteCenter width="100%">
-        <VStack as="h1" width="100%" textAlign="left">
-          <Heading as="span" size={{smDown:"5xl",base:"7xl"}} color="white">{name}</Heading>
-          <Heading as="span" size={{smDown:"xl",base:"3xl"}} color="white">@ Meta Makers Cooperative</Heading>
+        <VStack width="100%" textAlign="left">
+          <Heading as="h1" size={{smDown:"5xl",base:"7xl"}} color="white">{name}</Heading>
+          <Heading as="h2" size={{smDown:"xl",base:"3xl"}} color="white">@ Meta Makers Cooperative</Heading>
         </VStack>
       </AbsoluteCenter>
     </Container>
