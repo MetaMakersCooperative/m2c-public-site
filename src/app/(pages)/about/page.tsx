@@ -44,6 +44,7 @@ export default function AboutPage() {
             <Section id="news" title="News" backgroundColor={"bg.muted"}>  
                 <VStack alignItems={"left"}>
                     <Link variant={"underline"} target="_blank" href="https://bizxmagazine.com/events/grand-opening-of-windsors-only-makerspace/">Grand Opening of Windsor's Only Makerspace <LuExternalLink /></Link>
+                    <Link variant={"underline"} href="/csrf">Meta Makers Receives Community Services Recovery Fund (CSRF) Grant</Link>
                     <Link variant={"underline"} target="_blank" href="https://youtu.be/jRKCQpYDlug">Grand Opening Video by Kannex Media <LuExternalLink /></Link>
                     <Link variant={"underline"} target="_blank" href="https://bizxmagazine.com/biz-x-magazine-january-2024-volume-27-issue-1">See our feature story in Bizx magazine (page 11). <LuExternalLink /></Link>
                     <Link variant={"underline"} target="_blank" href="https://thedrivemagazine.com/posts/meta-makers/">See our feature story in The Drive magazine. <LuExternalLink /></Link>
