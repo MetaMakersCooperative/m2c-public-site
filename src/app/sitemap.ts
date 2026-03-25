@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 1.0,
         images: [`${BASE_URL}/images/home.webp`, ..._facilityImages.map((x) => `${BASE_URL}/${x.imageSrc}`)]
     }];
+    const csrf: MetadataRoute.Sitemap = [{
+        url: `${BASE_URL}/grants/csrf`,
+        lastModified: new Date("2023-11-02"),
+        changeFrequency: "never",
+        priority: 0.1,
+    }];
     const pages: MetadataRoute.Sitemap = _navItems
         .filter((page) => page.submenu == null)
         .map((page) => {
@@ -36,5 +42,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 };
             })
         ).reduce((a, b) => a.concat(b), []);
-    return [...home, ...pages, ...subPages];
+    return [...home, ...pages, ...subPages, ...csrf];
 }

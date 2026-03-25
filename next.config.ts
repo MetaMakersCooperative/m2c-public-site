@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
+import createMDX from '@next/mdx';
+
 
 const nextConfig: NextConfig = {
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   output: 'export',
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
@@ -20,6 +23,39 @@ const nextConfig: NextConfig = {
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
+  async redirects() {
+    return [
+      {
+        source: '/assets/SOP.pdf',
+        destination: '/forms/sop.pdf',
+        permanent: true,
+      },
+      {
+        source: '/assets/event.pdf',
+        destination: '/forms/event.pdf',
+        permanent: true,
+      },
+      {
+        source: '/assets/membership_form.pdf',
+        destination: '/forms/membership.pdf',
+        permanent: true,
+      },
+      {
+        source: '/csrf.html',
+        destination: '/grants/csrf',
+        permanent: true,
+      },
+      {
+        source: '/csrf',
+        destination: '/grants/csrf',
+        permanent: true,
+      },
+    ];
+  },
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+})
+
+export default withMDX(nextConfig);
