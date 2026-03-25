@@ -44,6 +44,7 @@ export default function Navigation({...boxProps}: NavigationProps) {
       backgroundColor={{_light: "white", _dark:"#111"}}
       zIndex={1000}
       width="100%"
+      _light={{boxShadow: "sm"}}
       transform={showHeader ? "translateY(0)" : "translateY(-100%)"}
       visibility={showHeader ? "visible" : "hidden"}
       transition={showHeader 

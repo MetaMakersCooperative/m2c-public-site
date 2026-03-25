@@ -11,22 +11,23 @@ export default function BecomeMemberSticky({hideLearnMoreButton = false, ...prop
     const {scrollYDirection, scrollYPosition} = useScrollY();
     const offsetSticky = scrollYPosition < HEADER_ALWAYS_SHOW_TOP || scrollYDirection != "down";
     return (
-            <Center                 
-                {...props}
-                position="sticky"
-                backgroundColor={{_light: "white", _dark:"#111"}}
-                top={offsetSticky ? HEADER_HEIGHT : "0px"}
-                zIndex="900"
-                width="100%"
-                transition="top 0.3s ease-out"
-      >
-                <Stack  p={4} direction={{base: "row", mdDown: "column"}} justifyContent={"center"} alignItems={"center"}>
-                    
-                    <Text textAlign="center" fontSize={{base: "lg", mdDown: "md"}}>Interested in membership?</Text>
-                    <Text fontSize={{base: "lg", mdDown: "md"}} display={{base: "flex", mdDown:"none"}}>Sign up here →</Text>
-                    
-                    <BecomeMemberButtons hideLearnMoreButton={hideLearnMoreButton} />
-                </Stack>
-            </Center>
+        <Center                 
+            {...props}
+            position="sticky"
+            backgroundColor={{_light: "white", _dark:"#111"}}
+            top={offsetSticky ? HEADER_HEIGHT : "0px"}
+            zIndex="900"
+            width="100%"
+            transition="top 0.3s ease-out"
+            _light={{boxShadow: "sm"}}
+        >
+            <Stack  p={4} direction={{base: "row", mdDown: "column"}} justifyContent={"center"} alignItems={"center"}>
+                
+                <Text textAlign="center" fontSize={{base: "lg", mdDown: "md"}}>Interested in membership?</Text>
+                <Text fontSize={{base: "lg", mdDown: "md"}} display={{base: "flex", mdDown:"none"}}>Sign up here →</Text>
+                
+                <BecomeMemberButtons hideLearnMoreButton={hideLearnMoreButton} />
+            </Stack>
+        </Center>
     );
 }
