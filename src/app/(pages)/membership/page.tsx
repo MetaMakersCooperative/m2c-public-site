@@ -35,7 +35,8 @@ export default function MembershipPage() {
                 <Text fontSize={{base: "xl", mdDown:"md"}}>The cost of membership varies by membership term.  Membership terms are offered on an annual, semi-annual or quarterly basis. Day and week passes are also available. Select a longer membership term for the best price.</Text>
                 <MemberPriceCardGrid paddingTop={8} />
             </Section>
-            <Section id="payment-options" title="Payment Options">  
+           
+            <Section id="payment-options" title="Payment Options" marginBottom={{base:"80px", mdDown: "100px"}}> {/* margin for bottom fixed element  */}
                 <Text fontSize={{base: "xl", mdDown:"md"}}>For automated payments, we accept credit and debit cards through Zeffy (click the <Link href="/join" variant={"underline"}>"Become a Member"</Link> button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org). To pay in person, complete the membership form and let us know you intend to pay in person when you email us.</Text>
             </Section>
             <BecomeMemberFixed hideLearnMoreButton={true} />
