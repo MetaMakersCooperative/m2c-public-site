@@ -22,36 +22,7 @@ const nextConfig: NextConfig = {
     nextImageExportOptimizer_exportFolderName: "generated",
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
-  },
-  async redirects() {
-    return [
-      {
-        source: '/assets/SOP.pdf',
-        destination: '/forms/sop.pdf',
-        permanent: true,
-      },
-      {
-        source: '/assets/event.pdf',
-        destination: '/forms/event.pdf',
-        permanent: true,
-      },
-      {
-        source: '/assets/membership_form.pdf',
-        destination: '/forms/membership.pdf',
-        permanent: true,
-      },
-      {
-        source: '/csrf.html',
-        destination: '/grants/csrf',
-        permanent: true,
-      },
-      {
-        source: '/csrf',
-        destination: '/grants/csrf',
-        permanent: true,
-      },
-    ];
-  },
+  }
 };
 
 const withMDX = createMDX({

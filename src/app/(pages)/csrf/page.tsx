@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function GrantsPage() {
+export default function CSRFPage() {
     return (
         <Markdown />
     );

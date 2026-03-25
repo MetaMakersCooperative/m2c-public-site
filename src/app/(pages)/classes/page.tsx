@@ -28,7 +28,7 @@ export default function ContactPage() {
                 <GoogleCalendar />
             </Section>
             <Section id="teach-classes" title="Teach a Class" backgroundColor={"bg.muted"}>  
-                <Text>Looking for a place to teach your skills and crafts? To host a class at Meta Makers, complete our <Link href="forms/event.pdf" variant={"underline"}>event form</Link> and email it to <Link href="mailto:directors@metamakers.org" variant={"underline"}>directors@metamakers.org.</Link></Text>
+                <Text>Looking for a place to teach your skills and crafts? To host a class at Meta Makers, complete our <Link href="/assets/event.pdf" variant={"underline"}>event form</Link> and email it to <Link href="mailto:directors@metamakers.org" variant={"underline"}>directors@metamakers.org.</Link></Text>
             </Section>
             {/* <Section id="past-classes" title="Past Classes">  
                 <p>todo</p>
