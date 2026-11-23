@@ -1,0 +1,73 @@
+{
+  "name": "Woodworking",
+  "slug": "woodworking",
+  "order": 1,
+  "description": "Do you need access to workshop space and tools to complete a woodworking project? Become a member and enjoy 24/7 access to our fully-equipped workshop!",
+  "color": "#d53e4f",
+  "image": "/images/zones/woodworking.webp",
+  "facilityImages": [
+    {
+      "imageSrc": "/images/facility/woodworking-facility-1.webp",
+      "altText": "Woodworking Area"
+    },
+    {
+      "imageSrc": "/images/facility/woodworking-facility-2.webp",
+      "altText": "Woodworking Area"
+    },
+    {
+      "imageSrc": "/images/facility/woodworking-facility-3.webp",
+      "altText": "Woodworking Area"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "SawStop Tablesaw",
+      "image": "/images/benefits/woodworking-sawstop.webp",
+      "description": "Enjoy the safety and convenience of our tablesaw, with an 8' outfeed table, a 52\" fence, and the SawStop safety system, which instantly retracts the blade if it contacts skin."
+    },
+    {
+      "title": "Dust Collection",
+      "image": "/images/benefits/woodworking-dust-collection.webp",
+      "description": "Breath easy: our workshop is thoughtfully designed, with dust collection ports on each tool and an air filtration system."
+    },
+    {
+      "title": "CNC Planing",
+      "image": "/images/benefits/woodworking-flattening.webp",
+      "description": "Flatten large wood planks (up to 4' x 8') with our CNC router.*",
+      "footnote": "Requires machine training and certification, or assistance from another member who is trained."
+    },
+    {
+      "title": "Stocked Workbenches",
+      "image": "/images/benefits/woodworking-workbench.webp",
+      "description": "Our woodworking zone includes several large workbenches, each stocked with a variety of hand tools and clamps for your projects."
+    },
+    {
+      "title": "Glue-up Station",
+      "image": "/images/benefits/woodworking-glue-up.webp",
+      "description": "Our dedicated glue-up station is equipped with a large, flat surface and clamps for gluing large projects."
+    }
+  ],
+  "tools": [
+    "Table Saw",
+    "Band Saw",
+    "Miter Saw",
+    "Jig Saw",
+    "Reciprocating Saw",
+    "Circular Saw",
+    "Router",
+    "Drill press",
+    "Scroll saw",
+    "Drum sander",
+    "Palm sander",
+    "Belt sander",
+    "Wood lathe",
+    "Handheld drill and driver",
+    "Vise",
+    "Hand saws",
+    "Pocket Hole Jig",
+    "Biscuit Jig",
+    "Planer",
+    "CNC Router",
+    "Chisels and hand planes"
+  ]
+}

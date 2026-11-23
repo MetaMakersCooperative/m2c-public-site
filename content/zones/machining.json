@@ -1,0 +1,46 @@
+{
+  "name": "Machining",
+  "slug": "machining",
+  "order": 7,
+  "description": "Are you interested in machining? Become a member and enjoy 24/7 access to our machine shop and community of makers who share your interest!",
+  "color": "#abdda4",
+  "image": "/images/zones/machining.webp",
+  "facilityImages": [
+    {
+      "imageSrc": "/images/zones/machining.webp",
+      "altText": "Machining Area"
+    },
+    {
+      "imageSrc": "/images/benefits/machining-lathe.webp",
+      "altText": "Machining Area"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Manual Mill",
+      "image": "/images/benefits/machining-mill.webp",
+      "description": "Use our manual mill for precision cutting, drilling, and shaping of metal and other materials with fine control over your operations."
+    },
+    {
+      "title": "Lathe",
+      "image": "/images/benefits/machining-lathe.webp",
+      "description": "Access our lathe for turning, threading, and shaping cylindrical workpieces with precision and control."
+    },
+    {
+      "title": "Drill Press",
+      "image": "/images/benefits/machining-drill-press.webp",
+      "description": "Use our drill press for accurate, repeatable drilling operations with consistent depth and alignment."
+    },
+    {
+      "title": "Bench Grinder Hand Tools",
+      "image": "/images/benefits/machining-hand-tools.webp",
+      "description": "Access bench grinders and a complete set of hand tools for tool maintenance, sharpening, and precision machining work."
+    },
+    {
+      "title": "CNC Plastic",
+      "image": "/images/benefits/machining-cnc.webp",
+      "description": "Use our CNC equipment to machine plastic with precision for prototyping and production runs.",
+      "footnote": "Our machine can also cut Aluminum but requires additional tooling and special approval."
+    }
+  ]
+}

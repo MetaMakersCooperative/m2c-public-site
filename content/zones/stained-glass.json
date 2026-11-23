@@ -1,0 +1,40 @@
+{
+  "name": "Stained Glass",
+  "slug": "stained-glass",
+  "order": 8,
+  "description": "Are you interested in stained glass? Become a member and enjoy 24/7 access to our stained glass tools and workspace!",
+  "color": "#66c2a5",
+  "image": "/images/zones/stained-glass.webp",
+  "facilityImages": [
+    {
+      "imageSrc": "/images/facility/stained-glass-facility-1.webp",
+      "altText": "Stained Glass Area"
+    },
+    {
+      "imageSrc": "/images/facility/stained-glass-facility-2.webp",
+      "altText": "Stained Glass Area"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Glass Cutting and Grinding Tools",
+      "image": "/images/facility/stained-glass-facility-2.webp",
+      "description": "Enjoy our dedicated workspace for cutting and grinding stained glass sheets and pieces. We isolated this area to keep glass shards and dust under control as much as possible."
+    },
+    {
+      "title": "Vertical and Horizontal Storage",
+      "image": "/images/benefits/stained-glass-storage.webp",
+      "description": "Members can organize and store their own glass sheets in convenient vertical storage cubbies. Access a range of hand tools for scoring and snapping. Store your work-in-progress projects on horizontal storage trays."
+    },
+    {
+      "title": "Layout and Soldering Station",
+      "image": "/images/benefits/stained-glass-hand-tools.webp",
+      "description": "Layout, foil and solder your creations on our dedicated solder station.  Use pins to hold your layout in place while you work."
+    },
+    {
+      "title": "Convenient Location",
+      "image": "/images/benefits/stained-glass-location.webp",
+      "description": "We're the only community stained glass working space available within Windsor, making it easy for you to access our equipment and expertise."
+    }
+  ]
+}

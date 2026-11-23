@@ -1,0 +1,49 @@
+{
+  "name": "3D Printing",
+  "slug": "3d-printing",
+  "order": 9,
+  "description": "Are you interested in 3D Printing? Become a member and enjoy 24/7 access to our 3D printers and a community of experienced makers!",
+  "color": "#3288bd",
+  "image": "/images/zones/3d-printing.webp",
+  "facilityImages": [
+    {
+      "imageSrc": "/images/zones/3d-printing.webp",
+      "altText": "3D Printer Area"
+    },
+    {
+      "imageSrc": "/images/facility/tech-facility-1.webp",
+      "altText": "Tech Area"
+    },
+    {
+      "imageSrc": "/images/facility/electronics-facility-1.webp",
+      "altText": "Tech Area"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Learning from Experienced Members",
+      "image": "/images/benefits/3d-printing-community.webp",
+      "description": "Learn from and troubleshoot with experienced members in our 3D printing community, getting guidance on design, settings, and best practices."
+    },
+    {
+      "title": "High-Quality Printers",
+      "image": "/images/benefits/3d-printing-printers.webp",
+      "description": "Access easy-to-use, high-quality printers that are maintained by community members to ensure reliable performance for your projects."
+    },
+    {
+      "title": "Heat-set Insert Tools",
+      "image": "/images/benefits/3d-printing-inserts.webp",
+      "description": "Use our heat-set insert tools to add threaded inserts to your prints for stronger, more durable connections and assemblies."
+    },
+    {
+      "title": "Post Processing Tools",
+      "image": "/images/benefits/3d-printing-post-processing.webp",
+      "description": "Finish your prints with our collection of post-processing tools for sanding, smoothing, and refining your 3D printed objects."
+    },
+    {
+      "title": "Community Materials",
+      "image": "/images/benefits/3d-printing-materials.webp",
+      "description": "Access a shared stock of filament and other materials, making it easy and affordable to experiment with different types and colors."
+    }
+  ]
+}

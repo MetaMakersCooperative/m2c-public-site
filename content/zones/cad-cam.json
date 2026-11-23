@@ -1,0 +1,44 @@
+{
+  "name": "CAD/CAM",
+  "slug": "cad-cam",
+  "order": 3,
+  "description": "Are you interested in Computer Aided Design and Manufacturiong (CAD/CAM)? Become a member and enjoy 24/7 access to our CAD/CAM workstations and software!",
+  "color": "#fdae61",
+  "image": "/images/zones/cad-cam.webp",
+  "facilityImages": [
+    {
+      "imageSrc": "/images/zones/cad-cam.webp",
+      "altText": "Computer Area"
+    },
+    {
+      "imageSrc": "/images/benefits/cad-cam-workstation.webp",
+      "altText": "Computer Area"
+    },
+    {
+      "imageSrc": "/images/facility/electronics-facility-1.webp",
+      "altText": "Tech Area"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Mastercam",
+      "image": "/images/benefits/cad-cam-mastercam.webp",
+      "description": "Access professional CAM software for toolpath generation and CNC machine programming, enabling precise manufacturing of your designs."
+    },
+    {
+      "title": "VCarve Software",
+      "image": "/images/benefits/cad-cam-vcarve.webp",
+      "description": "Use VCarve for vector design and 2D/3D carving, perfect for creating detailed cuts and engravings on wood, plastic, and other materials."
+    },
+    {
+      "title": "Design Software Suite",
+      "image": "/images/benefits/cad-cam-design-software.webp",
+      "description": "Design with industry-standard tools including Fusion 360, FreeCAD, and NX, giving you flexibility to choose the software that works best for your projects."
+    },
+    {
+      "title": "Professional Computer Workstations",
+      "image": "/images/benefits/cad-cam-workstation.webp",
+      "description": "Work on powerful, dedicated computer workstations optimized for CAD/CAM applications, ensuring smooth performance for complex designs and large files."
+    }
+  ]
+}

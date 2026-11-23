@@ -1,0 +1,49 @@
+{
+  "name": "Fibre Arts",
+  "slug": "fibre-arts",
+  "order": 6,
+  "description": "Are you interested in sewing, embroidery, or other fibre arts? Become a member and enjoy 24/7 access to our machines and host or attend classes!",
+  "color": "#e6f598",
+  "image": "/images/zones/fibre-arts.webp",
+  "facilityImages": [
+    {
+      "imageSrc": "/images/facility/classroom-facility-1.webp",
+      "altText": "Class Area"
+    },
+    {
+      "imageSrc": "/images/facility/classroom-facility-2.webp",
+      "altText": "Class Area"
+    },
+    {
+      "imageSrc": "/images/zones/fibre-arts.webp",
+      "altText": "Embroidery Area"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Embroidery Machine",
+      "image": "/images/benefits/fibre-arts-embroidery.webp",
+      "description": "Use our embroidery machine with a 6\"x10\" workable area for precise, detailed embroidery on your projects."
+    },
+    {
+      "title": "Sewing Machine",
+      "image": "/images/benefits/fibre-arts-sewing.webp",
+      "description": "Access a quality sewing machine for all your stitching and garment-making projects."
+    },
+    {
+      "title": "Large Layout Table",
+      "image": "/images/benefits/fibre-arts-table.webp",
+      "description": "Work on our big table designed for cutting out patterns and assembling your fibre art projects."
+    },
+    {
+      "title": "Free and Donated Fabrics",
+      "image": "/images/benefits/fibre-arts-fabrics.webp",
+      "description": "Browse our collection of free and donated fabrics to find materials for your creative projects."
+    },
+    {
+      "title": "Comprehensive Fibre Arts Supplies",
+      "image": "/images/benefits/fibre-arts-supplies.webp",
+      "description": "Access a variety of supplies including knitting needles, embroidery thread, looms for weaving, irons, and more."
+    }
+  ]
+}

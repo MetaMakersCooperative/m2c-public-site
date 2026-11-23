@@ -1,0 +1,46 @@
+{
+  "name": "CNC Cutting",
+  "slug": "cnc",
+  "order": 4,
+  "description": "Are you interested in CNC cutting? Become a member and enjoy affordable access to our professional-quality machine and training courses!",
+  "color": "#fee08b",
+  "image": "/images/zones/cnc.webp",
+  "facilityImages": [
+    {
+      "imageSrc": "/images/zones/cnc.webp",
+      "altText": "CNC Area"
+    },
+    {
+      "imageSrc": "/images/facility/woodworking-facility-1.webp",
+      "altText": "Woodworking Area"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Training Courses",
+      "image": "/images/benefits/cnc-training.webp",
+      "description": "Access comprehensive training courses to learn CNC operation, safety, and best practices for getting the most out of our equipment."
+    },
+    {
+      "title": "Large 4'x8' CANCAM CNC Router",
+      "image": "/images/zones/cnc.webp",
+      "description": "Work with our spacious CANCAM C2-48 LT CNC router, featuring a 49\" x 98\"x 12\" working area, enabling you to tackle large-scale projects with ease."
+    },
+    {
+      "title": "Professional Speed and Precision",
+      "image": "/images/benefits/cnc-large.webp",
+      "description": "Experience professional-grade speed and precision with a rugged, vibration-reducing design, state-of-the-art Masso controls, and a 6HP spindle that achieves speeds up to 24,000 RPM and IPM feed rate up to 1200w. Our advanced spoilboard with threaded inserts allows for speedy and precise material hold-down."
+    },
+    {
+      "title": "Versatile Material Cutting",
+      "image": "/images/benefits/machining-cnc.webp",
+      "description": "Cut wood and plastic with our CNC router, giving you flexibility to work with the materials best suited for your projects.",
+      "footnote": "Our machine can also cut Aluminum but requires additional tooling and special approval."
+    },
+    {
+      "title": "Affordable Machine Time",
+      "image": "/images/benefits/cnc-affordable.webp",
+      "description": "Access professional CNC cutting at an affordable machine time rate, making precision manufacturing accessible for all project budgets."
+    }
+  ]
+}

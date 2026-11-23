@@ -74,8 +74,11 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      # Runs the "build" script from package.json: `next build && next-image-export-optimizer`.
+      # The optimizer generates resized WebP versions of every image in public/images (including
+      # images uploaded through Pages CMS) and copies them into ./out.
+      - name: Build with Next.js and optimize images
+        run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

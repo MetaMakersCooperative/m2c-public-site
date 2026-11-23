@@ -1,0 +1,49 @@
+{
+  "name": "Electronics",
+  "slug": "electronics",
+  "order": 5,
+  "description": "Are you interested in electronics? Become a member and enjoy 24/7 access to our electronics workstation and a community of makers who share your passion!",
+  "color": "#ffffbf",
+  "image": "/images/zones/electronics.webp",
+  "facilityImages": [
+    {
+      "imageSrc": "/images/facility/electronics-facility-2.webp",
+      "altText": "Electronics Area"
+    },
+    {
+      "imageSrc": "/images/facility/electronics-facility-1.webp",
+      "altText": "Tech Area"
+    },
+    {
+      "imageSrc": "/images/facility/tech-facility-1.webp",
+      "altText": "Tech Area"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Community Knowledge",
+      "image": "/images/benefits/electronics-community.webp",
+      "description": "Learn from experienced members in our electronics community, getting guidance on circuit design, troubleshooting, and best practices."
+    },
+    {
+      "title": "High Quality Soldering Iron Stations",
+      "image": "/images/benefits/electronics-soldering.webp",
+      "description": "Access professional-grade soldering stations equipped with temperature control and quality tools for precise, reliable connections."
+    },
+    {
+      "title": "Common Components Library",
+      "image": "/images/benefits/electronics-components.webp",
+      "description": "Browse our extensive library of resistors, capacitors, diodes, LEDs, and other common electronic components for your projects."
+    },
+    {
+      "title": "Lab Bench Equipment",
+      "image": "/images/benefits/electronics-lab-equipment.webp",
+      "description": "Use essential lab tools including oscilloscopes, multimeters, and DC power supplies for testing, measuring, and prototyping."
+    },
+    {
+      "title": "All Common Electronics Hand Tools",
+      "image": "/images/benefits/electronics-hand-tools.webp",
+      "description": "Access a complete set of hand tools including wire strippers, crimpers, screwdrivers, and other essentials for electronics work."
+    }
+  ]
+}
