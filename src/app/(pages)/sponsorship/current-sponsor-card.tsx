@@ -28,7 +28,7 @@ export const CurrentSponsorCard = ({image, name, tier, url, ...props}: BecomeSpo
               <Card.Title textStyle="xl" fontWeight="bold">{name} <LuExternalLink style={{display: "inline"}} /></Card.Title>
             </Card.Body>
             <Card.Footer width={"100%"} px={4} paddingBottom={4} justifyContent={"flex-start"}>
-              <Badge colorPalette={tier === "platinum" ? "blue" : tier === "gold" ? "yellow" : tier === "silver" ? "gray" : "orange"} textTransform={"capitalize"}>
+              <Badge colorPalette={tier === "platinum" ? "blue" : tier === "gold" ? "yellow" : tier === "silver" ? "gray" : "orange"} textTransform={"capitalize"} px={2}>
                 {tier} Sponsor
               </Badge>
             </Card.Footer>
