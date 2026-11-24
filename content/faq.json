@@ -1,1 +1,252 @@
-[]
+[
+  {
+    "question": "Can I tour the makerspace before joining? Do you have open houses?",
+    "answer": "<p>Yes, we'd love to show you around. Members are always at the space on Tuesday evenings 7–9 pm and Saturday afternoons 2–4 pm, so you can drop in for a tour at either time. If those times don't work, <a href=\"/contact\">contact us</a> and we'll arrange another time with a member.</p>",
+    "featured": true
+  },
+  {
+    "question": "Do you offer classes or workshops? Where can I see the schedule?",
+    "answer": "<p>Yes! Check our <a href=\"/classes\">classes and events page</a> for more information. Sign up for our newsletter and follow us on social media for updates when new events are scheduled. <a href=\"/contact\">Let us know</a> if there's a specific topic you'd like to learn more about.</p>",
+    "featured": true
+  },
+  {
+    "question": "Do you accept donations of tools, equipment or materials?",
+    "answer": "<p>Yes, we welcome donations, but space is limited, so please <a href=\"/contact\">contact us</a> with details (and photos if possible) to confirm if we will accept the donation and to arrange a drop-off time.</p>",
+    "featured": true
+  },
+  {
+    "question": "Can I use the space without a full membership? Do you offer day or week passes?",
+    "answer": "<p>Yes, day passes are $10 per day and week passes are $50 per week. A member must be at the space with you (to let you in and help out), so <a href=\"/contact\">arrange a time with us</a> first. The shortest membership term is 3 months.</p>",
+    "featured": true
+  },
+  {
+    "question": "How can I volunteer?",
+    "answer": "<p>Meta Makers is entirely volunteer-run, so help is always welcome: software and website projects, hands-on work around the shop, events, and teaching. The best first step is to visit on Tuesday evenings 7–9 pm or Saturday afternoons 2–4 pm to meet members and talk about where you'd like to help. You can also <a href=\"/contact\">contact us</a> to join our volunteer list.</p>",
+    "featured": true
+  },
+  {
+    "question": "What tools and equipment do you have?",
+    "answer": "<p>Highlights include a woodworking shop (SawStop table saw, mitre saw, wood lathe), a CNC router for wood and plastics, a 60 W CO2 laser cutter/engraver, a metal lathe and milling machine, 3D printers (two Prusas), a Cricut vinyl cutter, sewing &amp; embroidery machines, and an electronics area. The best way to see everything is to come for a tour.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I use the space for my business or make items to sell?",
+    "answer": "<p>Members can use the space for personal or commercial use, so long as they do not prevent other members from having reasonable access to our shared tools. Please <a href=\"/contact\">contact the board</a> if you have a specific request.</p>",
+    "featured": true
+  },
+  {
+    "question": "Do you have a kiln or pottery studio?",
+    "answer": "<p>Not at this time.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can Meta Makers manufacture something for me?",
+    "answer": "<p>We're a member-run makerspace rather than a fabrication or repair shop. We're open to inquiries, but it depends on whether we can find a volunteer who is interested in taking on the project.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I teach a class or run a workshop at Meta Makers?",
+    "answer": "<p>Yes. Members and non-members can apply to host events and classes at Meta Makers by submitting the event form to the Board for review. <a href=\"/contact\">Contact us</a> to learn more about our “Fun-and-done” program.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I weld at Meta Makers? Can I bring my own welder?",
+    "answer": "<p>No. Our lease doesn't allow anything that creates sparks or fumes, so there's no welding or metal melting on site, and members can't bring in their own welders. For metalwork, we have a metal lathe and a milling machine.</p>",
+    "featured": false
+  },
+  {
+    "question": "What are your hours? When are people usually at the space?",
+    "answer": "<p>As a volunteer-run non-profit, we don't have public opening hours. Members get a key card with 24/7 access, 365 days a year. The most reliable times to find members on site are Tuesday evenings 7–9 pm and Saturday afternoons 2–4 pm. At other times, it depends on who happens to be in.</p>",
+    "featured": false
+  },
+  {
+    "question": "What is Meta Makers and how does it work? Is it open to the public?",
+    "answer": "<p>Meta Makers is a non-profit co-operative makerspace in Windsor, Ontario, and it's open to everyone. Members pay a membership fee and get 24/7 access to the space and its equipment. The co-op is entirely volunteer-run: board members and zone coordinators are volunteers, and members share their skills and teach each other. Areas include woodworking, CNC machining, laser engraving, 3D printing, electronics, fibre arts and more.</p>",
+    "featured": false
+  },
+  {
+    "question": "How do I find out about upcoming events and classes? Do you have a mailing list or newsletter?",
+    "answer": "<p>Upcoming events and classes are posted on our <a href=\"/classes\">classes and events page</a> and on social media, especially <a href=\"https://www.facebook.com/M2CYQG/\">Facebook</a>. You can also sign up to receive our newsletter.</p>",
+    "featured": false
+  },
+  {
+    "question": "I'm new to woodworking. Can members help me learn or help with my project?",
+    "answer": "<p>Yes. Several members do woodworking, and our woodworking zone coordinator has a ton of experience. As a member, you can schedule time with the coordinator or other members to learn to use any tool safely and get help with your project. Come by for a tour to meet them.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I bring my own tools or equipment into the space?",
+    "answer": "<p>Generally yes, as long as it isn't too big. <a href=\"/contact\">Check with us</a> first. Spark- or fume-producing equipment such as welders isn't allowed under our lease. We have an equipment-entry form to clarify whether equipment is loaned or donated.</p>",
+    "featured": false
+  },
+  {
+    "question": "Is there storage for members' tools, supplies and projects?",
+    "answer": "<p>Each member gets a personal shelf (about 12\" × 24\") for their own items. Larger projects can be temporarily stored in the workshop using a “parking permit” so long as they are not blocking access and are removed by the agreed-upon date.</p>",
+    "featured": false
+  },
+  {
+    "question": "What's included in a membership? Are classes included?",
+    "answer": "<p>Membership includes your own key card with 24/7 access, use of the shop's tools and equipment (a couple of machines need a short training session first), a personal storage shelf, and free use of shared materials donated by members. Members can also book the space to run their own classes. Classes taught by members may charge a fee to cover the instructor's time and materials. Members skip the $10 day-pass fee non-members pay to attend and sometimes get an extra discount.</p>",
+    "featured": false
+  },
+  {
+    "question": "How do I sign up?",
+    "answer": "<p>Click the <a href=\"/join\">\"Become a Member\"</a> button to purchase a 3-, 6- or 12-month membership. Next, complete our <a href=\"/assets/membership_form.pdf\" target=\"_blank\">membership form</a> and email it to <a href=\"mailto:membership@metamakers.org\">membership@metamakers.org</a>. We'll respond by email to schedule an orientation. At the orientation, you'll review and accept our <a href=\"/assets/SOP.pdf\" target=\"_blank\">standard operating procedures (SOPs)</a> and sign our <a href=\"/assets/waiver.pdf\" target=\"_blank\">liability waiver</a>. Finally, we'll give you a tour of the makerspace and issue your key card.</p><p>To pay in person (cash, cheque or e-transfer), complete the membership form and mention it in your email. See the <a href=\"/membership#sign-up-process\">sign-up process</a> on our membership page for details.</p>",
+    "featured": false
+  },
+  {
+    "question": "Where are you located? Do you have other locations?",
+    "answer": "<p>We're at <a href=\"/location\">628 Monmouth Rd, Windsor, Ontario</a>, in the Sho Studios building. Windsor is our only location.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you have 3D printers I can use?",
+    "answer": "<p>Yes. Two Prusa 3D printers are available to members. Non-members can use them with a $10 day pass while a member is there to help.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you have a laser cutter/engraver? What can it cut?",
+    "answer": "<p>Yes, a 60 W CO2 laser for engraving and cutting wood and similar materials. Check with the laser zone coordinator for material compatibility. A short safety training session is required before you use it on your own.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do I need training before using certain machines?",
+    "answer": "<p>Two of the more expensive machines, the laser cutter and the CNC router, require a short safe-use training session before you use them on your own. Standard operating procedures (SOPs) are available for all equipment, and zone coordinators and other members can show you how to use any tool safely. You can arrange training time with the relevant zone coordinator.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you provide materials and supplies? Can I buy materials through Meta Makers?",
+    "answer": "<p>Members generally bring their own materials. Some donated materials (wood, fasteners, 3D-printer filament, yarn, craft supplies, etc.) sit on shared shelves and are free for members to use. We don't currently sell materials, though we could if enough members want it.</p>",
+    "featured": false
+  },
+  {
+    "question": "What happens on Tuesday nights? Can I just drop in?",
+    "answer": "<p>Tuesday evenings (7–9 pm) are “Tech Tuesdays”, our busiest regular night. Members meet up to work on projects, socialize and help each other. Visitors are welcome to drop in for a tour and ask questions. If you'd like to join, see the <a href=\"/membership#sign-up-process\">sign-up process</a> on our membership page.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you have software/computer resources (CAD/CAM, IT)?",
+    "answer": "<p>We have some software and IT resources, and many members work in software and IT. Tech Tuesday evenings are the best time to get hands-on help with CAD/3D modelling and other software.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you have a CNC router? What can it cut?",
+    "answer": "<p>Yes. The CNC router cuts wood (including plywood for cabinets) and plastics such as acrylic, and it's precise enough for tight-fitting joints. Any member can use it after a short training session. For metal, the shop has a metal lathe and a milling machine.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you have equipment like a UV printer, dye-sublimation printer, heat press or clicker press? How can members request new equipment?",
+    "answer": "<p>We don't have those right now. Members can suggest new equipment to the board, which decides based on available funds, safety constraints, and what will benefit the most members.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you offer discounts (seniors, veterans, families, or in exchange for volunteering)?",
+    "answer": "<p>We don't currently offer discounts. As a non-profit, we try to keep membership affordable for everyone. Longer terms are cheaper: a 12-month membership costs half as much per month as a 3-month one.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I pause, cancel, renew or get a refund on my membership?",
+    "answer": "<p>Memberships are prepaid for a fixed term. When your term ends, you can take a break and renew whenever you're ready. Send your payment and we'll reactivate your existing key card (or issue a new one).</p>",
+    "featured": false
+  },
+  {
+    "question": "Are you hiring?",
+    "answer": "<p>We're a volunteer-based non-profit, so there are no paid positions, but we welcome volunteers, including for community software projects.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you recycle 3D-printing (PLA) waste?",
+    "answer": "<p>No, we don't have any plastic recycling capability.</p>",
+    "featured": false
+  },
+  {
+    "question": "Are there extra fees for using machines or materials?",
+    "answer": "<p>Two machines currently have small consumable costs (laser and CNC). These are also the machines that require training before use.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you have a wood lathe?",
+    "answer": "<p>Yes, two: an older benchtop lathe that works, and a second one that's out of service until its motor is replaced.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I work on large projects (e.g., restoring a boat or a large sculpture)?",
+    "answer": "<p>Project size is limited by the hallways and doors leading into the workshop. If the pieces can be carried in and out, we may be a good fit.</p>",
+    "featured": false
+  },
+  {
+    "question": "How much does a membership cost?",
+    "answer": "<p>$300 for 3 months, $450 for 6 months, or $600 for 12 months. See our <a href=\"/membership\">membership page</a> for details.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I pay monthly?",
+    "answer": "<p>Yes, members can pay $100 per month in a 3-month term, and you can enable your membership to auto-renew. If you cancel, your membership will not renew at the end of your 3-month term.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I buy a membership as a gift for someone?",
+    "answer": "<p>Yes. Purchase the membership using the <a href=\"/join\">\"Become a Member\"</a> button, then have the recipient complete our <a href=\"/assets/membership_form.pdf\" target=\"_blank\">membership form</a> and email it to <a href=\"mailto:membership@metamakers.org\">membership@metamakers.org</a>. We'll respond by email to schedule their orientation. See the <a href=\"/membership#sign-up-process\">sign-up process</a> for details.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I bring a guest?",
+    "answer": "<p>Guests are welcome to join you on a tour. To work in the space, a non-member needs a $10 day pass and must be accompanied by a member.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can children or teens use the makerspace? Does a child need their own membership?",
+    "answer": "<p>Membership is limited to adults. Classes and events will indicate the age range of attendees who are eligible to sign up.</p>",
+    "featured": false
+  },
+  {
+    "question": "Are you accepting new members? Are you still active?",
+    "answer": "<p>Yes, we're active and always welcome new members.</p>",
+    "featured": false
+  },
+  {
+    "question": "Do you offer student co-op placements or community-service hours?",
+    "answer": "<p>We don't currently have a program for community-service hours, but please <a href=\"/contact\">contact us</a> if you are interested, and our board will consider your request.</p>",
+    "featured": false
+  },
+  {
+    "question": "Are members required to volunteer?",
+    "answer": "<p>No, there's no minimum number of volunteer hours, but we encourage members to help with clean-up days and special events.</p>",
+    "featured": false
+  },
+  {
+    "question": "How are members' tools and supplies protected from theft?",
+    "answer": "<p>We operate on an honour system, so if in doubt, don't store any items at the makerspace that you can't afford to lose. We have some cameras in the makerspace that help to deter theft and resolve disputes.</p>",
+    "featured": false
+  },
+  {
+    "question": "Is there a booking system or a time limit for popular machines?",
+    "answer": "<p>Not at this time. Members are typically considerate and can resolve disputes over machine time directly. As membership grows, we plan to evolve our approach as needs arise.</p>",
+    "featured": false
+  },
+  {
+    "question": "Can I spray paint or do messy work at the space?",
+    "answer": "<p>We don't have a dedicated paint booth, so in general, we would prefer to avoid painting in the makerspace. In some cases, this can be permitted at the zone coordinator's discretion. Members are expected to clean up after themselves and not leave a huge mess for others to fix.</p>",
+    "featured": false
+  },
+  {
+    "question": "Is membership tax-deductible? Can you issue tax receipts?",
+    "answer": "<p>Meta Makers is a non-profit co-operative but not a registered charity, so we can't issue tax receipts.</p>",
+    "featured": false
+  },
+  {
+    "question": "What are the sponsorships listed on your website?",
+    "answer": "<p>Sponsors provide financial and in-kind support. If you are interested in supporting us, consider buying a gear on our <a href=\"/sponsorship\">sponsor wall</a> or <a href=\"/contact\">contact our board of directors</a>.</p>",
+    "featured": false
+  },
+  {
+    "question": "Where can I park?",
+    "answer": "<p>Free street parking is available on Monmouth Rd and nearby residential streets. Do not park in the adjacent lots or you could receive a ticket or your vehicle could be towed.</p>",
+    "featured": false
+  },
+  {
+    "question": "Is the space wheelchair accessible?",
+    "answer": "<p>We have a ground-level entrance, but it does not have an automated door-opener. The restrooms in the building are not fully wheelchair accessible.</p>",
+    "featured": false
+  }
+]
