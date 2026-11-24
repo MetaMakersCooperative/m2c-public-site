@@ -8,6 +8,7 @@ import BecomeMemberSticky from "@/app/(pages)/membership/become-member-sticky";
 import { ImageCarousel } from "@/components/ui/image-carousel";
 import { Metadata, ResolvingMetadata } from "next";
 import { BASE_URL } from "@/app/sitemap";
+import { EventPreviewSection } from "@/app/(common)/events/event-lists";
 
 
 export const dynamicParams  = false;
@@ -88,6 +89,13 @@ export default async function ZonePage({
         </Section>
         )
       }
+      <EventPreviewSection
+        id="classes"
+        title="Upcoming Classes"
+        zoneSlug={zone.slug}
+        backgroundColor={zone.tools ? undefined : "bg.muted"}
+        intro={`Upcoming ${zone.name} classes and events at Meta Makers:`}
+      />
     </VStack>
     
   );

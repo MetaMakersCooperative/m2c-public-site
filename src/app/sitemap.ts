@@ -1,6 +1,7 @@
 import { _facilityImages } from '@/data/facility';
 import { _navItems } from '@/data/navigation';
 import { _zonePages } from '@/data/zones';
+import { _events } from '@/data/events';
 import type { MetadataRoute } from 'next'
 export const dynamic = "force-static";
 
@@ -79,5 +80,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 };
             })
         ).reduce((a, b) => a.concat(b), []);
-    return [...main, ...pages, ...subPages, ...old];
+    const events: MetadataRoute.Sitemap = _events.map((event) => ({
+        url: `${BASE_URL}/events/${event.slug}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.7,
+        images: [event.image, ...event.photos.map((x) => x.imageSrc)].map((x) => `${BASE_URL}/${x}`),
+    }));
+    return [...main, ...pages, ...subPages, ...events, ...old];
 }

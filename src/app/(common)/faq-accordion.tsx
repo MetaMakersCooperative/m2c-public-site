@@ -1,6 +1,7 @@
 "use client"
 
-import { Accordion, Box, HStack, IconButton, Text } from "@chakra-ui/react";
+import { Accordion, HStack, IconButton, Text } from "@chakra-ui/react";
+import RichText from "@/components/ui/rich-text";
 import { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 import { LuCheck, LuLink } from "react-icons/lu";
 import { FaqItem } from "@/data/faq";
@@ -101,7 +102,7 @@ export default function FaqAccordion({ items, linkBase = "" }: FaqAccordionProps
           </HStack>
           <Accordion.ItemContent>
             <Accordion.ItemBody pt={0} pb={5} pl={{ base: 5, mdDown: 4 }} pr={{ base: 12, mdDown: 4 }}>
-              <FaqAnswer html={item.answer} />
+              <RichText html={item.answer} />
             </Accordion.ItemBody>
           </Accordion.ItemContent>
         </Accordion.Item>
@@ -133,23 +134,3 @@ async function copyToClipboard(text: string): Promise<boolean> {
   }
 }
 
-/** Renders the rich-text (HTML) answer written in Pages CMS. Content comes from this repository, not from visitors. */
-function FaqAnswer({ html }: { html: string }) {
-  return (
-    <Box
-      fontSize={{ base: "md", mdDown: "sm" }}
-      css={{
-        "& p": { marginBottom: "0.75em" },
-        "& > :last-child": { marginBottom: 0 },
-        "& a": { textDecoration: "underline", textUnderlineOffset: "3px" },
-        "& ul, & ol": { paddingLeft: "1.5em", marginBottom: "0.75em" },
-        "& ul": { listStyleType: "disc" },
-        "& ol": { listStyleType: "decimal" },
-        "& li": { marginBottom: "0.25em" },
-        "& h1, & h2, & h3, & h4": { fontWeight: "bold", marginBottom: "0.5em" },
-        "& img": { maxWidth: "100%", height: "auto" },
-      }}
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
-  );
-}

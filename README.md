@@ -48,12 +48,30 @@ Some site content is managed with [Pages CMS](https://pagescms.org/), a Git-base
 | Zones    | `content/zones/*.json` | `src/data/zones.ts`       |
 | Sponsors | `content/sponsors.json`| `src/data/sponsors.ts`    |
 | FAQ      | `content/faq.json`     | `src/data/faq.ts`         |
+| Classes & Events | `content/events/*.json` | `src/data/events.ts` |
 
 The remaining content (facility, membership, navigation) is still hardcoded in `src/data/*.ts`.
 
 FAQ questions appear on the FAQ page in the order they are listed, and questions marked **Featured** also appear on the Contact page. A question's deep link (e.g. `/faq#how-do-i-become-a-member`) is based on its wording, so rewording a question changes its link.
 
 Zones are listed in ascending order of their `order` field. A zone's file name comes from its slug, which is also its page URL (e.g. `woodworking` → `/woodworking`).
+
+### Classes & Events
+
+Each class or event is one file in `content/events`, named after its slug, and gets a page at `/events/<slug>`. Enter dates as local Windsor time. For a class with several sessions, add the later dates under **Additional sessions**.
+
+Cards appear on the Classes page (upcoming first, then past), on the home page (the next 4) and on the page of each zone the event is tagged with. The site works out an event's state in the visitor's browser, so events move from upcoming to in progress to past without a rebuild:
+
+| State | When | Card | Event page |
+| ----- | ---- | ---- | ---------- |
+| Upcoming | Before the first session | **Register** button | Embedded Zeffy form |
+| Sold out | Upcoming with **Sold out** checked | Disabled "Sold out" button | Event info with a "sold out" notice |
+| In progress | From the first session's start until the last session ends | Highlighted, disabled "In progress" button | Event info with a "registration closed" notice |
+| Past | After the last session ends | Shows the event photos, **View photos** / **Read more** button | Event info, recap and photo gallery (sections without content are hidden) |
+
+An upcoming event with no **Zeffy URL** shows "Registration soon" and its page shows the event info. Paste the normal Zeffy link (e.g. `https://www.zeffy.com/en-CA/ticketing/my-class`): the site converts it to the embed URL.
+
+After an event, add the **Event photos** and a **Recap / blog** to it. The first photo replaces the card image in the past events section.
 
 ### Images
 

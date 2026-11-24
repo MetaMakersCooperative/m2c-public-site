@@ -10,6 +10,7 @@
 #   - zones:    one JSON file per zone in content/zones (loaded by src/data/zones.ts)
 #   - sponsors: content/sponsors.json (loaded by src/data/sponsors.ts)
 #   - faq:      content/faq.json (loaded by src/data/faq.ts)
+#   - events:   one JSON file per class/event in content/events (loaded by src/data/events.ts)
 
 media:
   - name: images
@@ -235,3 +236,150 @@ content:
         type: boolean
         default: false
         description: Show this question on the Contact page.
+
+  - name: events
+    label: Classes & Events
+    type: collection
+    path: content/events
+    format: json
+    filename: "{fields.slug}.json"
+    description: Upcoming classes and events are shown on the Classes page, the home page and the matching zone pages. Once an event is over it moves to "Past Classes & Events" — add photos and a recap afterwards.
+    view:
+      primary: title
+      fields: [title, date, type, soldOut]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        description: URL of the event page (e.g. "intro-to-woodturning-2026" → /events/intro-to-woodturning-2026). Lowercase letters, numbers and dashes only. Must be unique, so consider adding the month or year.
+        pattern:
+          regex: "^[a-z0-9]+(-[a-z0-9]+)*$"
+          message: Use lowercase letters, numbers and dashes only.
+      - name: type
+        label: Type
+        type: select
+        required: true
+        default: class
+        options:
+          values:
+            - name: class
+              label: Class
+            - name: event
+              label: Event
+      - name: description
+        label: Short description
+        type: text
+        required: true
+        description: One or two sentences shown on the event card and page.
+      - name: image
+        label: Card / banner image
+        type: image
+        required: true
+        options:
+          media: images
+      - name: date
+        label: Date & start time
+        type: date
+        required: true
+        default: ""
+        description: Local (Windsor) time of the first session.
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm
+      - name: duration
+        label: Duration (hours)
+        type: number
+        required: true
+        default: 2
+        description: Length of each session in hours, e.g. 1.5 for 90 minutes.
+        options:
+          min: 0.25
+      - name: additionalSessions
+        label: Additional sessions
+        type: object
+        description: Optional. For classes with more than one session, add the dates after the first one. The class shows as "in progress" from the first session until the last one ends.
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.date}"
+        fields:
+          - name: date
+            label: Date & start time
+            type: date
+            required: true
+            default: ""
+            options:
+              time: true
+              format: yyyy-MM-dd'T'HH:mm
+          - name: duration
+            label: Duration (hours)
+            type: number
+            description: Optional. Leave empty to use the main duration.
+            options:
+              min: 0.25
+      - name: price
+        label: Price
+        type: number
+        description: Optional. Regular (non-member) price in dollars. Leave empty or 0 for a free event.
+        options:
+          min: 0
+      - name: memberPrice
+        label: Member price
+        type: number
+        description: Optional. Discounted price for members. The savings are shown when it's lower than the regular price.
+        options:
+          min: 0
+      - name: zeffyUrl
+        label: Zeffy URL
+        type: string
+        description: Link to the Zeffy ticketing form, e.g. https://www.zeffy.com/en-CA/ticketing/my-class. Registration is embedded on the event page while the event is upcoming and not sold out.
+      - name: soldOut
+        label: Sold out
+        type: boolean
+        default: false
+        description: Disables registration and marks the event as sold out.
+      - name: zones
+        label: Zones
+        type: reference
+        description: Optional. The event is also shown on these zone pages.
+        options:
+          collection: zones
+          multiple: true
+          search: name
+          value: "{fields.slug}"
+          label: "{fields.name}"
+      - name: photos
+        label: Event photos
+        type: object
+        description: Optional. Photos taken at the event, shown in the gallery once it's over.
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.altText}"
+        fields:
+          - name: imageSrc
+            label: Image
+            type: image
+            required: true
+            options:
+              media: images
+          - name: altText
+            label: Alt text
+            type: string
+            description: Optional. A short description of the photo for screen readers.
+      - name: blog
+        label: Recap / blog
+        type: rich-text
+        description: Optional. Write about how the event went. Shown on the event page once it's over.
+        options:
+          format: html
+          media: images

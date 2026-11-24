@@ -15,6 +15,8 @@ const nextConfig: NextConfig = {
   },
   transpilePackages: ["next-image-export-optimizer"],
   env: {
+    // Used by useNow() as the time for the static render (see src/components/useNow.ts).
+    BUILD_TIME: String(Date.now()),
     nextImageExportOptimizer_imageFolderPath: "public/images",
     nextImageExportOptimizer_exportFolderPath: "out",
     nextImageExportOptimizer_quality: "75",

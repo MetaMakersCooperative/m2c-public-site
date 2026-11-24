@@ -19,6 +19,7 @@ import { _facilityImages } from "@/data/facility";
 import { ImageCarousel } from "@/components/ui/image-carousel";
 import useScrollY from "@/components/useScrollY";
 import WordDefinition from "../word-definition";
+import { EventPreviewSection } from "../(common)/events/event-lists";
 
 export default function Home() {
   var {scrollYPosition} = useScrollY();
@@ -57,14 +58,21 @@ export default function Home() {
           </Stack>
         </Section>
       </VStack>
-      <Section id="zones" title="Zones"  backgroundColor={"bg.muted"} >
+      <EventPreviewSection
+        id="upcoming-classes"
+        title="Upcoming Classes"
+        backgroundColor={"bg.muted"}
+        intro="Learn something new at our upcoming classes and events:"
+        emptyText="New classes and events are coming soon, so check back often!"
+      />
+      <Section id="zones" title="Zones">
         <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>
           Our makerspace has zones with tools and resources for these areas of
           interest:
         </Text>
         <ZoneGrid />
       </Section>
-      <Section id="facility" title="Facility">
+      <Section id="facility" title="Facility" backgroundColor={"bg.muted"}>
         <Text fontSize={{base: "xl", mdDown:"md"}} paddingBottom={8}>
           Our makerspace is 2000 square feet with ground floor access and an overhead door.  The space is split into two sections: one area for loud and dusty activities such as woodworking and machining, and another for quiet and clean activities such as 3D printing and fibre arts.
         </Text>
