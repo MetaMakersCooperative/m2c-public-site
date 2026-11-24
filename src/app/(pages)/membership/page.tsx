@@ -36,8 +36,11 @@ export default function MembershipPage() {
                 <Text fontSize={{base: "xl", mdDown:"md"}}>The cost of membership varies by membership term.  Membership terms are offered on an annual, semi-annual or quarterly basis. Day and week passes are also available. Select a longer membership term for the best price.</Text>
                 <MemberPriceCardGrid paddingTop={8} />
             </Section>
+            <Section id="guests" title="Guest Passes">  
+                <Text fontSize={{base: "xl", mdDown:"md"}}>Non-membership day and week passes are also available for guests of existing members. As a guest, you must complete a liability waiver and be accompanied by a member for the full duration of your visit. Members are responsible for communicating our standard operating procedures to guests and facilitating payment. A day guest pass costs $10 and a week guest pass costs $50.</Text>
+            </Section>
            
-            <Section id="payment-options" title="Payment Options" marginBottom={{base:"80px", mdDown: "100px"}}> {/* margin for bottom fixed element  */}
+            <Section id="payment-options" title="Payment Options" marginBottom={{base:"80px", mdDown: "100px"}}  backgroundColor={"bg.muted"}> {/* margin for bottom fixed element  */}
                 <Text fontSize={{base: "xl", mdDown:"md"}}>For automated payments, we accept credit and debit cards through Zeffy (click the <Link href="/join" variant={"underline"}>"Become a Member"</Link> button to get started). In-person, we also accept cash, cheques and etransfer (pay@metamakers.org). To pay in person, complete the membership form and let us know you intend to pay in person when you email us.</Text>
             </Section>
             <BecomeMemberFixed hideLearnMoreButton={true} />
