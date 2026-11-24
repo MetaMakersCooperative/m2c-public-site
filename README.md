@@ -47,8 +47,11 @@ Some site content is managed with [Pages CMS](https://pagescms.org/), a Git-base
 | -------- | ---------------------- | ------------------------- |
 | Zones    | `content/zones/*.json` | `src/data/zones.ts`       |
 | Sponsors | `content/sponsors.json`| `src/data/sponsors.ts`    |
+| FAQ      | `content/faq.json`     | `src/data/faq.ts`         |
 
 The remaining content (facility, membership, navigation) is still hardcoded in `src/data/*.ts`.
+
+FAQ questions appear on the FAQ page in the order they are listed, and questions marked **Featured** also appear on the Contact page. A question's deep link (e.g. `/faq#how-do-i-become-a-member`) is based on its wording, so rewording a question changes its link.
 
 Zones are listed in ascending order of their `order` field. A zone's file name comes from its slug, which is also its page URL (e.g. `woodworking` → `/woodworking`).
 

@@ -9,6 +9,7 @@
 # Content
 #   - zones:    one JSON file per zone in content/zones (loaded by src/data/zones.ts)
 #   - sponsors: content/sponsors.json (loaded by src/data/sponsors.ts)
+#   - faq:      content/faq.json (loaded by src/data/faq.ts)
 
 media:
   - name: images
@@ -209,3 +210,28 @@ content:
             options:
               media: logos
             description: Optional. Supporters with a logo are shown in the logo marquee.
+
+  - name: faq
+    label: FAQ
+    type: file
+    path: content/faq.json
+    format: json
+    list: true
+    description: Questions are shown in this order on the FAQ page. Featured questions are also shown on the Contact page. Each question's link (e.g. /faq#how-do-i-become-a-member) is based on its wording, so rewording a question changes its link.
+    fields:
+      - name: question
+        label: Question
+        type: string
+        required: true
+      - name: answer
+        label: Answer
+        type: rich-text
+        required: true
+        options:
+          format: html
+          media: images
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+        description: Show this question on the Contact page.

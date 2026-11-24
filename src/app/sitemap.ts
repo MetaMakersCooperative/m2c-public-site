@@ -13,6 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 1.0,
         images: [`${BASE_URL}/images/home.webp`, ..._zonePages.map((x)=> `${BASE_URL}/${x.image}`), ..._facilityImages.map((x) => `${BASE_URL}/${x.imageSrc}`)]
     },{
+        url: `${BASE_URL}/faq`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },{
         url: `${BASE_URL}/join`,
         lastModified: new Date("2026-03-25"),
         changeFrequency: "yearly",
